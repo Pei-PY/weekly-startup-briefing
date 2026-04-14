@@ -9,7 +9,7 @@ Each briefing covers the top 10 startup stories of the day, filtered for:
 - **Stage**: Pre-seed through Series D (no public companies)
 - **Sectors**: AI/ML, SaaS, developer tools, deep tech, robotics, consumer tech
 - **Topics**: Funding rounds, acquisitions, product launches, major pivots
-- **Sources**: TechCrunch, Y Combinator/HN, Product Hunt, VentureBeat, Business Insider, Fortune
+- **Sources**: TechCrunch, Hacker News, Product Hunt, VentureBeat, Crunchbase News, Axios, The Information, a16z, YC company directory, targeted web searches across 23 Inception verticals
 
 ## Structure
 
