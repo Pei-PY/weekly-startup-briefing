@@ -367,6 +367,8 @@ Use this exact format:
 
 **Inception Status:** [Community member / Not in Inception]
 
+**Website:** [company.com](https://company.com) *(the company's official homepage URL — always include; find via their press release, LinkedIn, or a quick search)*
+
 ---
 
 ### 2–10: [Same format as #1]
