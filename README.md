@@ -41,10 +41,19 @@ TechCrunch, VentureBeat, Hacker News, Product Hunt, The Information, Crunchbase 
 
 ---
 
+## Web App
+
+Browse all briefings at **[richling98.github.io/daily-startup-briefing](https://richling98.github.io/daily-startup-briefing/)** — a dark-themed React frontend with sortable columns, company detail drawers, and filters by vertical, stage, and NVIDIA fit.
+
+Auto-deployed to GitHub Pages on every push to `main`. See [`briefing-app/README.md`](briefing-app/README.md) for local development instructions.
+
+---
+
 ## Structure
 
 ```
 briefings/          # Daily briefing files (YYYY-MM-DD-briefing.md)
+briefing-app/       # Vite + React frontend (GitHub Pages)
 docs/               # Reference docs (NVIDIA Inception, tech stack)
 skills/             # Claude Code skill definition
 CLAUDE.md           # Project instructions for Claude Code
@@ -58,4 +67,4 @@ In Claude Code, run:
 /startup-briefing
 ```
 
-This researches the day's top startup news and saves a briefing to `briefings/`.
+This researches the day's top startup news and saves a briefing to `briefings/`. The web app picks it up automatically on the next push to `main`.

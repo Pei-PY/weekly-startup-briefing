@@ -1,16 +1,87 @@
-# React + Vite
+# Briefing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Vite + React + Tailwind frontend for browsing NVIDIA Inception daily startup briefings. Live at **[richling98.github.io/daily-startup-briefing](https://richling98.github.io/daily-startup-briefing/)**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it does
 
-## React Compiler
+Displays every daily briefing as a sortable, filterable table. Click any row to open a full company detail drawer (Notion-style). A sidebar lists all briefing dates; a methodology panel explains the research protocol and scoring rubric.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Columns:** Rank · Company · Vertical · Total Raised · Stage · NVIDIA Fit · Inception Status
 
-## Expanding the ESLint configuration
+**Filters:** Vertical · Stage · NVIDIA Fit
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Stack
+
+- **Vite 8** + **React 19**
+- **Tailwind CSS v4** (dark theme, NVIDIA green `#76B900` accent)
+- **lucide-react** icons
+- Static JSON data (`src/data/briefings.json`) generated from markdown briefing files
+
+---
+
+## Local development
+
+```bash
+cd briefing-app
+
+# Parse markdown briefings → JSON (run whenever briefings/ changes)
+npm run parse
+
+# Dev server with HMR
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173).
+
+---
+
+## Data pipeline
+
+```
+briefings/YYYY-MM-DD-briefing.md  →  scripts/parse-briefings.js  →  src/data/briefings.json
+```
+
+`parse-briefings.js` reads every `YYYY-MM-DD-briefing.md` from `../briefings/`, parses the structured markdown into typed JSON objects, and writes `src/data/briefings.json`. The Vite build inlines this file as a static asset.
+
+Run `npm run build` to parse + build in one step (used by CI).
+
+---
+
+## Deployment
+
+Deployed to **GitHub Pages** via GitHub Actions on every push to `main`.
+
+Workflow: `.github/workflows/deploy.yml`
+- Installs deps (`npm ci`)
+- Runs `npm run build` (parse → Vite build → `dist/`)
+- Uploads `dist/` as a Pages artifact and deploys
+
+`vite.config.js` sets `base: '/daily-startup-briefing/'` for the subdirectory path.
+
+---
+
+## Project structure
+
+```
+briefing-app/
+├── scripts/
+│   └── parse-briefings.js   # Markdown → JSON parser
+├── src/
+│   ├── components/
+│   │   ├── Sidebar.jsx       # Date list + methodology panel
+│   │   ├── BriefingView.jsx  # Header, filter bar, table wrapper
+│   │   ├── CompanyTable.jsx  # Sortable table
+│   │   └── CompanyDrawer.jsx # Full company detail drawer
+│   ├── data/
+│   │   └── briefings.json   # Generated — do not edit manually
+│   ├── lib/
+│   │   └── utils.js          # Badge colors, date formatters
+│   ├── App.jsx
+│   └── index.css
+├── package.json
+└── vite.config.js
+```
