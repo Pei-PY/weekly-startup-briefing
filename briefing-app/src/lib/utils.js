@@ -34,7 +34,7 @@ export const STAGE_COLORS = {
 };
 
 export const INCEPTION_COLORS = {
-  'Not in Inception': 'bg-zinc-800/60 text-zinc-400 border-zinc-700/50',
+  'Not in Inception': 'bg-red-900/30 text-red-400 border-red-800/50',
   'Community member': 'bg-blue-900/40 text-blue-300 border-blue-800/50',
   'Prospect — Being Recruited': 'bg-green-900/40 text-green-300 border-green-800/50',
   'High touch': 'bg-[#76B900]/20 text-[#76B900] border-[#76B900]/30',

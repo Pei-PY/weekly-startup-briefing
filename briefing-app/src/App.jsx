@@ -35,6 +35,7 @@ export default function App() {
       <main className="flex-1 overflow-hidden flex flex-col">
         {currentBriefing ? (
           <BriefingView
+            key={currentBriefing.date}
             briefing={currentBriefing}
             onSelectCompany={handleSelectCompany}
             selectedCompany={selectedCompany}
