@@ -1,5 +1,6 @@
 import { X, ChevronLeft, ChevronRight, ExternalLink, Database } from 'lucide-react';
 import { getVerticalColor, getStageColor, getInceptionColor } from '../lib/utils.js';
+import { extractNvidiaTech, NVIDIA_TECH } from '../lib/nvidia-tech.js';
 
 export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
   return (
@@ -127,10 +128,11 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
             </Section>
 
             <Section label="NVIDIA Relevancy">
-              <div className="flex items-start gap-2">
+              <div className="flex items-start gap-2 mb-4">
                 <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
                 <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
               </div>
+              <NvidiaTechTable relevancyText={company.nvidiaRelevancy} />
             </Section>
 
             {company.salesforceUrl && (
@@ -165,6 +167,54 @@ function Stat({ label, value, mono, valueColor, dot }) {
         {dot && <span className={`w-2 h-2 rounded-full ${dot}`} />}
         <p className={`text-sm font-semibold ${mono ? 'font-mono' : ''} ${valueColor || 'text-slate-200'}`}>{value}</p>
       </div>
+    </div>
+  );
+}
+
+function NvidiaTechTable({ relevancyText }) {
+  if (!relevancyText) return null;
+  const keys = extractNvidiaTech(relevancyText);
+  if (!keys.length) return null;
+
+  return (
+    <div className="overflow-x-auto rounded border border-[#1e293b]">
+      <table className="w-full text-[11px] border-collapse">
+        <thead>
+          <tr className="bg-[#0a1628] border-b border-[#1e293b]">
+            {['Use-case', 'NVIDIA Library / SDK', 'Expected Outcome', 'Case Study'].map(h => (
+              <th key={h} className="px-3 py-2 text-left text-[10px] font-semibold uppercase tracking-wider text-[#76B900] whitespace-nowrap">
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {keys.map((key, i) => {
+            const t = NVIDIA_TECH[key];
+            return (
+              <tr key={key} className={`border-b border-[#1e293b] ${i % 2 === 0 ? 'bg-[#0f172a]' : 'bg-[#0d1526]'}`}>
+                <td className="px-3 py-2.5 text-slate-300 font-medium align-top leading-snug">{t.useCase}</td>
+                <td className="px-3 py-2.5 align-top">
+                  <span className="text-[#76B900] font-semibold">{key}</span>
+                  <span className="text-slate-500 block leading-snug mt-0.5">{t.sdk}</span>
+                </td>
+                <td className="px-3 py-2.5 text-slate-400 align-top leading-snug">{t.outcome}</td>
+                <td className="px-3 py-2.5 align-top">
+                  <a
+                    href={t.caseStudy.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors whitespace-nowrap"
+                  >
+                    <ExternalLink size={10} />
+                    {t.caseStudy.label}
+                  </a>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
