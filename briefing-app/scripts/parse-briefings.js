@@ -28,6 +28,61 @@ function parseCurrencyToM(str) {
   return null;
 }
 
+const BIGTECH_SIGNALS = [
+  { label: 'ex-Google',    re: /\b(?:ex-Google(?:Brain| Brain)?|from Google|Google alum|formerly at Google)\b/i },
+  { label: 'ex-DeepMind',  re: /\b(?:ex-DeepMind|from DeepMind|DeepMind alum)\b/i },
+  { label: 'ex-Meta',      re: /\b(?:ex-Meta|ex-Facebook|from Meta|from Facebook|Meta alum)\b/i },
+  { label: 'ex-NVIDIA',    re: /\b(?:ex-NVIDIA|ex-Nvidia|from NVIDIA|from Nvidia|NVIDIA VP|Nvidia VP|NVIDIA alum)\b/i },
+  { label: 'ex-Microsoft', re: /\b(?:ex-Microsoft|from Microsoft|Microsoft alum|Microsoft Research)\b/i },
+  { label: 'ex-Amazon',    re: /\b(?:ex-Amazon|from Amazon|ex-AWS|from AWS|Amazon alum)\b/i },
+  { label: 'ex-Apple',     re: /\b(?:ex-Apple|from Apple|Apple alum)\b/i },
+  { label: 'ex-OpenAI',    re: /\b(?:ex-OpenAI|from OpenAI|OpenAI alum)\b/i },
+  { label: 'ex-Anthropic', re: /\b(?:ex-Anthropic|from Anthropic)\b/i },
+  { label: 'ex-ByteDance', re: /\b(?:ex-ByteDance|ex-TikTok|from ByteDance|from TikTok)\b/i },
+  { label: 'ex-Tencent',   re: /\b(?:ex-Tencent|from Tencent|Tencent AI Lab|Tencent.*Lab)\b/i },
+  { label: 'ex-Alibaba',   re: /\b(?:ex-Alibaba|from Alibaba|ex-Ant Group|from Ant Group)\b/i },
+  { label: 'ex-Baidu',     re: /\b(?:ex-Baidu|from Baidu|Baidu Research)\b/i },
+  { label: 'ex-Grab',      re: /\b(?:ex-Grab|from Grab|Grab alum)\b/i },
+  { label: 'ex-Gojek',     re: /\b(?:ex-Gojek|from Gojek)\b/i },
+  { label: 'ex-Sea',       re: /\b(?:ex-Sea(?:\b| Ltd| Group)|from Sea(?:\b| Ltd| Group)|ex-Shopee|ex-Garena)\b/i },
+  { label: 'ex-Uber',      re: /\b(?:ex-Uber|from Uber|Uber alum)\b/i },
+  { label: 'ex-Intel',     re: /\b(?:ex-Intel|from Intel|Intel alum)\b/i },
+  { label: 'ex-Qualcomm',  re: /\b(?:ex-Qualcomm|from Qualcomm)\b/i },
+  { label: 'ex-Tesla',     re: /\b(?:ex-Tesla|from Tesla)\b/i },
+  { label: 'ex-SpaceX',    re: /\b(?:ex-SpaceX|from SpaceX)\b/i },
+  { label: 'ex-Goldman',   re: /\b(?:ex-Goldman|from Goldman Sachs)\b/i },
+  { label: 'ex-McKinsey',  re: /\b(?:ex-McKinsey|from McKinsey)\b/i },
+];
+
+const SERIAL_SIGNALS = [
+  /\bserial founder\b/i,
+  /\brepeat founder\b/i,
+  /\bsecond[- ]time founder\b/i,
+  /\bunicorn founder\b/i,
+  /\bex-unicorn founder\b/i,
+  /\bpreviously founded\b/i,
+  /\btook it public\b/i,
+  /\bfounder.*\btook.*public\b/i,
+  /\btook.*public.*\bfounder\b/i,
+  /\bfounder.*\bacquired by\b/i,
+  /\bacquired by.*\bfounder\b/i,
+];
+
+function extractFounderBackground(fields) {
+  const text = [
+    fields['What we do'] ?? '',
+    fields["Today's interesting article"] ?? '',
+    fields['NVIDIA Relevancy'] ?? '',
+  ].join(' ');
+
+  const found = [];
+  for (const sig of BIGTECH_SIGNALS) {
+    if (sig.re.test(text)) found.push(sig.label);
+  }
+  if (SERIAL_SIGNALS.some(re => re.test(text))) found.push('Serial founder');
+  return found;
+}
+
 function stripMarkdown(text) {
   return text
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // [text](url) -> text
@@ -128,6 +183,7 @@ function parseCompanySection(sectionText) {
   const description = stripMarkdown((fields['What we do'] ?? '').replace(/\n/g, ' ').trim());
   const articleBody = stripMarkdown((fields["Today's interesting article"] ?? '').replace(/\n+/g, ' ').trim());
   const nvidiaRelevancy = stripMarkdown((fields['NVIDIA Relevancy'] ?? '').replace(/\n/g, ' ').trim());
+  const founderBackground = extractFounderBackground(fields);
 
   return {
     name,
@@ -141,6 +197,7 @@ function parseCompanySection(sectionText) {
     investors,
     nvidiaRelevancy,
     inceptionStatus,
+    founderBackground,
     salesforceUrl,
     websiteUrl,
     websiteDisplay,
@@ -148,7 +205,7 @@ function parseCompanySection(sectionText) {
 }
 
 function parseBriefingFile(filePath) {
-  const content = readFileSync(filePath, 'utf8');
+  const content = readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
 
   // Extract date from header line ## Weekday, Month DD, YYYY
   const dateLineM = content.match(/^## (.+) · NVIDIA Inception Edition/m);

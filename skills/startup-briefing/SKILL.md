@@ -10,9 +10,11 @@ description: |
   Cybersecurity, Edtech/Higher Ed, Media & Entertainment, Gaming, Smart Spaces,
   Energy/CleanTech/Oil & Gas, AgTech, Architecture/Engineering/Construction,
   AI Developer Tools, CRISP, Retail, Supercomputing/Quantum, Adtech/Martech, Space.
-  Saves to disk and emails to rling@nvidia.com.
-  Trigger on: "daily briefing", "startup news", "what's happening in startups today",
-  "morning briefing", or when invoked as /startup-briefing.
+  Restricted to startups headquartered or primarily operating in South East Asia:
+  Singapore, Malaysia, Vietnam, Indonesia, Philippines, Thailand.
+  Saves to disk and emails to pyi@nvidia.com.
+  Trigger on: "daily briefing", "startup news", "SEA startups", "Southeast Asia startups",
+  "what's happening in startups today", "morning briefing", "research", "top in benchmarks" or when invoked as /startup-briefing.
 allowed-tools:
   - WebSearch
   - WebFetch
@@ -30,7 +32,7 @@ be building on, NVIDIA's technology stack.
 
 You think like a VC scout with NVIDIA's strategic lens: which companies are GPU-native,
 which verticals is NVIDIA winning, and which early-stage bets could become the next
-Moon Surgical, Covariant, or Abridge.
+Moon Surgical, Covariant, or Abridge. Research Spin offs that have their papers and models, with an operating website, successfully ranking top in benchmarks. Benchmarks include Artificial Analysis, MLCommons, SemiAnalysis, Artificial Analysis LLM Inference Benchmark, MMLU, LMSYS. 
 
 **Reference documents — read these before starting:**
 
@@ -40,6 +42,24 @@ Moon Surgical, Covariant, or Abridge.
 Use these to understand (1) what NVIDIA Inception looks for in startups and (2) which
 NVIDIA products map to which startup verticals, so you can assess NVIDIA-relevance for
 every story you cover.
+
+---
+
+## Regional Scope — South East Asia Only
+
+**This briefing is restricted to startups headquartered or primarily operating in:**
+- 🇸🇬 Singapore
+- 🇲🇾 Malaysia
+- 🇻🇳 Vietnam
+- 🇮🇩 Indonesia
+- 🇵🇭 Philippines
+- 🇹🇭 Thailand
+
+**Disqualify any company not based in one of these six countries**, regardless of how newsworthy the story is. When in doubt about a company's country of origin, check their LinkedIn, About page, or press release before including.
+
+When running search queries, always append country/region terms:
+- `"Singapore startup"`, `"Malaysia startup"`, `"Vietnam startup"`, `"Indonesia startup"`, `"Philippines startup"`, `"Thailand startup"`
+- `"Southeast Asia" OR "SEA" startup funding [TODAY] OR [YESTERDAY]`
 
 ---
 
@@ -54,10 +74,10 @@ Prioritize stories from these 23 verticals — they represent NVIDIA's strategic
 | 1   | **Healthcare & Life Sciences**                                                                                                                                                                                 | Clara Holoscan, MONAI, BioNeMo, Clara Parabricks, IGX Orin, NeMo (clinical), Isaac for Healthcare                          |
 | 2   | **Auto / AV Infra**                                                                                                                                                                                            | DRIVE Orin/Thor, DriveWorks, DRIVE Sim, Omniverse, H100/B200                                                               |
 | 3   | **Manufacturing & Industrial**                                                                                                                                                                                 | Omniverse (digital twins), OpenUSD, Isaac Sim, IGX Orin, Jetson Orin, DeepStream                                           |
-| 4   | **Robotics**                                                                                                                                                                                                   | Isaac ROS/Sim/Lab/GR00T, Jetson Orin, Omniverse, Newton physics engine                                                     |
+| 4   | **Robotics**                                                                                                                                                                                                   | Isaac ROS/Sim/Lab/GR00T, Jetson Orin, Omniverse, Newton physics engine, Cosmos3                                                    |
 | 5   | **Federal / US Public Sector / Defense**                                                                                                                                                                       | Morpheus (cybersecurity), H100/B200 (sovereign AI), Jetson (edge/unmanned), DRIVE, NIM (on-prem sovereign)                 |
 | 6   | **Global Public Sector**                                                                                                                                                                                       | Sovereign AI (DGX national AI programs), NIM (on-prem), H100/B200 clusters                                                 |
-| 7   | **Telecom**                                                                                                                                                                                                    | H100/B200 (RAN AI), Spectrum-X (network AI), Morpheus, NIM, Triton                                                         |
+| 7   | **Telecom**                                                                                                                                                                                                    | H100/B200 (RAN AI), Spectrum-X (network AI), Morpheus, NIM, Triton, Aerial AI                                                         |
 | 8   | **FinTech / FSI**                                                                                                                                                                                              | RAPIDS (fraud/risk modeling), Morpheus (AML/fraud), H100 (quant/HFT), NIM (on-prem LLM for compliance)                     |
 | 9   | **IT Services / Data Science / Mar-Legal-HR Tech**                                                                                                                                                             | RAPIDS, NIM, NeMo, NVAIE, Triton                                                                                           |
 | 10  | **Cybersecurity**                                                                                                                                                                                              | Morpheus, BlueField DPU, H100/B200 (AI threat detection), NIM                                                              |
@@ -119,6 +139,25 @@ Fetch ALL of these pages directly for today's content:
 - `https://www.axios.com/technology` (Axios Pro Rata / tech funding)
 - `https://a16z.com/news/` (a16z portfolio announcements)
 - `https://www.ycombinator.com/companies` (YC company directory — filter by recent)
+- `https://www.cbinsights.com/learn/ai-100-tracker`
+-  `https://www.techinasia.com/`
+- `https://e27.co/`
+- `https://www.dealstreetasia.com`
+- `https://www.backscoop.com/`
+- `https://www.crunchbase.com/`
+- `http://pitchbook.com`
+- `https://www.gobi.vc/news`
+- `foxbusiness.com`
+- `https://edition.cnn.com/business/tech`
+- `https://artificialanalysis.ai/`
+- `https://artificialanalysis.ai/benchmarks/hardware`
+- `https://mlcommons.org/benchmarks/inference-datacenter/`
+- `https://inferencemax.ai/`
+- `https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro`
+- `https://www.swebench.com/`
+- `https://huggingface.co/`
+- 
+
 
 ### 1B — Targeted search queries
 
@@ -152,36 +191,45 @@ Phase 0. Use both dates in queries to ensure full 24-hour coverage. Replace
 16. `Reddit r/startups r/artificial hot posts [TODAY] OR [YESTERDAY]`
 17. `site:axios.com startup funding [TODAY] OR [YESTERDAY]`
 
+**South East Asia — always run these (primary regional sources):**
+18. `site:dealstreetasia.com startup funding [TODAY] OR [YESTERDAY]`
+19. `site:techinasia.com startup funding [TODAY] OR [YESTERDAY]`
+20. `site:e27.co startup funding [TODAY] OR [YESTERDAY]`
+21. `site:kr-asia.com startup funding [TODAY] OR [YESTERDAY]`
+22. `site:vulcanpost.com startup funding [TODAY] OR [YESTERDAY]`
+23. `"Southeast Asia" OR "SEA" startup funding raised [TODAY] OR [YESTERDAY]`
+24. `Singapore OR Malaysia OR Vietnam OR Indonesia OR Philippines OR Thailand startup raises [TODAY] OR [YESTERDAY]`
+
 **NVIDIA ecosystem-specific (always run these):**
-18. `NVIDIA GPU startup funding [TODAY] OR [YESTERDAY]`
-19. `robotics AI startup funding [TODAY] OR [YESTERDAY]`
-20. `drug discovery AI startup [TODAY] OR [YESTERDAY]`
-21. `"NVIDIA Inception" OR "built on NVIDIA" startup [TODAY] OR [YESTERDAY]`
+25. `NVIDIA GPU startup funding [TODAY] OR [YESTERDAY]`
+26. `robotics AI startup funding [TODAY] OR [YESTERDAY]`
+27. `drug discovery AI startup [TODAY] OR [YESTERDAY]`
+28. `"NVIDIA Inception" OR "built on NVIDIA" startup [TODAY] OR [YESTERDAY]`
 
 **Vertical-targeted searches — run ALL 23, one per Inception vertical:**
-22. `healthcare AI startup funding [TODAY] OR [YESTERDAY]` *(Healthcare & Life Sciences)*
-23. `autonomous vehicle AV startup raises [TODAY] OR [YESTERDAY]` *(Auto / AV Infra)*
-24. `industrial AI manufacturing startup [TODAY] OR [YESTERDAY]` *(Manufacturing & Industrial)*
-25. `humanoid robot physical AI startup funding [TODAY] OR [YESTERDAY]` *(Robotics)*
-26. `defense govtech AI startup funding [TODAY] OR [YESTERDAY]` *(Federal / Defense)*
-27. `sovereign AI government infrastructure startup [TODAY] OR [YESTERDAY]` *(Global Public Sector)*
-28. `telecom network AI startup funding [TODAY] OR [YESTERDAY]` *(Telecom)*
-29. `fintech AI startup funding [TODAY] OR [YESTERDAY]` *(FinTech / FSI)*
-30. `data science HR legal AI SaaS startup funding [TODAY] OR [YESTERDAY]` *(IT Services / Data Science / Mar-Legal-HR)*
-31. `cybersecurity AI startup raises [TODAY] OR [YESTERDAY]` *(Cybersecurity)*
-32. `edtech AI startup funding [TODAY] OR [YESTERDAY]` *(Edtech / Higher Ed)*
-33. `media entertainment AI startup funding [TODAY] OR [YESTERDAY]` *(Media & Entertainment)*
-34. `gaming AI startup funding [TODAY] OR [YESTERDAY]` *(Gaming)*
-35. `smart city building video analytics AI startup [TODAY] OR [YESTERDAY]` *(Smart Spaces)*
-36. `cleantech climate AI startup funding [TODAY] OR [YESTERDAY]` *(Energy / CleanTech)*
-37. `agtech agriculture AI startup [TODAY] OR [YESTERDAY]` *(AgTech)*
-38. `construction AEC AI startup funding [TODAY] OR [YESTERDAY]` *(Architecture/Engineering/Construction)*
-39. `AI developer tools infrastructure startup funding [TODAY] OR [YESTERDAY]` *(AI Developer Tools)*
-40. `data platform AI infrastructure startup funding [TODAY] OR [YESTERDAY]` *(CRISP — Consumer Internet)*
-41. `retail AI startup funding [TODAY] OR [YESTERDAY]` *(Retail)*
-42. `quantum computing supercomputing startup funding [TODAY] OR [YESTERDAY]` *(Supercomputing / Quantum)*
-43. `adtech martech AI startup funding [TODAY] OR [YESTERDAY]` *(Adtech / Martech)*
-44. `space satellite AI startup funding [TODAY] OR [YESTERDAY]` *(Space)*
+29. `healthcare AI startup funding [TODAY] OR [YESTERDAY]` *(Healthcare & Life Sciences)*
+30. `autonomous vehicle AV startup raises [TODAY] OR [YESTERDAY]` *(Auto / AV Infra)*
+31. `industrial AI manufacturing startup [TODAY] OR [YESTERDAY]` *(Manufacturing & Industrial)*
+32. `humanoid robot physical AI startup funding [TODAY] OR [YESTERDAY]` *(Robotics)*
+33. `defense govtech AI startup funding [TODAY] OR [YESTERDAY]` *(Federal / Defense)*
+34. `sovereign AI government infrastructure startup [TODAY] OR [YESTERDAY]` *(Global Public Sector)*
+35. `telecom network AI startup funding [TODAY] OR [YESTERDAY]` *(Telecom)*
+36. `fintech AI startup funding [TODAY] OR [YESTERDAY]` *(FinTech / FSI)*
+37. `data science HR legal AI SaaS startup funding [TODAY] OR [YESTERDAY]` *(IT Services / Data Science / Mar-Legal-HR)*
+38. `cybersecurity AI startup raises [TODAY] OR [YESTERDAY]` *(Cybersecurity)*
+39. `edtech AI startup funding [TODAY] OR [YESTERDAY]` *(Edtech / Higher Ed)*
+40. `media entertainment AI startup funding [TODAY] OR [YESTERDAY]` *(Media & Entertainment)*
+41. `gaming AI startup funding [TODAY] OR [YESTERDAY]` *(Gaming)*
+42. `smart city building video analytics AI startup [TODAY] OR [YESTERDAY]` *(Smart Spaces)*
+43. `cleantech climate AI startup funding [TODAY] OR [YESTERDAY]` *(Energy / CleanTech)*
+44. `agtech agriculture AI startup [TODAY] OR [YESTERDAY]` *(AgTech)*
+45. `construction AEC AI startup funding [TODAY] OR [YESTERDAY]` *(Architecture/Engineering/Construction)*
+46. `AI developer tools infrastructure startup funding [TODAY] OR [YESTERDAY]` *(AI Developer Tools)*
+47. `data platform AI infrastructure startup funding [TODAY] OR [YESTERDAY]` *(CRISP — Consumer Internet)*
+48. `retail AI startup funding [TODAY] OR [YESTERDAY]` *(Retail)*
+49. `quantum computing supercomputing startup funding [TODAY] OR [YESTERDAY]` *(Supercomputing / Quantum)*
+50. `adtech martech AI startup funding [TODAY] OR [YESTERDAY]` *(Adtech / Martech)*
+51. `space satellite AI startup funding [TODAY] OR [YESTERDAY]` *(Space)*
 
 ### 1C — Follow-up chaining
 
@@ -203,8 +251,8 @@ For each story that passes the initial filter, fetch the full article and extrac
 1. **Company name + one-line description** — what do they actually do?
 2. **Stage and amount** — pre-seed / seed / A / B / C / D, $ raised this round, and **total capital raised to date** (check Crunchbase or article for cumulative figure). **If total raised to date exceeds $200M, discard immediately — do not proceed further with this candidate.** The purpose of the briefing is to surface companies at the earliest stages, before they accumulate NVIDIA attention outside of the Inception program. Companies that have raised $200M+ are typically already well-known to NVIDIA and do not need to be sourced via this briefing. Look up Crunchbase if the article does not state the total. Well-known examples that would be disqualified: Cursor (~$3B total), Cohere, Scale AI, Mistral, Sarvam AI (~$350M), ScaleOps (~$210M), Valar Atomics (~$580M). When in doubt, check Crunchbase before including.
 3. **Investors** — who led? Note tier-1 signals: a16z, Sequoia, Benchmark, Accel, GV,
-  Bessemer, YC, General Catalyst, Founders Fund, Lightspeed, NEA, Index, Coatue, Tiger
-4. **Founding team** — repeat founder? Ex-Google/OpenAI/Meta/NVIDIA? Domain expert?
+  Bessemer, YC, General Catalyst, Founders Fund, Lightspeed, NEA, Index, Coatue, Tiger Global, Sequoia, PeakXV
+4. **Founding team** — repeat founder? Ex-Google/OpenAI/Meta/NVIDIA/Deepmind? Domain expert?
 5. **Traction signals** — ARR, users, customers, growth metrics mentioned?
 6. **Why now** — what market shift, technology unlock, or regulatory change is the tailwind?
 7. **Competitive landscape** — who are they up against? What's their wedge?
@@ -272,10 +320,10 @@ Score NVIDIA fit 0–3:
 | Healthcare & Life Sciences                    | Clara Holoscan, MONAI, BioNeMo, Parabricks, IGX Orin, NeMo (clinical)                                                      |
 | Auto / AV Infra                               | DRIVE Orin/Thor, DriveWorks, DRIVE Sim, Omniverse                                                                          |
 | Manufacturing & Industrial                    | Omniverse, OpenUSD, Isaac Sim, IGX Orin, Jetson, DeepStream                                                                |
-| Robotics                                      | Isaac ROS/Sim/Lab/GR00T, Jetson Orin, Omniverse, Newton                                                                    |
+| Robotics                                      | Isaac ROS/Sim/Lab/GR00T, Jetson Orin, Omniverse, Newton, Cosmos3                                                                  |
 | Federal / Defense                             | Morpheus, H100/B200 (sovereign AI), Jetson (edge/unmanned), NIM (on-prem)                                                  |
 | Global Public Sector                          | Sovereign AI DGX, NIM (on-prem), H100/B200 clusters                                                                        |
-| Telecom                                       | H100/B200 (RAN AI), Spectrum-X, Morpheus, NIM, Triton                                                                      |
+| Telecom                                       | H100/B200 (RAN AI), Spectrum-X, Morpheus, NIM, Triton, Aerial AI                                                                     |
 | FinTech / FSI                                 | RAPIDS (fraud/risk), Morpheus (AML), H100 (quant/HFT), NIM (on-prem LLM)                                                   |
 | IT Services / Data Science / Mar-Legal-HR     | RAPIDS, NIM, NeMo, NVAIE, Triton                                                                                           |
 | Cybersecurity                                 | Morpheus, BlueField DPU, H100/B200, NIM                                                                                    |
@@ -330,6 +378,7 @@ Break remaining ties: funding amount > acquisition > launch.
 - **Company's Inception membership status is "High touch"** — these companies are already actively managed by the Inception team and do not need to appear in the briefing. Only include companies with status "Not in Inception" or "Community member." Check this via the Salesforce `Inception_Connect_Profile__c` lookup in Phase 2B before including any company.
 - **Company has 2 or more Opportunities in Salesforce** — if the account opportunity count (Phase 2B step 3) is ≥2, disqualify. Multiple opportunities signals the company is already actively covered by NVIDIA field or Inception teams. Companies with 0 or 1 opportunities — or no Salesforce account at all — are eligible.
 - **Company has "Enterprise Customer" in AccountTags** — if the Salesforce Account's `AccountTags__c` field contains "Enterprise Customer" (Phase 2B step 1), disqualify. This tag means the company is already an active NVIDIA enterprise customer managed through enterprise sales, not Inception origination.
+- **Entity is an ecosystem program, accelerator, or venture fund** — disqualify any entity that is primarily a government ecosystem program, corporate accelerator, incubator, startup studio, or venture capital / private equity fund. These are not startups and are not eligible for Inception. Examples: national AI programs, government grants, VC fund announcements, accelerator cohort launches, innovation lab programs. Only include operating companies building a product or service.
 
 ---
 
@@ -379,11 +428,11 @@ Use this exact format:
 
 *Companies from today's briefing ranked by NVIDIA relevance — for Inception pipeline review.*
 
-| Rank | Company | Vertical | Stage | NVIDIA Tech Alignment | Key NVIDIA Tech | Inception Status | Salesforce |
-|------|---------|---------|-------|-----------|-----------------|-----------------|------------|
-| 1 | [Name] | [Vertical] | [Stage] | 🟢 Strong potential | [Products] | Community member / Not in Inception | [Account](URL) or — |
-| 2 | [Name] | [Vertical] | [Stage] | 🟠 Maybe | [Products] | Community member / Not in Inception | — |
-| ... | | | | | | | |
+| Rank | Company | Country | Vertical | Stage | NVIDIA Tech Alignment | Key NVIDIA Tech | Inception Status | Salesforce |
+|------|---------|---------|---------|-------|-----------|-----------------|-----------------|------------|
+| 1 | [Name] | [Country] | [Vertical] | [Stage] | 🟢 Strong potential | [Products] | Community member / Not in Inception | [Account](URL) or — |
+| 2 | [Name] | [Country] | [Vertical] | [Stage] | 🟠 Maybe | [Products] | Community member / Not in Inception | — |
+| ... | | | | | | | | |
 
 *Use this table to identify which companies to route to Inception Capital Connect or flag for NVentures.*
 
@@ -441,7 +490,7 @@ Tell the user:
 Report:
 
 - File saved: `[full path]`
-- Email: sent to [rling@nvidia.com](mailto:rling@nvidia.com) ✓ (or: not sent — reason)
+- Email: sent to [pyi@nvidia.com](mailto:pyi@nvidia.com) ✓ (or: not sent — reason)
 - Total capital announced: $XM
 - Stories by type: X funding, X acquisitions, X launches
 - **Top NVIDIA fit companies: [list top 3 with their NVIDIA angle]**

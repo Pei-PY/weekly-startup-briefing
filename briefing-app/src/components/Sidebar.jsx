@@ -30,9 +30,9 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
   const [showInfo, setShowInfo] = useState(false);
 
   return (
-    <aside className="w-56 flex-shrink-0 bg-[#111] flex flex-col h-full border-r border-[#222] relative">
+    <aside className="w-56 flex-shrink-0 bg-[#0a1628] flex flex-col h-full border-r border-[#1e293b] relative">
       {/* Header */}
-      <div className="px-4 py-4 border-b border-[#222]">
+      <div className="px-4 py-4 border-b border-[#1e293b]">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-[#76B900]" />
           <span className="text-[10px] font-semibold uppercase tracking-widest text-[#76B900]">
@@ -40,11 +40,11 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
           </span>
         </div>
         <div className="flex items-center justify-between mt-1 gap-2">
-          <p className="text-white font-semibold text-sm leading-tight">Daily Startup Briefings</p>
+          <p className="text-slate-100 font-semibold text-sm leading-tight">Daily Startup Briefings</p>
           <button
             onClick={() => setShowInfo(v => !v)}
             className={`flex-shrink-0 p-0.5 rounded transition-colors ${
-              showInfo ? 'text-[#76B900]' : 'text-[#4b5563] hover:text-slate-400'
+              showInfo ? 'text-[#76B900]' : 'text-slate-500 hover:text-slate-300'
             }`}
             title="Methodology & purpose"
           >
@@ -63,19 +63,19 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
               onClick={() => onSelectDate(b.date)}
               className={`w-full text-left px-4 py-2.5 flex items-center justify-between transition-colors group ${
                 isActive
-                  ? 'bg-[#1a1a1a] border-l-2 border-[#76B900]'
-                  : 'border-l-2 border-transparent hover:bg-[#1a1a1a]/60'
+                  ? 'bg-[#1e293b] border-l-2 border-[#76B900]'
+                  : 'border-l-2 border-transparent hover:bg-[#1e293b]/60'
               }`}
             >
               <div>
-                <p className={`text-sm font-medium ${isActive ? 'text-white' : 'text-[#9ca3af] group-hover:text-[#d1d5db]'}`}>
+                <p className={`text-sm font-medium ${isActive ? 'text-slate-100' : 'text-slate-400 group-hover:text-slate-200'}`}>
                   {formatDate(b.date)}
                 </p>
-                <p className="text-[11px] text-[#6b7280] mt-0.5">
+                <p className="text-[11px] text-slate-600 mt-0.5">
                   {b.companies.length} companies
                 </p>
               </div>
-              <span className={`text-[11px] font-mono tabular-nums ${isActive ? 'text-[#76B900]' : 'text-[#4b5563]'}`}>
+              <span className={`text-[11px] font-mono tabular-nums ${isActive ? 'text-[#76B900]' : 'text-slate-700'}`}>
                 {b.date.slice(5)}
               </span>
             </button>
@@ -84,7 +84,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
       </nav>
 
       {/* Footer */}
-      <div className="px-4 py-4 border-t border-[#222]">
+      <div className="px-4 py-4 border-t border-[#1e293b]">
         {(() => {
           const totalM = briefings.reduce((s, b) => s + b.companies.reduce((cs, c) => cs + (c.totalRaised?.valueM || 0), 0), 0);
           const fundingDisplay = totalM >= 1000 ? `$${(totalM / 1000).toFixed(1)}B` : `$${Math.round(totalM)}M`;
@@ -92,64 +92,62 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
             <div className="grid grid-cols-3 gap-2">
               <div>
                 <p className="text-lg font-bold text-[#76B900] leading-none">{briefings.length}</p>
-                <p className="text-[10px] text-[#6b7280] mt-1 leading-tight">briefings</p>
+                <p className="text-[10px] text-slate-500 mt-1 leading-tight">briefings</p>
               </div>
               <div>
                 <p className="text-lg font-bold text-[#76B900] leading-none">{briefings.reduce((s, b) => s + b.companies.length, 0)}</p>
-                <p className="text-[10px] text-[#6b7280] mt-1 leading-tight">companies</p>
+                <p className="text-[10px] text-slate-500 mt-1 leading-tight">companies</p>
               </div>
               <div>
                 <p className="text-lg font-bold text-[#76B900] leading-none">{fundingDisplay}</p>
-                <p className="text-[10px] text-[#6b7280] mt-1 leading-tight">total raised</p>
+                <p className="text-[10px] text-slate-500 mt-1 leading-tight">total raised</p>
               </div>
             </div>
           );
         })()}
       </div>
 
-      {/* Methodology panel — slides in to the right of sidebar */}
+      {/* Methodology panel */}
       {showInfo && (
         <>
-          {/* Backdrop */}
           <div
             className="fixed inset-0 z-40"
             onClick={() => setShowInfo(false)}
           />
-          {/* Panel */}
-          <div className="absolute left-full top-0 z-50 w-80 h-full bg-[#161616] border-r border-[#2a2a2a] shadow-2xl overflow-y-auto flex flex-col">
+          <div className="absolute left-full top-0 z-50 w-80 h-full bg-[#0a1628] border-r border-[#1e293b] shadow-xl overflow-y-auto flex flex-col">
             {/* GitHub link */}
             <a
               href="https://github.com/richling98/daily-startup-briefing"
               target="_blank"
               rel="noopener noreferrer"
               onClick={e => e.stopPropagation()}
-              className="flex items-center gap-2 px-4 py-2.5 bg-[#0d0d0d] border-b border-[#262626] hover:bg-[#111] transition-colors group flex-shrink-0"
+              className="flex items-center gap-2 px-4 py-2.5 bg-[#0f172a] border-b border-[#1e293b] hover:bg-[#1e293b] transition-colors group flex-shrink-0"
             >
-              <GitBranch size={13} className="text-[#6b7280] group-hover:text-slate-300 transition-colors flex-shrink-0" />
-              <span className="text-[11px] text-[#6b7280] group-hover:text-slate-300 transition-colors font-mono">
+              <GitBranch size={13} className="text-slate-500 group-hover:text-slate-300 transition-colors flex-shrink-0" />
+              <span className="text-[11px] text-slate-500 group-hover:text-slate-300 transition-colors font-mono">
                 GitHub Repo
               </span>
             </a>
             {/* Panel header */}
-            <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#262626] flex-shrink-0">
+            <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#1e293b] flex-shrink-0">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-[#76B900]">Methodology</p>
                 <p className="text-sm font-semibold text-slate-100 mt-0.5">How this briefing works</p>
               </div>
               <button
                 onClick={() => setShowInfo(false)}
-                className="p-1 rounded text-[#4b5563] hover:text-slate-300 hover:bg-[#222] transition-colors"
+                className="p-1 rounded text-slate-500 hover:text-slate-300 hover:bg-[#1e293b] transition-colors"
               >
                 <X size={14} />
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto divide-y divide-[#1e1e1e]">
+            <div className="flex-1 overflow-y-auto divide-y divide-[#1e293b]">
               {/* Purpose */}
               <Section label="Purpose">
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Surfaces the <strong className="text-slate-100">top 10 AI & tech startups</strong> each day
-                  that are most relevant to <strong className="text-slate-100">NVIDIA's Inception program</strong> —
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Surfaces the <strong className="text-slate-200">top 10 AI & tech startups</strong> each day
+                  that are most relevant to <strong className="text-slate-200">NVIDIA's Inception program</strong> —
                   covering pre-seed through Series D, across 23 strategic verticals. Used by the Inception team
                   to identify and recruit high-potential companies into the program before they become widely known.
                 </p>
@@ -157,14 +155,14 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
 
               {/* Research */}
               <Section label="Daily Research">
-                <p className="text-xs text-slate-300 leading-relaxed mb-2">
-                  Every briefing runs <strong className="text-slate-100">45+ targeted searches</strong> across
+                <p className="text-xs text-slate-400 leading-relaxed mb-2">
+                  Every briefing runs <strong className="text-slate-200">45+ targeted searches</strong> across
                   a strict 24-hour publication window — one query per Inception vertical, plus funding,
                   acquisition, and launch sweeps.
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {SOURCES.map(s => (
-                    <span key={s} className="text-[10px] bg-[#1e1e1e] border border-[#2a2a2a] text-[#94a3b8] rounded px-1.5 py-0.5">
+                    <span key={s} className="text-[10px] bg-[#1e293b] border border-[#334155] text-slate-400 rounded px-1.5 py-0.5">
                       {s}
                     </span>
                   ))}
@@ -173,12 +171,12 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
 
               {/* Scoring */}
               <Section label="Scoring (max 15 pts)">
-                <p className="text-[10px] text-[#64748b] mb-2">5 signals × 1–3 pts each. Higher NVIDIA relevance breaks ties.</p>
+                <p className="text-[10px] text-slate-500 mb-2">5 signals × 1–3 pts each. Higher NVIDIA relevance breaks ties.</p>
                 <div className="space-y-2">
                   {SCORING.map(({ signal, range }) => (
                     <div key={signal}>
-                      <p className="text-[11px] font-medium text-slate-200">{signal}</p>
-                      <p className="text-[10px] text-[#64748b]">{range}</p>
+                      <p className="text-[11px] font-medium text-slate-300">{signal}</p>
+                      <p className="text-[10px] text-slate-500">{range}</p>
                     </div>
                   ))}
                 </div>
@@ -186,8 +184,8 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
 
               {/* Salesforce checks */}
               <Section label="Salesforce Verification">
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Every candidate is checked against <strong className="text-slate-100">NVIDIA's CRM (NVCRM)</strong> before
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Every candidate is checked against <strong className="text-slate-200">NVIDIA's CRM (NVCRM)</strong> before
                   inclusion. The briefing only surfaces companies that are genuinely new to NVIDIA's pipeline —
                   not ones already covered by field teams or Inception account managers.
                 </p>
@@ -195,12 +193,12 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
 
               {/* Disqualifiers */}
               <Section label="Disqualifiers">
-                <p className="text-[10px] text-[#64748b] mb-2">A company is automatically excluded if any of the following apply:</p>
+                <p className="text-[10px] text-slate-500 mb-2">A company is automatically excluded if any of the following apply:</p>
                 <ul className="space-y-1.5">
                   {DISQUALIFIERS.map(d => (
                     <li key={d} className="flex items-baseline gap-1.5">
-                      <span className="text-[#dc2626] flex-shrink-0">×</span>
-                      <span className="text-[11px] text-slate-300">{d}</span>
+                      <span className="text-red-500 flex-shrink-0">×</span>
+                      <span className="text-[11px] text-slate-400">{d}</span>
                     </li>
                   ))}
                 </ul>
@@ -212,15 +210,15 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
                   <div className="flex items-start gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#76B900] mt-1 flex-shrink-0" />
                     <div>
-                      <p className="text-[11px] font-medium text-slate-200">Strong potential</p>
-                      <p className="text-[10px] text-[#64748b]">GPU-native workloads, inference at scale, or confirmed NVIDIA tech fit</p>
+                      <p className="text-[11px] font-medium text-slate-300">Strong potential</p>
+                      <p className="text-[10px] text-slate-500">GPU-native workloads, inference at scale, or confirmed NVIDIA tech fit</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="w-2 h-2 rounded-full bg-amber-500 mt-1 flex-shrink-0" />
                     <div>
-                      <p className="text-[11px] font-medium text-slate-200">Maybe</p>
-                      <p className="text-[10px] text-[#64748b]">Software-only, no meaningful compute, or built on non-NVIDIA silicon</p>
+                      <p className="text-[11px] font-medium text-slate-300">Maybe</p>
+                      <p className="text-[10px] text-slate-500">Software-only, no meaningful compute, or built on non-NVIDIA silicon</p>
                     </div>
                   </div>
                 </div>

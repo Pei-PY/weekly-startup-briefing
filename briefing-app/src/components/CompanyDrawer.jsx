@@ -11,25 +11,25 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
       />
 
       {/* Drawer */}
-      <div className="fixed right-0 top-0 h-full w-[520px] bg-[#161616] shadow-2xl z-50 flex flex-col border-l border-[#2a2a2a] overflow-hidden">
+      <div className="fixed right-0 top-0 h-full w-[520px] bg-[#0a1628] shadow-2xl z-50 flex flex-col border-l border-[#1e293b] overflow-hidden">
         {/* Drawer header */}
-        <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#262626] flex-shrink-0">
+        <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#1e293b] flex-shrink-0 bg-[#0f172a]">
           <div className="flex items-center gap-2">
             {onPrev && (
-              <button onClick={onPrev} className="p-1 rounded hover:bg-[#222] text-[#64748b] hover:text-slate-300 transition-colors" title="Previous company">
+              <button onClick={onPrev} className="p-1 rounded hover:bg-[#1e293b] text-slate-600 hover:text-slate-300 transition-colors" title="Previous company">
                 <ChevronLeft size={16} />
               </button>
             )}
             {onNext && (
-              <button onClick={onNext} className="p-1 rounded hover:bg-[#222] text-[#64748b] hover:text-slate-300 transition-colors" title="Next company">
+              <button onClick={onNext} className="p-1 rounded hover:bg-[#1e293b] text-slate-600 hover:text-slate-300 transition-colors" title="Next company">
                 <ChevronRight size={16} />
               </button>
             )}
-            <span className="text-xs text-[#4b5563] ml-1">
+            <span className="text-xs text-slate-600 ml-1">
               Company {company.rank} of 10
             </span>
           </div>
-          <button onClick={onClose} className="p-1.5 rounded hover:bg-[#222] text-[#64748b] hover:text-slate-300 transition-colors">
+          <button onClick={onClose} className="p-1.5 rounded hover:bg-[#1e293b] text-slate-600 hover:text-slate-300 transition-colors">
             <X size={16} />
           </button>
         </div>
@@ -37,7 +37,7 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto">
           {/* Company title block */}
-          <div className="px-5 py-5 border-b border-[#262626]">
+          <div className="px-5 py-5 border-b border-[#1e293b]">
             <h2 className="text-xl font-bold text-slate-100 leading-tight">{company.name}</h2>
             <div className="flex flex-wrap gap-2 mt-3">
               <Badge color={getVerticalColor(company.vertical)}>{company.vertical}</Badge>
@@ -64,14 +64,14 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
                 )}
                 {company.salesforceUrl && (
                   <a href={company.salesforceUrl} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-[#64748b] hover:text-slate-300 transition-colors">
+                    className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors">
                     <Database size={11} />
                     Salesforce
                   </a>
                 )}
                 {company.articleUrl && (
                   <a href={company.articleUrl} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-[#64748b] hover:text-slate-300 transition-colors">
+                    className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors">
                     <ExternalLink size={11} />
                     Source article
                   </a>
@@ -81,13 +81,13 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
           </div>
 
           {/* Fields */}
-          <div className="divide-y divide-[#1e1e1e]">
+          <div className="divide-y divide-[#1e293b]">
             <Section label="What They Do">
-              <p className="text-sm text-slate-300 leading-relaxed">{company.description}</p>
+              <p className="text-sm text-slate-400 leading-relaxed">{company.description}</p>
             </Section>
 
             <Section label="Today's News">
-              <p className="text-sm text-slate-300 leading-relaxed">{company.articleBody}</p>
+              <p className="text-sm text-slate-400 leading-relaxed">{company.articleBody}</p>
               {company.articleUrl && (
                 <a href={company.articleUrl} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 mt-2 font-medium transition-colors">
@@ -97,10 +97,29 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
               )}
             </Section>
 
+            {company.founderBackground?.length > 0 && (
+              <Section label="Founder Background">
+                <div className="flex flex-wrap gap-1.5">
+                  {company.founderBackground.map(tag => (
+                    <span
+                      key={tag}
+                      className={`text-xs font-semibold px-2 py-1 rounded border ${
+                        tag === 'Serial founder'
+                          ? 'bg-amber-900/40 text-amber-300 border-amber-800/50'
+                          : 'bg-sky-900/40 text-sky-300 border-sky-800/50'
+                      }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Section>
+            )}
+
             <Section label="Investors">
               <div className="flex flex-wrap gap-1.5">
                 {company.investors.map(inv => (
-                  <span key={inv} className="text-xs bg-[#1e1e1e] text-[#94a3b8] border border-[#2a2a2a] rounded-md px-2 py-1 font-medium">
+                  <span key={inv} className="text-xs bg-[#1e293b] text-slate-400 border border-[#334155] rounded-md px-2 py-1 font-medium">
                     {inv}
                   </span>
                 ))}
@@ -110,7 +129,7 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
             <Section label="NVIDIA Relevancy">
               <div className="flex items-start gap-2">
                 <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
-                <p className="text-sm text-slate-300 leading-relaxed">{company.nvidiaRelevancy}</p>
+                <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
               </div>
             </Section>
 
@@ -141,7 +160,7 @@ function Badge({ children, color }) {
 function Stat({ label, value, mono, valueColor, dot }) {
   return (
     <div>
-      <p className="text-[10px] font-semibold uppercase tracking-wider text-[#4b5563] mb-1">{label}</p>
+      <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-600 mb-1">{label}</p>
       <div className="flex items-center gap-1">
         {dot && <span className={`w-2 h-2 rounded-full ${dot}`} />}
         <p className={`text-sm font-semibold ${mono ? 'font-mono' : ''} ${valueColor || 'text-slate-200'}`}>{value}</p>

@@ -25,27 +25,55 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#0f0f0f]">
-      <Sidebar
-        briefings={briefings}
-        selectedDate={selectedDate}
-        onSelectDate={(date) => { setSelectedDate(date); setSelectedCompany(null); }}
-      />
+    <div className="flex flex-col h-screen overflow-hidden bg-[#0f172a]">
+      {/* Top header banner */}
+      <div className="flex-shrink-0 bg-[#0a1628] px-6 py-2.5 flex items-center gap-3 border-b border-[#1e293b]">
+        <div className="w-2 h-2 rounded-full bg-[#76B900]" />
+        <span className="text-[11px] font-semibold uppercase tracking-widest text-[#76B900]">NVIDIA Inception</span>
+        <span className="text-[#475569] text-[11px]">·</span>
+        <span className="text-[11px] text-slate-300 font-medium">South East Asia Startup Briefing</span>
+        <span className="ml-auto flex items-center gap-2.5">
+          {[
+            { code: 'sg', name: 'Singapore' },
+            { code: 'my', name: 'Malaysia' },
+            { code: 'vn', name: 'Vietnam' },
+            { code: 'id', name: 'Indonesia' },
+            { code: 'ph', name: 'Philippines' },
+            { code: 'th', name: 'Thailand' },
+          ].map(({ code, name }) => (
+            <img
+              key={code}
+              src={`https://flagcdn.com/w40/${code}.png`}
+              alt={name}
+              title={name}
+              className="h-4 w-auto rounded-[2px] opacity-90 hover:opacity-100 transition-opacity shadow-sm"
+            />
+          ))}
+        </span>
+      </div>
 
-      <main className="flex-1 overflow-hidden flex flex-col">
-        {currentBriefing ? (
-          <BriefingView
-            key={currentBriefing.date}
-            briefing={currentBriefing}
-            onSelectCompany={handleSelectCompany}
-            selectedCompany={selectedCompany}
-          />
-        ) : (
-          <div className="flex items-center justify-center h-full text-slate-400">
-            Select a briefing date from the sidebar
-          </div>
-        )}
-      </main>
+      <div className="flex flex-1 overflow-hidden">
+        <Sidebar
+          briefings={briefings}
+          selectedDate={selectedDate}
+          onSelectDate={(date) => { setSelectedDate(date); setSelectedCompany(null); }}
+        />
+
+        <main className="flex-1 overflow-hidden flex flex-col">
+          {currentBriefing ? (
+            <BriefingView
+              key={currentBriefing.date}
+              briefing={currentBriefing}
+              onSelectCompany={handleSelectCompany}
+              selectedCompany={selectedCompany}
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full text-slate-400">
+              Select a briefing date from the sidebar
+            </div>
+          )}
+        </main>
+      </div>
 
       {selectedCompany && (
         <CompanyDrawer

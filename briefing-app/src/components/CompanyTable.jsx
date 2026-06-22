@@ -10,6 +10,7 @@ const COLS = [
   { key: 'vertical',    label: 'Vertical',        width: 'w-48',                    sortable: true },
   { key: 'totalRaised', label: 'Total Raised',    width: 'w-28',                    sortable: true },
   { key: 'stage',       label: 'Stage',           width: 'w-28',                    sortable: true },
+  { key: 'founder',     label: 'Founder BG',      width: 'w-44',                    sortable: false },
   { key: 'alignment',   label: 'NVIDIA Fit',      width: 'w-32',                    sortable: true },
   { key: 'description', label: 'Description',     width: 'w-64',                    sortable: false },
   { key: 'article',     label: "Today's News",    width: 'w-64',                    sortable: false },
@@ -53,9 +54,9 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
   }, [companies, sortKey, sortDir]);
 
   return (
-    <div className="h-full overflow-auto bg-[#111111]">
+    <div className="h-full overflow-auto bg-[#0f172a]">
       <table className="min-w-max w-full text-sm border-collapse">
-        <thead className="sticky top-0 z-20 bg-[#1a1a1a] border-b border-[#2a2a2a]">
+        <thead className="sticky top-0 z-20 bg-[#1e293b] border-b border-[#334155]">
           <tr>
             {COLS.map(col => {
               const isActive = sortKey === col.key;
@@ -67,9 +68,9 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
                   className={[
                     'px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider whitespace-nowrap',
                     col.width,
-                    col.sticky ? `sticky ${col.sticky} bg-[#1a1a1a] z-30` : '',
+                    col.sticky ? `sticky ${col.sticky} bg-[#1e293b] z-30` : '',
                     col.sortable ? 'cursor-pointer select-none group/th' : '',
-                    isActive ? 'text-[#76B900]' : 'text-[#4b5563]',
+                    isActive ? 'text-[#76B900]' : 'text-slate-500',
                   ].join(' ')}
                 >
                   <span className="inline-flex items-center gap-1">
@@ -77,14 +78,14 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
                     {col.sortable && (
                       <SortIcon
                         size={10}
-                        className={isActive ? 'text-[#76B900]' : 'text-[#374151] group-hover/th:text-[#6b7280]'}
+                        className={isActive ? 'text-[#76B900]' : 'text-slate-600 group-hover/th:text-slate-400'}
                       />
                     )}
                   </span>
                 </th>
               );
             })}
-            <th className="sticky right-0 bg-[#1a1a1a] z-30 w-10 px-2 border-l border-[#222]" />
+            <th className="sticky right-0 bg-[#1e293b] z-30 w-10 px-2 border-l border-[#334155]" />
           </tr>
         </thead>
         <tbody>
@@ -107,21 +108,21 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
   const rowBg = isSelected
     ? 'bg-[#76B900]/10'
     : isEven
-      ? 'bg-[#111111] hover:bg-[#1a1a1a]'
-      : 'bg-[#171717] hover:bg-[#1a1a1a]';
+      ? 'bg-[#0f172a] hover:bg-[#1e293b]'
+      : 'bg-[#0d1526] hover:bg-[#1e293b]';
 
   return (
     <tr
       onClick={onClick}
-      className={`cursor-pointer transition-colors border-b border-[#1e1e1e] ${rowBg} group`}
+      className={`cursor-pointer transition-colors border-b border-[#1e293b] ${rowBg} group`}
     >
       {/* Rank */}
-      <td className="sticky left-0 px-3 py-3 text-[#4b5563] text-xs font-mono tabular-nums bg-inherit">
+      <td className="sticky left-0 px-3 py-3 text-slate-600 text-xs font-mono tabular-nums bg-inherit">
         {company.rank}
       </td>
 
       {/* Company Name */}
-      <td className="sticky left-8 px-3 py-3 bg-inherit shadow-[1px_0_0_0_#262626]">
+      <td className="sticky left-8 px-3 py-3 bg-inherit shadow-[1px_0_0_0_#1e293b]">
         <div className="font-semibold text-slate-100 leading-tight">{company.name}</div>
       </td>
 
@@ -144,6 +145,28 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
         </span>
       </td>
 
+      {/* Founder Background */}
+      <td className="px-3 py-3">
+        {company.founderBackground?.length > 0 ? (
+          <div className="flex flex-wrap gap-1">
+            {company.founderBackground.map(tag => (
+              <span
+                key={tag}
+                className={`text-[10px] font-semibold px-1.5 py-0.5 rounded border leading-none ${
+                  tag === 'Serial founder'
+                    ? 'bg-amber-900/40 text-amber-300 border-amber-800/50'
+                    : 'bg-sky-900/40 text-sky-300 border-sky-800/50'
+                }`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        ) : (
+          <span className="text-xs text-slate-700">—</span>
+        )}
+      </td>
+
       {/* NVIDIA Alignment */}
       <td className="px-3 py-3">
         <div className="flex items-center gap-1.5">
@@ -156,12 +179,12 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
 
       {/* Description (truncated) */}
       <td className="px-3 py-3 max-w-[16rem]">
-        <p className="text-xs text-[#64748b] line-clamp-2 leading-relaxed">{company.description}</p>
+        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{company.description}</p>
       </td>
 
       {/* Article (truncated + link) */}
       <td className="px-3 py-3 max-w-[16rem]">
-        <p className="text-xs text-[#64748b] line-clamp-2 leading-relaxed">{company.articleBody}</p>
+        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{company.articleBody}</p>
         {company.articleUrl && (
           <a
             href={company.articleUrl}
@@ -180,12 +203,12 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
       <td className="px-3 py-3 max-w-[13rem]">
         <div className="flex flex-wrap gap-1">
           {company.investors.slice(0, 2).map(inv => (
-            <span key={inv} className="text-[11px] bg-[#1e1e1e] text-[#94a3b8] rounded px-1.5 py-0.5 leading-none">
+            <span key={inv} className="text-[11px] bg-[#1e293b] text-slate-400 rounded px-1.5 py-0.5 leading-none border border-[#334155]">
               {inv.length > 22 ? inv.slice(0, 22) + '…' : inv}
             </span>
           ))}
           {company.investors.length > 2 && (
-            <span className="text-[11px] bg-[#1e1e1e] text-[#64748b] rounded px-1.5 py-0.5 leading-none">
+            <span className="text-[11px] bg-[#1e293b] text-slate-600 rounded px-1.5 py-0.5 leading-none border border-[#334155]">
               +{company.investors.length - 2}
             </span>
           )}
@@ -194,7 +217,7 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
 
       {/* NVIDIA Relevancy (truncated) */}
       <td className="px-3 py-3 max-w-[16rem]">
-        <p className="text-xs text-[#64748b] line-clamp-2 leading-relaxed">{company.nvidiaRelevancy}</p>
+        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{company.nvidiaRelevancy}</p>
       </td>
 
       {/* Inception Status */}
@@ -218,15 +241,15 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
             {company.websiteDisplay || company.websiteUrl.replace(/^https?:\/\//, '')}
           </a>
         ) : (
-          <span className="text-xs text-[#333]">—</span>
+          <span className="text-xs text-slate-700">—</span>
         )}
       </td>
 
       {/* Open button */}
-      <td className="sticky right-0 px-2 py-3 bg-inherit shadow-[-1px_0_0_0_#262626] border-l border-[#1e1e1e]">
+      <td className="sticky right-0 px-2 py-3 bg-inherit shadow-[-1px_0_0_0_#1e293b] border-l border-[#1e293b]">
         <button
           onClick={onClick}
-          className="p-1 rounded hover:bg-[#2a2a2a] text-[#4b5563] hover:text-slate-300 transition-colors opacity-0 group-hover:opacity-100"
+          className="p-1 rounded hover:bg-[#334155] text-slate-700 hover:text-slate-300 transition-colors opacity-0 group-hover:opacity-100"
           title="Open details"
         >
           <ChevronRight size={14} />

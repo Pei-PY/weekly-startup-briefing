@@ -25,14 +25,14 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
   return (
     <div className="flex flex-col h-full overflow-hidden">
       {/* Header */}
-      <div className="flex-shrink-0 px-6 py-4 bg-[#161616] border-b border-[#262626]">
+      <div className="flex-shrink-0 px-6 py-4 bg-[#0a1628] border-b border-[#1e293b]">
         <h1 className="text-lg font-semibold text-slate-100">
           {briefing.label || formatDateLong(briefing.date)}
         </h1>
         <div className="flex items-center gap-4 mt-1.5">
-          <Pill label={`${briefing.companies.length} companies`} color="text-slate-400" />
-          <Pill label={`${formatCapital(briefing.totalCapitalM)} represented`} color="text-slate-400" />
-          <Pill label={`${verticals.length} verticals`} color="text-slate-400" />
+          <Pill label={`${briefing.companies.length} companies`} color="text-slate-500" />
+          <Pill label={`${formatCapital(briefing.totalCapitalM)} represented`} color="text-slate-500" />
+          <Pill label={`${verticals.length} verticals`} color="text-slate-500" />
           <Pill
             label={`${strongCount} strong NVIDIA fit`}
             color="text-[#76B900]"
@@ -42,8 +42,8 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
       </div>
 
       {/* Filter Bar */}
-      <div className="flex-shrink-0 px-6 py-2.5 bg-[#131313] border-b border-[#222] flex items-center gap-3">
-        <span className="text-[10px] text-[#4b5563] uppercase tracking-wider font-semibold flex-shrink-0">
+      <div className="flex-shrink-0 px-6 py-2.5 bg-[#0f172a] border-b border-[#1e293b] flex items-center gap-3">
+        <span className="text-[10px] text-slate-600 uppercase tracking-wider font-semibold flex-shrink-0">
           Filter
         </span>
 
@@ -75,12 +75,12 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
           <>
             <button
               onClick={clearFilters}
-              className="flex items-center gap-1 text-[11px] text-[#4b5563] hover:text-slate-300 transition-colors px-2 py-1 rounded hover:bg-[#1e1e1e]"
+              className="flex items-center gap-1 text-[11px] text-slate-500 hover:text-slate-300 transition-colors px-2 py-1 rounded hover:bg-[#1e293b]"
             >
               <X size={10} />
               Clear
             </button>
-            <span className="ml-auto text-[11px] text-[#4b5563]">
+            <span className="ml-auto text-[11px] text-slate-500">
               <span className="text-[#76B900]">{filteredCompanies.length}</span>
               {' '}of {briefing.companies.length}
             </span>
@@ -112,7 +112,7 @@ function FilterSelect({ placeholder, value, onChange, options }) {
           'appearance-none rounded px-3 py-1.5 pr-6 text-[11px] cursor-pointer transition-colors outline-none',
           isActive
             ? 'bg-[#76B900]/10 border border-[#76B900]/40 text-[#76B900] focus:border-[#76B900]/70'
-            : 'bg-[#1a1a1a] border border-[#2a2a2a] text-[#6b7280] hover:border-[#3a3a3a] hover:text-slate-300 focus:border-[#3a3a3a]',
+            : 'bg-[#1e293b] border border-[#334155] text-slate-400 hover:border-[#475569] hover:text-slate-200 focus:border-[#475569]',
         ].join(' ')}
       >
         <option value="">{placeholder}</option>
@@ -124,7 +124,7 @@ function FilterSelect({ placeholder, value, onChange, options }) {
       </select>
       <ChevronDown
         size={10}
-        className={`pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 ${isActive ? 'text-[#76B900]' : 'text-[#4b5563]'}`}
+        className={`pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 ${isActive ? 'text-[#76B900]' : 'text-slate-500'}`}
       />
     </div>
   );
