@@ -4,13 +4,14 @@ Daily AI and tech startup news briefings for the NVIDIA Inception team.
 
 Each briefing surfaces the top 10 startup stories of the day — funding rounds, acquisitions, and product launches — filtered to pre-seed through Series D companies across AI/ML, SaaS, developer tools, deep tech, robotics, and consumer tech.
 
+v1.0: Focused on South East Asia countries - Singapore, VietNam, Malaysia, Indonesia, Thailand, Phillipines
 ---
 
 ## Research Methodology
 
 The briefing is generated via a structured five-phase research protocol executed against live web sources and Salesforce CRM. A strict 24-hour publication window is established at the start of each run.
 
-A minimum of 45 web searches and direct URL fetches are executed across Tier-1 sources plus one targeted search per each of NVIDIA's 23 Inception verticals, casting a wide raw candidate pool. Each candidate article is deep-read to extract funding stage, total raised, investors, founding team signals, traction metrics, and market timing.
+A minimum of 53 web searches and direct URL fetches are executed across Tier-1 sources plus one targeted search per each of NVIDIA's 23 Inception verticals, casting a wide raw candidate pool. Each candidate article is deep-read to extract funding stage, total raised, investors, founding team signals, traction metrics, and market timing.
 
 Three sequential Salesforce SOQL queries are run against the nvcrm-dev org for every surviving candidate — an Account lookup (checking `AccountTags__c`), an Inception Connect Profile lookup (checking `Membership_Status__c`), and an Opportunity count query — each capable of triggering immediate disqualification.
 
