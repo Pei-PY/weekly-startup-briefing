@@ -392,7 +392,7 @@ Use this exact format:
 # Top 10 Startup Stories
 ## [DAY OF WEEK], [MONTH DD, YYYY] · NVIDIA Inception Edition
 
-> *Curated for: rling@nvidia.com · NVIDIA Inception Team · Pre-Seed through Series D · AI & Technology*
+> *Curated for: pyi@nvidia.com · NVIDIA Inception Team · Pre-Seed through Series D · AI & Technology*
 
 **NVIDIA Tech Alignment Legend:** 🟢 Strong potential — uses AI/ML with GPU-native workloads, inference at scale, or clear NVIDIA tech fit · 🟠 Maybe — software-only, no meaningful compute, or built on non-NVIDIA silicon
 
@@ -468,7 +468,7 @@ Use this exact format:
 
 ---
 
-## Phase 5 — Deliver briefing to rling@nvidia.com
+## Phase 5 — Deliver briefing to pyi@nvidia.com
 
 Note: `outlook-cli` is read/organize only — it cannot compose or send new emails.
 
@@ -480,7 +480,7 @@ open ~/Documents/Claude/daily-startup-briefing/briefings/YYYY-MM-DD-briefing.md
 
 Tell the user:
 - Briefing saved at: `[full path]`
-- To send: open the file, select all, paste into a new Outlook email to rling@nvidia.com
+- To send: open the file, select all, paste into a new Outlook email to pyi@nvidia.com
 - Suggested subject: `Daily Startup Briefing — [DAY], [MONTH DD YYYY] · NVIDIA Inception Edition`
 
 ---

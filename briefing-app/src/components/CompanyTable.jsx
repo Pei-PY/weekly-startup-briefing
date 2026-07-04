@@ -7,6 +7,7 @@ const STAGE_ORDER = ['Pre-seed', 'Seed', 'Series A', 'Series B', 'Series C', 'Se
 const COLS = [
   { key: 'rank',        label: '#',               width: 'w-8',  sticky: 'left-0',  sortable: true },
   { key: 'name',        label: 'Company',         width: 'w-44', sticky: 'left-8',  sortable: true },
+  { key: 'country',     label: 'Country',          width: 'w-32',                    sortable: true },
   { key: 'vertical',    label: 'Vertical',        width: 'w-48',                    sortable: true },
   { key: 'totalRaised', label: 'Total Raised',    width: 'w-28',                    sortable: true },
   { key: 'stage',       label: 'Stage',           width: 'w-28',                    sortable: true },
@@ -40,6 +41,7 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
       switch (sortKey) {
         case 'rank':        av = a.rank; bv = b.rank; break;
         case 'name':        av = a.name.toLowerCase(); bv = b.name.toLowerCase(); break;
+        case 'country':     av = (a.country?.name ?? '').toLowerCase(); bv = (b.country?.name ?? '').toLowerCase(); break;
         case 'vertical':    av = a.vertical.toLowerCase(); bv = b.vertical.toLowerCase(); break;
         case 'totalRaised': av = a.totalRaised.valueM ?? -1; bv = b.totalRaised.valueM ?? -1; break;
         case 'stage':       av = STAGE_ORDER.indexOf(a.stage); bv = STAGE_ORDER.indexOf(b.stage); break;
@@ -124,6 +126,22 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
       {/* Company Name */}
       <td className="sticky left-8 px-3 py-3 bg-inherit shadow-[1px_0_0_0_#1e293b]">
         <div className="font-semibold text-slate-100 leading-tight">{company.name}</div>
+      </td>
+
+      {/* Country */}
+      <td className="px-3 py-3">
+        {company.country ? (
+          <div className="flex items-center gap-1.5">
+            <img
+              src={`https://flagcdn.com/w40/${company.country.code}.png`}
+              alt={company.country.name}
+              className="h-3.5 w-auto rounded-[2px] flex-shrink-0"
+            />
+            <span className="text-xs text-slate-400">{company.country.name}</span>
+          </div>
+        ) : (
+          <span className="text-xs text-slate-700">—</span>
+        )}
       </td>
 
       {/* Vertical */}

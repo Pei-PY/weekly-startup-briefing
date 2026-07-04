@@ -68,6 +68,27 @@ const SERIAL_SIGNALS = [
   /\bacquired by.*\bfounder\b/i,
 ];
 
+const COUNTRY_PATTERNS = [
+  { code: 'sg', name: 'Singapore',   re: /\bSingapore\b/i },
+  { code: 'my', name: 'Malaysia',    re: /\bMalaysia\b|\bKuala Lumpur\b|\bKL\b/i },
+  { code: 'vn', name: 'Vietnam',     re: /\bVietnam\b|\bVietnamese\b|\bHanoi\b|\bHo Chi Minh\b|\bHCMC\b/i },
+  { code: 'id', name: 'Indonesia',   re: /\bIndonesia\b|\bIndonesian\b|\bJakarta\b/i },
+  { code: 'ph', name: 'Philippines', re: /\bPhilippines\b|\bPhilippine\b|\bFilipino\b|\bManila\b/i },
+  { code: 'th', name: 'Thailand',    re: /\bThailand\b|\bThai\b|\bBangkok\b/i },
+];
+
+function extractCountry(fields) {
+  const text = [
+    fields['What we do'] ?? '',
+    fields["Today's interesting article"] ?? '',
+  ].join(' ');
+
+  for (const c of COUNTRY_PATTERNS) {
+    if (c.re.test(text)) return { code: c.code, name: c.name };
+  }
+  return null;
+}
+
 function extractFounderBackground(fields) {
   const text = [
     fields['What we do'] ?? '',
@@ -184,6 +205,7 @@ function parseCompanySection(sectionText) {
   const articleBody = stripMarkdown((fields["Today's interesting article"] ?? '').replace(/\n+/g, ' ').trim());
   const nvidiaRelevancy = stripMarkdown((fields['NVIDIA Relevancy'] ?? '').replace(/\n/g, ' ').trim());
   const founderBackground = extractFounderBackground(fields);
+  const country = extractCountry(fields);
 
   return {
     name,
@@ -198,6 +220,7 @@ function parseCompanySection(sectionText) {
     nvidiaRelevancy,
     inceptionStatus,
     founderBackground,
+    country,
     salesforceUrl,
     websiteUrl,
     websiteDisplay,
