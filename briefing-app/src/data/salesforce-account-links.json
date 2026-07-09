@@ -1,0 +1,3923 @@
+{
+  "generatedAt": "2026-07-08T15:59:53.800Z",
+  "sourceOrg": "nvcrm-dev",
+  "records": [
+    {
+      "companyKey": "alcatraz ai|no-domain",
+      "briefingDates": [
+        "2026-04-05"
+      ],
+      "sourceName": "Alcatraz AI",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Alcatraz AI makes \"the Rock\" — a wall-mounted physical access control device that uses facial authentication instead of security badges, purpose-built for data centers, airports, energy facilities, and enterprise campuses. Unlike most facial recognition systems, Alcatraz does not store a persistent facial database — identity is confirmed and immediately discarded, enabling privacy-preserving access control that meets GDPR and enterprise data governance requirements.",
+      "salesforceAccountId": "0011W00001suPs2QAE",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/0011W00001suPs2QAE/view",
+      "salesforceAccountName": "Alcatraz",
+      "salesforceWebsite": "www.alcatraz.ai",
+      "salesforceWebsiteDomain": "alcatraz.ai",
+      "salesforceAccountTags": "Enterprise Customer;Jetson Embedded Customer",
+      "inceptionProfileId": "aGBVv00006SEnhYOAT",
+      "inceptionStatus": "Member - Community",
+      "opportunityCount": 17,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "linked inception profile account match",
+        "partial normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "0011W00001suPs2QAE",
+          "name": "Alcatraz",
+          "website": "www.alcatraz.ai",
+          "accountTags": "Enterprise Customer;Jetson Embedded Customer",
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:56:33.624Z"
+    },
+    {
+      "companyKey": "also|no-domain",
+      "briefingDates": [
+        "2026-04-05"
+      ],
+      "sourceName": "Also",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Also (spun out of Rivian in 2025) builds autonomous urban delivery vehicles purpose-built for last-mile logistics. Their TM-Q is a four-wheeled autonomous cargo vehicle designed to fit in bike lanes, haul commercial deliveries, and operate without a driver. They also make the TM-B, a $3,500 connected e-bike with a virtual drivetrain.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00002WR373QAD",
+          "name": "ALSO A/S",
+          "website": "www.also.dk",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGPvPQAX",
+          "name": "Also A/S (Ex Also Actebis A/S)",
+          "website": "www.also.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000000okZMDAA2",
+          "name": "Also A/S (Ex Also Actebis A/S) (MDF)",
+          "website": "https://www.also.com/ec/cms5/en_6000/6000",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002WQz83QAD",
+          "name": "ALSO Deutschland GmbH",
+          "website": "http://www.also.de",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000fkMinIAE",
+          "name": "ALSO Deutschland GmbH",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000000eHMEzAAO",
+          "name": "Also Deutschland Gmbh (MDF)",
+          "website": "also.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000001qeoCSAAY",
+          "name": "Also Finland Oy",
+          "website": "https://www.also.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002WRT6FQAX",
+          "name": "ALSO France",
+          "website": "www.also.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002PloFyQAJ",
+          "name": "ALSO France (MDF)",
+          "website": "https://www.also.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGS7AQAX",
+          "name": "ALSO Holding AG",
+          "website": "https://www.also.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003G7lkHQAR",
+          "name": "ALSO International Services GmbH",
+          "website": "also.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGOgEQAX",
+          "name": "Alsok",
+          "website": "https://www.alsok.co.jp/en",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGNdXQAX",
+          "name": "Alsomine LTD",
+          "website": "https://www.alsomine.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000000mqPmKAAU",
+          "name": "Also Nederland BV (MDF)",
+          "website": "https://www.also.com/ec/cms5/nl_2400/2400",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002njFh5QAE",
+          "name": "Alsontech",
+          "website": "alsontech.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGPpgQAH",
+          "name": "ALSO Polska Sp zoo",
+          "website": "www.alsopolska.pl",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002IPWGTQA5",
+          "name": "ALSO Polska Sp zoo (MDF)",
+          "website": "http://also.group",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00001v2RXAQA2",
+          "name": "ALSO Schweiz AG",
+          "website": "www.also.ch",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000JyDE2IAN",
+          "name": "Calsoft Private Limited",
+          "website": "calsoftinc.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000001YWqHBAA1",
+          "name": "Calsonic Kansei",
+          "website": "https://www.calsonickansei.co.jp",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGU4EQAX",
+          "name": "RyvalSoft",
+          "website": "https://ryvalsoft.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGY3JQAX",
+          "name": "Falso Tech",
+          "website": "https://www.falso.tech",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv000009xSZNIA2",
+          "name": "WalSof Technologies",
+          "website": "https://www.walsoftechnologies.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000BB5hCIAT",
+          "name": "VALSOFT TECHNOLOGIES PVT LTD",
+          "website": "https://www.valsoftech.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000BeQ3vIAF",
+          "name": "MetalSoft Cloud Inc",
+          "website": "https://www.metalsoft.io",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000CaDJBIA3",
+          "name": "Digitalsofts",
+          "website": "https://www.digitalsofts.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000oS7OLIA0",
+          "name": "Thus And Also Technologies Private Limited",
+          "website": "https://healthtrackr.me",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:55:57.787Z"
+    },
+    {
+      "companyKey": "antaris|no-domain",
+      "briefingDates": [
+        "2026-04-06"
+      ],
+      "sourceName": "Antaris",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Antaris builds an AI-powered platform for the full satellite lifecycle — design, simulation, manufacturing orchestration, and mission operations. Their \"Full Mission Virtualization\" approach lets satellite operators design and test complete missions in software before building hardware. Founded 2021, Mountain View; focused on ISR and communications missions for DoD and allied governments.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Community member",
+      "opportunityCount": null,
+      "matchConfidence": "ambiguous",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "multiple high-confidence account candidates"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003G7QO7QAN",
+          "name": "Antaris Space",
+          "website": "https://www.antaris.space",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000EtSJlIAN",
+          "name": "Antaris",
+          "website": "https://www.dev.antaris.io",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:56:45.597Z"
+    },
+    {
+      "companyKey": "anvil robotics|no-domain",
+      "briefingDates": [
+        "2026-04-03"
+      ],
+      "sourceName": "Anvil Robotics",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Anvil Robotics makes pre-built robot hardware components — motors, frames, and control modules — that engineers snap together to build custom robots without designing hardware from scratch. They sell to robotics teams that want to focus on software and AI, not mechanical engineering.",
+      "salesforceAccountId": "001Vv00000nZb8YIAS",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/001Vv00000nZb8YIAS/view",
+      "salesforceAccountName": "Anvil Robotics",
+      "salesforceWebsite": "https://anvil.bot",
+      "salesforceWebsiteDomain": "anvil.bot",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": "aGBVv00009MNYLFOA5",
+      "inceptionStatus": "Member - Community",
+      "opportunityCount": 0,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "linked inception profile account match",
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000nZb8YIAS",
+          "name": "Anvil Robotics",
+          "website": "https://anvil.bot",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:55:06.335Z"
+    },
+    {
+      "companyKey": "auctor|getauctor.com",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Auctor",
+      "sourceWebsiteUrl": "https://getauctor.com",
+      "sourceWebsiteDomain": "getauctor.com",
+      "sourceDescription": "Auctor is an AI-native \"system of action\" for the enterprise software implementation market — automating the entire lifecycle from requirements capture through artifact generation (statements of work, resource plans, architecture docs, user stories) while keeping all context synchronized across tools. It serves professional services firms and system integrators who currently lose billions to project failures caused by fragmented institutional knowledge and tool sprawl. Founded 2025 (YC Spring 2025), New York.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "reject",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "account website domain auctoria.ai conflicts with source domain getauctor.com"
+      ],
+      "reviewStatus": "rejected",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGSUxQAP",
+          "name": "auctoria Inc",
+          "website": "https://www.auctoria.ai",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain auctoria.ai conflicts with source domain getauctor.com"
+          ]
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:59:26.395Z"
+    },
+    {
+      "companyKey": "bluefish|bluefishai.com",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Bluefish",
+      "sourceWebsiteUrl": "https://bluefishai.com",
+      "sourceWebsiteDomain": "bluefishai.com",
+      "sourceDescription": "Bluefish is an agentic marketing platform (AMP) built for the AI-driven internet — helping Fortune 500 brands monitor, optimize, and control how they appear across AI discovery channels: ChatGPT, Google AI Overviews, Claude, Perplexity, and Amazon Rufus. Rather than traditional SEO optimized for search engine crawlers, Bluefish gives brands real-time visibility into how AI systems understand, represent, and recommend their products and services. Founded 2024.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "reject",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "account website domain bluefish444.com conflicts with source domain bluefishai.com"
+      ],
+      "reviewStatus": "rejected",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGQ1nQAH",
+          "name": "BlueFish444",
+          "website": "https://bluefish444.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain bluefish444.com conflicts with source domain bluefishai.com"
+          ]
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:59:31.705Z"
+    },
+    {
+      "companyKey": "cavilinq|no-domain",
+      "briefingDates": [
+        "2026-04-05",
+        "2026-04-06"
+      ],
+      "sourceName": "CavilinQ",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "CavilinQ is building the interconnect layer for modular quantum computing — a scalable light-matter interface architecture that links separate quantum processors together into a unified, high-fidelity quantum machine. Rather than trying to build a single massive quantum chip, CavilinQ's approach allows utility-scale quantum systems to be assembled from smaller, higher-quality modules. The company is a spinout from the University of Chicago's Pritzker School of Molecular Engineering, co-founded by quantum faculty from both UChicago and Harvard.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:56:38.905Z"
+    },
+    {
+      "companyKey": "city detect|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "City Detect",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "City Detect mounts cameras on public fleet vehicles — garbage trucks, street sweepers — and uses computer vision to continuously photograph city infrastructure as those vehicles complete their normal routes. Their AI platform analyzes the captured imagery to detect structural damage, graffiti, illegal dumping, litter, and maintenance violations, converting visual pass-throughs into actionable municipal work orders. The platform is live in 17+ cities including Dallas and Miami. The key insight is economic: city fleet vehicles already cover every street on a regular schedule, giving City Detect dense recurring visual coverage of the entire urban environment at near-zero marginal cost compared to dedicated drones or satellite imagery.",
+      "salesforceAccountId": "0018Z00003FGUKyQAP",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/0018Z00003FGUKyQAP/view",
+      "salesforceAccountName": "City Detect Inc",
+      "salesforceWebsite": "https://www.citydetect.com",
+      "salesforceWebsiteDomain": "citydetect.com",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": "aGBVv00006SFNADOA5",
+      "inceptionStatus": "Member - Community",
+      "opportunityCount": 0,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "linked inception profile account match",
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGUKyQAP",
+          "name": "City Detect Inc",
+          "website": "https://www.citydetect.com",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:58:29.316Z"
+    },
+    {
+      "companyKey": "coefficient bio|no-domain",
+      "briefingDates": [
+        "2026-04-05"
+      ],
+      "sourceName": "Coefficient Bio",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Coefficient Bio built an AI platform for pharmaceutical R&D decision-making — identifying drug development opportunities, modeling clinical strategy, and automating regulatory pathway planning. Founded in fall 2025 by Aris Theologis (CEO) and Nathan Frey (CTO), the company was less than six months old at acquisition.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception (was flagged as a recruitment prospect pre-acquisition)",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGOUzQAP",
+          "name": "Coefficient",
+          "website": "https://www.coefficient.io",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:56:03.111Z"
+    },
+    {
+      "companyKey": "daydream|no-domain",
+      "briefingDates": [
+        "2026-04-06"
+      ],
+      "sourceName": "Daydream",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Daydream is an AI-native agency for organic search that pairs autonomous AI agents with human strategists. Clients get a dedicated Growth Lead plus agents executing seven levers of organic growth — including Generative Engine Optimization (GEO), helping brands appear in AI-generated search answers rather than just traditional blue-link results.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGNWHQA5",
+          "name": "daydream.io",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:57:10.507Z"
+    },
+    {
+      "companyKey": "edmund|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Edmund",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Edmund is a Czech AI debugging platform for industrial maintenance that uses machine learning to diagnose equipment failures in manufacturing environments. Their system cuts diagnostic time by 90% and reduces manufacturing downtime by 26% by analyzing sensor data streams to identify root causes before human technicians are dispatched. A spinout from Czech technical university research; currently deployed in European manufacturing facilities.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0011W00002PmCaoQAF",
+          "name": "Edmund Optics Inc",
+          "website": "https://www.edmundoptics.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000KVXKOIA5",
+          "name": "St Edmunds College",
+          "website": "stedmundscollege.org",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:57:53.960Z"
+    },
+    {
+      "companyKey": "epia neuro|no-domain",
+      "briefingDates": [
+        "2026-04-03"
+      ],
+      "sourceName": "Epia Neuro",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Epia Neuro makes a brain-computer interface for stroke survivors that reads neural signals and translates them into arm and hand movement — implanted in under one hour using a minimally invasive procedure. An AI model on the device learns the patient's intended movements by combining brain signals with limb sensor data.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:55:38.953Z"
+    },
+    {
+      "companyKey": "flashpass|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Flashpass",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Flashpass is a workforce reskilling platform offering AI-focused micro-certifications for workers in energy, defense, and cybersecurity sectors — industries facing acute skills gaps as AI transforms job requirements faster than traditional education can respond. The platform delivers short-form, role-specific credentials and partners with state governments to deploy them as workforce development programs. Backed by J2 Ventures, a defense-focused VC.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:57:57.979Z"
+    },
+    {
+      "companyKey": "generare|no-domain",
+      "briefingDates": [
+        "2026-04-06"
+      ],
+      "sourceName": "Generare",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Generare is a Paris-based techbio company that decodes microbial genomes at scale to discover novel chemical compounds for drug development. Their AI platform reads microbial DNA, identifies gene sequences most likely to produce bioactive molecules, expresses them in lab conditions, and characterizes the results — accessing the 97% of microbial chemistry that traditional approaches cannot reach. Founded 2023 by Dr. Vincent Libis (ERC-funded synthetic biology pioneer, co-founder of Abolis Biotechnologies) and Guillaume Vandenesch.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:56:58.886Z"
+    },
+    {
+      "companyKey": "gitbutler|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "GitButler",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "GitButler is an AI-native Git client that redesigns version control for agentic coding workflows. Rather than working one branch at a time, developers can manage multiple parallel workstreams simultaneously, with unlimited undo and seamless handoffs to AI coding agents. Founded by Scott Chacon (GitHub co-founder) and Kiril Martini; built from the ground up around the assumption that AI agents will write most code.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:57:14.537Z"
+    },
+    {
+      "companyKey": "haast|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Haast",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Haast is an AI agent platform that automates enterprise compliance by embedding company policies directly into marketing, product, and operations workflows for real-time content review and approval. Rather than routing content through a legal queue, Haast agents run policy checks inline — flagging issues before they ship, not after. Targets regulated industries where AI-generated content is exploding faster than compliance teams can scale.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Community member",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000hTPwkIAG",
+          "name": "Haast Autonomous Inc.",
+          "website": "https://haastautonomous.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:57:21.212Z"
+    },
+    {
+      "companyKey": "halter|no-domain",
+      "briefingDates": [
+        "2026-04-05"
+      ],
+      "sourceName": "Halter",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Halter makes solar-powered GPS AI collars for cattle that replace physical fencing, herding dogs, and manual farm labor. Ranchers use a smartphone app to draw virtual fence boundaries; collars deliver gentle audio/vibration cues to redirect animals. The platform also tracks animal health, fertility cycles, and flags sick cattle — building what is likely the world's largest cattle behavioral and biometric dataset.",
+      "salesforceAccountId": "001Vv00000ihgykIAA",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/001Vv00000ihgykIAA/view",
+      "salesforceAccountName": "Halter Limited",
+      "salesforceWebsite": "https://www.halterhq.com",
+      "salesforceWebsiteDomain": "halterhq.com",
+      "salesforceAccountTags": "Enterprise Customer",
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "medium",
+      "matchEvidence": [
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000ihgykIAA",
+          "name": "Halter Limited",
+          "website": "https://www.halterhq.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "medium",
+          "evidence": [
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00001v1vidQAA",
+          "name": "Burkhalter Services AG",
+          "website": "www.burkhalter.ch",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00001rmo3AQAQ",
+          "name": "Halter AG",
+          "website": "http://www.halter.ch",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000AuPvdIAF",
+          "name": "Stadt Haltern am See",
+          "website": "https://www.haltern-am-see.de/Inhalte/Startseite/Verwaltung_Politik/index.asp",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000LRWNvIAP",
+          "name": "Valeo Schalter & Sensoren GMBH",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000LRHiEIAX",
+          "name": "Valeo Schalter und Sensoren GmbH",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:56:22.994Z"
+    },
+    {
+      "companyKey": "heydonto ai|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "HeyDonto AI",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "HeyDonto AI is building the first AI-native dental-medical interoperability platform — their Conduit product creates bidirectional data pipelines between dental and medical EHR systems, enabling revenue cycle management, referral coordination, and patient record exchange between providers who have historically operated in completely siloed systems. Founded by practicing dentists and dental industry veterans who experienced the data fragmentation problem firsthand; the first company to create real-time bidirectional dental-medical data exchange at scale.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:58:38.596Z"
+    },
+    {
+      "companyKey": "jimini health|no-domain",
+      "briefingDates": [
+        "2026-04-03"
+      ],
+      "sourceName": "Jimini Health",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Jimini Health makes an AI assistant called Sage that therapists deploy to their patients — it checks in between sessions, delivers therapeutic exercises, and flags concerns back to the clinician. It extends what a human therapist can offer between appointments, not replace them.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:55:25.652Z"
+    },
+    {
+      "companyKey": "juno|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Juno",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Juno is an AI platform for CPA firms that automates tax return preparation — handling 90% of data entry across 92+ document types with full source-to-return traceability. Rather than replacing accountants, Juno handles the mechanical extraction and mapping work so CPAs can focus on advisory and review. Founded by CPAs who experienced the problem firsthand; targets small and mid-size accounting firms.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003G6yJHQAZ",
+          "name": "Her Juno Ltd",
+          "website": "https://www.yourjuno.co",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000t90CSIAY",
+          "name": "Juno Industries Inc",
+          "website": "https://www.junoindustries.ca",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000MHdA4IAL",
+          "name": "Juno Innovations",
+          "website": "https://www.juno-innovations.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000rDrK7IAK",
+          "name": "Junoon",
+          "website": "https://junoon.com.pk",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:57:49.991Z"
+    },
+    {
+      "companyKey": "linx security|no-domain",
+      "briefingDates": [
+        "2026-04-05",
+        "2026-04-06"
+      ],
+      "sourceName": "Linx Security",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Linx Security is an AI-native identity security and governance platform that maps every identity in an enterprise — human, non-human (service accounts, API keys), and agentic (AI agents) — and monitors all of them in real time. When identity-based threats emerge, Linx automatically remediates them rather than waiting for a human analyst to respond. Founded 2023, based in New York.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:56:27.008Z"
+    },
+    {
+      "companyKey": "luminai|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "Luminai",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Luminai builds AI-native enterprise automation for health system operations — handling referral management, revenue cycle, and compliance workflows by interpreting unstructured clinical and administrative inputs and converting them into structured actions. Rather than replacing clinical staff, the platform extends what operational teams can accomplish without adding headcount. Cleveland Clinic is a live production customer, not a pilot.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGZh1QAH",
+          "name": "illuminairy",
+          "website": "illuminairy.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000s7rjdIAA",
+          "name": "Illuminait",
+          "website": "https://www.illuminait.io",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000E8JtVIAV",
+          "name": "LuminAI Security",
+          "website": "https://luminaisec.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000qYAFBIA4",
+          "name": "Lumin Universe Holdings (Luminaire A.I)",
+          "website": "https://lumin-holdings-site.vercel.app",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:58:03.699Z"
+    },
+    {
+      "companyKey": "manna air delivery|no-domain",
+      "briefingDates": [
+        "2026-04-06"
+      ],
+      "sourceName": "Manna Air Delivery",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Manna builds and operates a full-stack autonomous drone delivery network — designing its own airframes, manufacturing them, and running the flight orchestration software. Deliveries reach doorsteps in under three minutes at 85% lower CO2 than ground transport. Founded 2019 in Dublin by Bobby Healy (serial entrepreneur, founded CarTrawler); now operating in Ireland, Finland, and Texas.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Community member",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGZloQAH",
+          "name": "Manna",
+          "website": "www.manna.aero",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:56:50.912Z"
+    },
+    {
+      "companyKey": "mintlify|mintlify.com",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Mintlify",
+      "sourceWebsiteUrl": "https://mintlify.com",
+      "sourceWebsiteDomain": "mintlify.com",
+      "sourceDescription": "Mintlify is the documentation infrastructure layer for the agentic internet — building the platform that makes software products understandable and discoverable not just by human developers, but by AI agents and models. Over 20,000 companies use Mintlify to host, generate, and maintain technical documentation, with their content reaching more than 100 million people every month. Founded 2022 (YC W22).",
+      "salesforceAccountId": "0018Z000036ELtTQAW",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/0018Z000036ELtTQAW/view",
+      "salesforceAccountName": "mintlify",
+      "salesforceWebsite": "https://mintlify.com",
+      "salesforceWebsiteDomain": "mintlify.com",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": 0,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "exact website domain match",
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "0018Z000038x29TQAQ",
+          "name": "Droneyee",
+          "website": "www.droneyee.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain droneyee.com conflicts with source domain mintlify.com"
+          ]
+        },
+        {
+          "id": "0018Z000036ELtTQAW",
+          "name": "mintlify",
+          "website": "https://mintlify.com",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "exact website domain match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:58:59.617Z"
+    },
+    {
+      "companyKey": "miravoice|no-domain",
+      "briefingDates": [
+        "2026-04-03"
+      ],
+      "sourceName": "Miravoice",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Miravoice builds AI phone agents that call people, conduct up to 120-question surveys in natural conversation, and return structured data — replacing human interviewers for market research, universities, retail, and logistics companies across 15+ languages.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:55:29.656Z"
+    },
+    {
+      "companyKey": "moonbounce|no-domain",
+      "briefingDates": [
+        "2026-04-03"
+      ],
+      "sourceName": "Moonbounce",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Moonbounce builds software that takes a company's written AI safety or content moderation policy and translates it into rules that reliably control how the AI actually behaves — closing the gap between what policy documents say and what deployed AI systems do.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:55:21.674Z"
+    },
+    {
+      "companyKey": "nava|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Nava",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Nava (formerly Kluisz) is an AI cloud infrastructure platform providing GPU access and AI data center capacity across Asia-Pacific — functioning as a regional GPU cloud for enterprises that cannot or will not use US hyperscalers for data sovereignty reasons. The platform aggregates compute from multiple data center partners and presents it through a unified API. Founded in Singapore; focused on APAC enterprise and government AI workloads.",
+      "salesforceAccountId": "0018Z00003FGYmAQAX",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/0018Z00003FGYmAQAX/view",
+      "salesforceAccountName": "NAVA",
+      "salesforceWebsite": "https://www.kompasapp.com",
+      "salesforceWebsiteDomain": "kompasapp.com",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": "aGBVv00006SGFDEOA5",
+      "inceptionStatus": "Past Member",
+      "opportunityCount": 0,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "linked inception profile account match",
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "0011W00002CAYdhQAH",
+          "name": "Nava",
+          "website": "www.nava.com.pl",
+          "accountTags": "Enterprise Customer",
+          "confidence": "medium",
+          "evidence": [
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGYmAQAX",
+          "name": "NAVA",
+          "website": "https://www.kompasapp.com",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000BHVDxIAP",
+          "name": "ANAVA BIOWARE PRIVATE LIMITED",
+          "website": "https://www.terrabioware.co",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000TmzjdIAB",
+          "name": "Annavas Corp",
+          "website": "https://www.annavas.io",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000sD1TpIAK",
+          "name": "Appnava Inc.",
+          "website": "https://appnava.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000fi9RSIAY",
+          "name": "Beijing Navana Technologies",
+          "website": "https://globance.ai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W000027hd0JQAQ",
+          "name": "BSO19-NAVAIR",
+          "website": "NOTFOUND",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W000023Pl5XQAS",
+          "name": "Center for Naval Analyses (CNA)",
+          "website": "www.cna.org",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002jGJRSQA4",
+          "name": "Chantier Naval De Marseille",
+          "website": "www.cndm.fr",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002Pn8KpQAJ",
+          "name": "Damen Schelde Naval Shipbuilding (DSNS)",
+          "website": "www.damennaval.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003G7U5TQAV",
+          "name": "De Voogt Naval Architects BV",
+          "website": "https://www.feadship.nl/family/de-voogt-naval-architects",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000001nyQzMAAU",
+          "name": "Dr Bhanuben Nanavati College of Architecture Eng and Construction For Women",
+          "website": "www.bnca.ac.in",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGMTjQAP",
+          "name": "Escola Naval",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000FTkTTIA1",
+          "name": "FlyNava Technologies",
+          "website": "https://www.flynava.ai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002TZ8U5QAL",
+          "name": "FSB (The Faculty of Mechanical Engineering and Naval Architecture)",
+          "website": "https://www.fsb.unizg.hr/index.php?fsbonline",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0011W00002PmO7dQAF",
+          "name": "Gobierno de Navarra Direccion General de Telecom y Digitalizacion",
+          "website": "https://www.navarra.es",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002Oug4LQAR",
+          "name": "Gregory C Marshall Naval Architect Ltd",
+          "website": "www.gregmarshalldesign.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000n38w8IAA",
+          "name": "Insightnavai",
+          "website": "https://insightnavai.co.ke",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002TZIajQAH",
+          "name": "Karnavati University",
+          "website": "www.karnavatiuniversity.edu.in",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account name contains relationship term not present in source company name"
+          ]
+        },
+        {
+          "id": "001Vv00000G7R3tIAF",
+          "name": "Luossavaara-Kiirunavaara LKAB",
+          "website": "https://lkab.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000YzIfcIAF",
+          "name": "Monava AB",
+          "website": "https://monava.io",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002s2G7pQAE",
+          "name": "Navasto GmbH",
+          "website": "navasto.de",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGL7sQAH",
+          "name": "Synavate Labs",
+          "website": "https://www.synavate.tech",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGOIpQAP",
+          "name": "Navan",
+          "website": "http://navan.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGTCRQA5",
+          "name": "Navak AI",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGYGuQAP",
+          "name": "Navana Tech India Pvt. Ltd.",
+          "website": "https://navanatech.in",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGZSAQA5",
+          "name": "Pranava Technologies",
+          "website": "http://pranavatechnologies.co.uk",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FVNG2QAP",
+          "name": "Navanc Data Sciences Pvt Ltd",
+          "website": "http://navanc.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003G6f2xQAB",
+          "name": "Navan AI Pte Ltd",
+          "website": "https://navan.ai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003G72jpQAB",
+          "name": "SignAvatar",
+          "website": "https://www.signavatar.org",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000GqgjWIAR",
+          "name": "NavAiro",
+          "website": "https://www.navairo.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000H70pkIAB",
+          "name": "Navaura arctiq OPC private limited",
+          "website": "https://www.navaura.in",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000H7kXOIAZ",
+          "name": "NAVALCARE",
+          "website": "https://naval.care",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000ZiCSjIAN",
+          "name": "Navarro Capital LTDA",
+          "website": "https://www.chatltv.com.br",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account name contains relationship term not present in source company name"
+          ]
+        },
+        {
+          "id": "001Vv00000ev0ynIAA",
+          "name": "NavAI",
+          "website": "https://navai.pro",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000fDHoFIAW",
+          "name": "Nava Innovations LLC",
+          "website": "https://navainventions.com/products/gaplensai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:57:39.385Z"
+    },
+    {
+      "companyKey": "neye ai|neye.ai",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "nEye.ai",
+      "sourceWebsiteUrl": "https://neye.ai",
+      "sourceWebsiteDomain": "neye.ai",
+      "sourceDescription": "nEye.ai has built an optical circuit switch (OCS) on a single chip — combining silicon photonics, MEMS, and CMOS into a foundry-ready chip that replaces the large, expensive mechanical optical switching systems that currently limit AI data center interconnect bandwidth. In large GPU clusters, optical circuit switching enables dynamic reconfiguration of high-bandwidth GPU-to-GPU interconnects, allowing the network topology to adapt in real time to workload demands rather than remaining statically wired. Founded 2020 by UC Berkeley PhDs Tae Joon Seok and Kyungmok Mogi Kwon.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "reject",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "account website domain dragoneye.ai conflicts with source domain neye.ai",
+        "account website domain keeneye.ai conflicts with source domain neye.ai"
+      ],
+      "reviewStatus": "rejected",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000Wlfi5IAB",
+          "name": "Dragoneye, Inc.",
+          "website": "https://dragoneye.ai",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain dragoneye.ai conflicts with source domain neye.ai"
+          ]
+        },
+        {
+          "id": "0018Z00002jGeYCQA0",
+          "name": "Keen Eye Technologies",
+          "website": "keeneye.ai",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain keeneye.ai conflicts with source domain neye.ai"
+          ]
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:59:19.757Z"
+    },
+    {
+      "companyKey": "nomadic|no-domain",
+      "briefingDates": [
+        "2026-04-05",
+        "2026-04-06"
+      ],
+      "sourceName": "Nomadic (NomadicML)",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Nomadic converts unstructured AV fleet footage and sensor data into structured, semantically searchable datasets using vision-language models. Engineering teams at AV companies can search petabytes of footage by describing what they want to find — \"pedestrian crossing at night in rain\" — rather than manually scrubbing video. They are building the data infrastructure layer that makes physical AI training practical at scale.",
+      "salesforceAccountId": "001Vv00000VsFzVIAV",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/001Vv00000VsFzVIAV/view",
+      "salesforceAccountName": "NomadicML Inc.",
+      "salesforceWebsite": "https://www.nomadicml.com",
+      "salesforceWebsiteDomain": "nomadicml.com",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": "aGBVv00007k1EQlOAM",
+      "inceptionStatus": "Member - Community",
+      "opportunityCount": 0,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "linked inception profile account match",
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000VsFzVIAV",
+          "name": "NomadicML Inc.",
+          "website": "https://www.nomadicml.com",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGbCNQA1",
+          "name": "Nomadic Technologies",
+          "website": "www.nomadictechnologies.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGNTfQAP",
+          "name": "Nomadic vr",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:56:12.442Z"
+    },
+    {
+      "companyKey": "numos|no-domain",
+      "briefingDates": [
+        "2026-04-06"
+      ],
+      "sourceName": "Numos",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Numos builds AI software for enterprise finance teams that integrates across accounting systems, billing tools, data warehouses, and spreadsheets to create a queryable, living understanding of an organization's financial state. AI agents perform FP&A analysis, automate month-end close, and flag anomalies — enabling CFOs to cut reporting cycles by 80% and book-close time by more than half. Founded by Parijat Sarkar (former SVP at Zenefits) and Mitul Tiwari (LinkedIn AI veteran); early customers include Udemy and Dandy.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000oVnHPIA0",
+          "name": "Numos AI, Inc.",
+          "website": "https://numosai.net",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:57:04.180Z"
+    },
+    {
+      "companyKey": "odc|no-domain",
+      "briefingDates": [
+        "2026-04-05"
+      ],
+      "sourceName": "ODC (ORAN Development Company)",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "ODC's Odyssey platform converts standard 5G base stations into distributed AI compute hubs — what the company calls \"Token Factories.\" Rather than routing AI workloads to centralized data centers, ODC embeds inference capacity directly inside telecom infrastructure, enabling real-time AI at the radio access layer for autonomous systems, industrial robotics, and critical infrastructure applications.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "reject",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "no name, domain, or profile evidence matched"
+      ],
+      "reviewStatus": "rejected",
+      "candidateAccounts": [
+        {
+          "id": "0011W000024uGedQAE",
+          "name": "Modcam AB",
+          "website": "https://www.modcam.com",
+          "accountTags": "Enterprise Customer;Jetson Embedded Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0011W00002TXrC1QAL",
+          "name": "EODC Earth Observation Data Centre for Water Resources Monitoring GmbH",
+          "website": "https://eodc.eu",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0018Z00003FGL0YQAX",
+          "name": "AI Podcasting",
+          "website": "https://aipodcast.ing",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0018Z00003FGQe0QAH",
+          "name": "Podcastle Inc",
+          "website": "https://podcastle.ai",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0018Z00003FGVOBQA5",
+          "name": "FoodChef Ltd",
+          "website": "https://www.foodchef.co.uk",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0018Z00003G6zPMQAZ",
+          "name": "Podcasty",
+          "website": "https://www.podcasty.ai",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0018Z00003G7OgOQAV",
+          "name": "goodchoice.ltd",
+          "website": "https://goodchoice.ltd",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0018Z00003G7dZPQAZ",
+          "name": "Podcast Hawk",
+          "website": "https://wwww.podcasthawk.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "001Vv00000Fwl2mIAB",
+          "name": "RodCat Tecnologia",
+          "website": "https://www.rodcattecnologia.com.br",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "001Vv00000IzzFVIAZ",
+          "name": "PodConverge",
+          "website": "https://podconverge.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "001Vv00000dEfw5IAC",
+          "name": "AutoPodcast™",
+          "website": "https://www.autopodcast.tech",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "001Vv00000kyYZ0IAM",
+          "name": "Podcastr",
+          "website": "https://podcastr.ai",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "001Vv00000nWEV4IAO",
+          "name": "Modcart Technology Solution",
+          "website": "https://modcart.io",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:55:47.020Z"
+    },
+    {
+      "companyKey": "pillar|pillarhq.com",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Pillar",
+      "sourceWebsiteUrl": "https://pillarhq.com",
+      "sourceWebsiteDomain": "pillarhq.com",
+      "sourceDescription": "Pillar automates commodity risk hedging for businesses in metals, food, airlines, and other commodity-intensive industries. The platform ingests data from contracts, cash flows, inventory systems, ERP software, spreadsheets, and messaging apps, then continuously analyzes exposure across commodities, FX, and freight — automatically building and managing hedge portfolios in real time without requiring a derivatives specialist on staff. Founded 2023, San Francisco.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "reject",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "account website domain askpillar.ai conflicts with source domain pillarhq.com",
+        "account website domain 6pillars.ai conflicts with source domain pillarhq.com",
+        "account website domain caterpillar.com conflicts with source domain pillarhq.com",
+        "account website domain caterpillar-energy-solutions.de conflicts with source domain pillarhq.com",
+        "account website domain cat.com conflicts with source domain pillarhq.com",
+        "account website domain ironpillarfund.com conflicts with source domain pillarhq.com",
+        "account website domain luminouspillars.com conflicts with source domain pillarhq.com",
+        "account website domain mapillary.com conflicts with source domain pillarhq.com",
+        "account website domain pillarai.co conflicts with source domain pillarhq.com",
+        "account website domain pillarcommunications.com conflicts with source domain pillarhq.com",
+        "account website domain pillarix.ai conflicts with source domain pillarhq.com",
+        "account website domain pillar.security conflicts with source domain pillarhq.com",
+        "account website domain pillar.vc conflicts with source domain pillarhq.com",
+        "account website domain pillarworld.xyz conflicts with source domain pillarhq.com",
+        "account website domain quantpillar.com conflicts with source domain pillarhq.com",
+        "account website domain topicpillars.ai conflicts with source domain pillarhq.com",
+        "account website domain workpillars.com conflicts with source domain pillarhq.com"
+      ],
+      "reviewStatus": "rejected",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000oyZwKIAU",
+          "name": "PILLAR",
+          "website": "https://www.askpillar.ai",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain askpillar.ai conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGQRfQAP",
+          "name": "6PILLARS CLOUD AUTOMATION PTY LTD",
+          "website": "https://www.6pillars.ai",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain 6pillars.ai conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0018Z00002bLW6nQAG",
+          "name": "Caterpillar Australia",
+          "website": "https://www.caterpillar.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain caterpillar.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0011W00002OvUUvQAN",
+          "name": "Caterpillar Energy Solutions GmbH",
+          "website": "https://caterpillar-energy-solutions.de",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain caterpillar-energy-solutions.de conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "001Vv00000CEKeNIAX",
+          "name": "Caterpillar France Sas",
+          "website": "cat.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain cat.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0014000000olPanAAE",
+          "name": "Caterpillar Inc",
+          "website": "www.caterpillar.com",
+          "accountTags": "Enterprise Customer;Automotive Customer;Jetson Embedded Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain caterpillar.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "001Vv00000GexJZIAZ",
+          "name": "Caterpillar Work Tools BV",
+          "website": "cat.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain cat.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGMpLQAX",
+          "name": "Iron Pillar",
+          "website": "https://ironpillarfund.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain ironpillarfund.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "001Vv00000YZHYhIAP",
+          "name": "Luminous Pillars",
+          "website": "https://www.luminouspillars.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain luminouspillars.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0014000001m1vTWAAY",
+          "name": "Mapillary AB",
+          "website": "www.mapillary.com",
+          "accountTags": "Enterprise Customer;Automotive Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain mapillary.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0018Z00002WQxC9QAL",
+          "name": "Mapillary GmbH",
+          "website": "https://www.mapillary.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain mapillary.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGLVtQAP",
+          "name": "Pillar AI",
+          "website": "https://www.pillarai.co",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain pillarai.co conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0011W00002OvZbFQAV",
+          "name": "Pillar Communications Inc",
+          "website": "http://www.pillarcommunications.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain pillarcommunications.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "001Vv00000q5K9rIAE",
+          "name": "Pillarix",
+          "website": "https://pillarix.ai",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain pillarix.ai conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGL2NQAX",
+          "name": "Pillar Security",
+          "website": "https://www.pillar.security",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain pillar.security conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGL3VQAX",
+          "name": "Pillar VC",
+          "website": "https://www.pillar.vc",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain pillar.vc conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGTrQQAX",
+          "name": "Pillar World",
+          "website": "https://www.pillarworld.xyz",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain pillarworld.xyz conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "001Vv00000cRYisIAG",
+          "name": "QuantPillar",
+          "website": "https://quantpillar.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain quantpillar.com conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "001Vv00000nntQXIAY",
+          "name": "Topic Pillars LLC",
+          "website": "https://topicpillars.ai",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain topicpillars.ai conflicts with source domain pillarhq.com"
+          ]
+        },
+        {
+          "id": "001Vv00000jyTlGIAU",
+          "name": "Work Pillars",
+          "website": "https://workpillars.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain workpillars.com conflicts with source domain pillarhq.com"
+          ]
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:59:38.386Z"
+    },
+    {
+      "companyKey": "plume|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Plume",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Plume is a Franco-American geospatial AI platform that dramatically accelerates renewable energy project development by automating site selection, stakeholder mapping, and permit drafting. Projects that currently take 3–7 years to permit can be compressed by automating the most time-consuming analysis and document generation steps. Founded by engineers with backgrounds in government and energy infrastructure; backed by YC W26.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGNGZQA5",
+          "name": "PLUMED",
+          "website": "https://plumed.github.io",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGNGKQA5",
+          "name": "PLUMED consortium",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000WtqOXIAZ",
+          "name": "PLUMERAI LIMITED",
+          "website": "plumerai.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:57:44.716Z"
+    },
+    {
+      "companyKey": "portal space systems|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Portal Space Systems",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Portal Space Systems builds maneuverable spacecraft using solar thermal propulsion for rapid orbital repositioning — targeting both defense (rapid ISR tasking) and commercial in-space servicing. Their propulsion approach uses concentrated solar energy to heat propellant, delivering high thrust without carrying large chemical propellant reserves. Based in Seattle; founded by aerospace engineers from Blue Origin and ULA.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:57:34.059Z"
+    },
+    {
+      "companyKey": "prefix|useprefix.com",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Prefix",
+      "sourceWebsiteUrl": "https://useprefix.com",
+      "sourceWebsiteDomain": "useprefix.com",
+      "sourceDescription": "Prefix is an AI-powered facility management coordination platform for multi-location restaurant and retail brands — connecting brands with local service providers to manage HVAC, refrigeration, plumbing, and electrical maintenance across thousands of locations. The platform handles repair requests, technician scheduling, job completion, and invoicing end-to-end, replacing the fragmented phone/email workflows that currently cost the restaurant and retail industry hundreds of billions in inefficiency. Founded approximately 2024, New York.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "reject",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "account website domain prefixa.com conflicts with source domain useprefix.com",
+        "account name contains relationship term not present in source company name",
+        "account website domain prefix.dev conflicts with source domain useprefix.com"
+      ],
+      "reviewStatus": "rejected",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FGPzSQAX",
+          "name": "Prefixa",
+          "website": "https://www.prefixa.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain prefixa.com conflicts with source domain useprefix.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGRvIQAX",
+          "name": "Prefixa Inc",
+          "website": "www.prefixa.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain prefixa.com conflicts with source domain useprefix.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGLzjQAH",
+          "name": "Prefix Capital",
+          "website": "prefixcapital.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account name contains relationship term not present in source company name"
+          ]
+        },
+        {
+          "id": "001Vv00000AgF09IAF",
+          "name": "prefix.dev GmbH",
+          "website": "https://prefix.dev",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain prefix.dev conflicts with source domain useprefix.com"
+          ]
+        },
+        {
+          "id": "0018Z00003FGTOzQAP",
+          "name": "Orbital Outpost X Inc.",
+          "website": "https://www.prefixa.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account website domain prefixa.com conflicts with source domain useprefix.com"
+          ]
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:59:49.018Z"
+    },
+    {
+      "companyKey": "prismml|no-domain",
+      "briefingDates": [
+        "2026-04-03"
+      ],
+      "sourceName": "PrismML",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "PrismML makes language models compressed to run on a single GPU or mobile device using 1-bit quantization — storing each model weight as a single bit instead of 16 or 32 bits. Their Bonsai 8B model is 14x smaller and 8x faster than a standard 8B model.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:55:11.655Z"
+    },
+    {
+      "companyKey": "q factor|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "Q-Factor",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Q-Factor builds neutral atom quantum computing systems designed to scale from thousands to millions of qubits — the primary technical bottleneck preventing quantum systems from reaching practical utility. Their architecture targets the path to quantum advantage in optimization, simulation, and cryptography workloads. Co-founded by physicists from the Weizmann Institute of Science and the Technion, two of the world's top quantum research institutions. Based in Israel.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:58:07.965Z"
+    },
+    {
+      "companyKey": "qoro quantum|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "Qoro Quantum",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Qoro Quantum builds the software orchestration layer that makes CPUs, GPUs, and quantum processors work together as a single logical machine. Their platform reduces the integration code required to run hybrid classical-quantum workloads from approximately 150,000 lines to approximately 20 — making QPUs accessible to developers who already know GPU programming. A University of Chicago spinout from the Polsky Center for Entrepreneurship, with backing from quantum-specialist investors.",
+      "salesforceAccountId": "001Vv00000Cd9KvIAJ",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/001Vv00000Cd9KvIAJ/view",
+      "salesforceAccountName": "Qoro Quantum",
+      "salesforceWebsite": "https://www.qoroquantum.de",
+      "salesforceWebsiteDomain": "qoroquantum.de",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": "aGBVv00006SH323OAD",
+      "inceptionStatus": "Member - Community",
+      "opportunityCount": 0,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "linked inception profile account match",
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000Cd9KvIAJ",
+          "name": "Qoro Quantum",
+          "website": "https://www.qoroquantum.de",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:58:43.897Z"
+    },
+    {
+      "companyKey": "ranger ai|rangerrfx.com",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Ranger AI",
+      "sourceWebsiteUrl": "https://rangerrfx.com",
+      "sourceWebsiteDomain": "rangerrfx.com",
+      "sourceDescription": "Ranger AI (Ranger RFX) is an AI agent platform for industrial teams — automating the tendering, RFP response, and technical document review process for engineering and manufacturing companies. Industrial RFPs are among the most complex procurement documents in any industry, requiring deep technical knowledge, cross-referencing across hundreds of pages, and precise compliance verification. Ranger deploys AI agents that handle this complexity at speed, enabling smaller teams to compete for — and win — contracts they previously couldn't resource effectively. Founded 2024, New York.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:59:53.800Z"
+    },
+    {
+      "companyKey": "replenit|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "Replenit",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Replenit is a Warsaw-based AI decision layer that sits between retailers' data warehouses and their marketing activation tools — positioning itself as \"the reasoning layer of retail AI.\" Rather than building more dashboards, Replenit's AI agents automatically connect first-party warehouse data to marketing channels and execute decisions in real time, closing the gap between data collection and action. The company notes that 90% of marketers value first-party data but less than 30% use it effectively across all channels.",
+      "salesforceAccountId": "001Vv00000pD5KfIAK",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/001Vv00000pD5KfIAK/view",
+      "salesforceAccountName": "Replenit",
+      "salesforceWebsite": "https://replen.it",
+      "salesforceWebsiteDomain": "replen.it",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": "aGBVv00009WEtnDOAT",
+      "inceptionStatus": "Member - Community",
+      "opportunityCount": 0,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "linked inception profile account match",
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000pD5KfIAK",
+          "name": "Replenit",
+          "website": "https://replen.it",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:58:50.544Z"
+    },
+    {
+      "companyKey": "round|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "Round",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Round is a London-based AI finance automation platform that handles treasury, payroll, payments, and FX for modern finance teams — replacing fragmented manual workflows across invoice approvals, payment execution, and payroll funding with autonomous AI agents. The company launched two new products alongside this round: Agentic Workflow Builder and Autonomous Payroll. Customers include Cleo and PostHog; approximately 10% of existing customers co-invested in the round.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0011W000027gg5fQAA",
+          "name": "Aberdeen Proving Ground (APG)",
+          "website": "https://home.army.mil/apg/index.php",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z000036De0SQAS",
+          "name": "Arounddeal",
+          "website": "https://www.arounddeal.cn/about",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002njQCJQA2",
+          "name": "Automotive Proving Ground Zala Ltd",
+          "website": "https://zalazone.hu",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000DqlGIIAZ",
+          "name": "Babaground",
+          "website": "https://nonunbub.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002QTb9SQAT",
+          "name": "Battle Ground Public Schools",
+          "website": "www.battlegroundps.org",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002QIA11QAH",
+          "name": "Beijing Groundsun Technology Co Ltd",
+          "website": "http://www.groundsun.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003G6eybQAB",
+          "name": "Beround Inc.",
+          "website": "https://beroundgroup.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGa0cQAD",
+          "name": "Cgi Backgrounds, Inc.",
+          "website": "https://www.cgibackgrounds.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000ldMNOIA2",
+          "name": "Civic Roundtable, Inc.",
+          "website": "https://www.civicroundtable.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002Pm7FnQAJ",
+          "name": "CommonGround",
+          "website": "https://www.commonground-ai.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGOCnQAP",
+          "name": "Common Ground",
+          "website": "https://www.commonground-ai.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000HVxzkIAD",
+          "name": "DealGround",
+          "website": "https://www.dealground.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000VqYWnIAN",
+          "name": "Direct Round",
+          "website": "www.directround.vc",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002PmiyvQAB",
+          "name": "Distributed Common Ground System-Army (DCGS-A)",
+          "website": "https://asc.army.mil/web/portfolio-item/iews-dcgs-a",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000MsdhFIAR",
+          "name": "Emergent Ground Inc.",
+          "website": "https://emergentground.org",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000TOBuTIAX",
+          "name": "Fairground Entertainment",
+          "website": "https://fairground.tv",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002OvHQIQA3",
+          "name": "Fairgrounds Projects",
+          "website": "https://fairgrounds.art",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000o3fJcIAI",
+          "name": "Final Round AI",
+          "website": "https://final-roundai.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGLzcQAH",
+          "name": "GroundBreak Ventures",
+          "website": "www.groundbreakventures.com",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account name contains relationship term not present in source company name"
+          ]
+        },
+        {
+          "id": "001Vv00000XiyWwIAJ",
+          "name": "Ground Capital",
+          "website": "https://ground.capital",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account name contains relationship term not present in source company name"
+          ]
+        },
+        {
+          "id": "0011W00002Rl9p0QAB",
+          "name": "Ground Truth Labs (GTL)",
+          "website": "https://groundtruthlabs.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002f5CX7QAM",
+          "name": "Playground Technologies",
+          "website": "https://playground.ai",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGNbXQAX",
+          "name": "Zero Workarounds Solutions GmbH",
+          "website": "https://bestcase.work",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGPlrQAH",
+          "name": "Surround.io",
+          "website": "http://surround.io",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGPmlQAH",
+          "name": "HiveGround Co., Ltd.",
+          "website": "https://www.hiveground.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGQftQAH",
+          "name": "Roundabout",
+          "website": "https://www.roundabout.pro/eng/home",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGRifQAH",
+          "name": "Grounded",
+          "website": "https://www.groundedrvs.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGSDQQA5",
+          "name": "Grounded AI Ltd",
+          "website": "https://groundedai.company",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGSImQAP",
+          "name": "Playground Legends",
+          "website": "https://www.playgroundlegends.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGTEXQA5",
+          "name": "Groundup.ai Pte Ltd",
+          "website": "https://groundup.ai",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGTnxQAH",
+          "name": "Roundata One",
+          "website": "https://www.roundata.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGVPyQAP",
+          "name": "ROUND RABBIT LTD",
+          "website": "http://www.roundrabbit.co",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGVQ4QAP",
+          "name": "Groundwork AI LLC",
+          "website": "http://www.groundwork-ai.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGYC5QAP",
+          "name": "Round-p",
+          "website": "www.round-p.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGYVgQAP",
+          "name": "THE UNDERGROUND VFX",
+          "website": "http://undergroundengine.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003G6dywQAB",
+          "name": "Playground AI",
+          "website": "https://www.playground-ai.xyz",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003G6jt0QAB",
+          "name": "ROUND PIXEL PTY LTD",
+          "website": "https://looke.ai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:58:18.735Z"
+    },
+    {
+      "companyKey": "sarvam ai|no-domain",
+      "briefingDates": [
+        "2026-04-05"
+      ],
+      "sourceName": "Sarvam AI",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Sarvam AI is building India's full-stack generative AI infrastructure — proprietary foundational models optimized for Indian languages (22 languages, voice-first), plus enterprise deployment tooling that allows Indian organizations to run sovereign AI on-premises. They are the leading AI lab based in India by funding and model capability.",
+      "salesforceAccountId": "0018Z00003FFpNLQA1",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/0018Z00003FFpNLQA1/view",
+      "salesforceAccountName": "Sarvam AI",
+      "salesforceWebsite": "https://www.sarvam.ai",
+      "salesforceWebsiteDomain": "sarvam.ai",
+      "salesforceAccountTags": "Enterprise Customer",
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "medium",
+      "matchEvidence": [
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003FFpNLQA1",
+          "name": "Sarvam AI",
+          "website": "https://www.sarvam.ai",
+          "accountTags": "Enterprise Customer",
+          "confidence": "medium",
+          "evidence": [
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:55:52.333Z"
+    },
+    {
+      "companyKey": "sett|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "Sett",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Sett is an AI-native user acquisition platform for game studios that automates marketing spend optimization — using machine learning to identify which users to target, at what price, and through which channels. The platform has Zynga, Playtika, and Papaya Gaming as live paying customers and generates tens of millions in revenue. Based in Tel Aviv; expanding from gaming into fintech and e-commerce verticals.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception (Prospect — Being Recruited; not yet enrolled)",
+      "opportunityCount": null,
+      "matchConfidence": "ambiguous",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "multiple high-confidence account candidates"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000QzJA1IAN",
+          "name": "Sett",
+          "website": "https://www.sett.ai",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGbFxQAL",
+          "name": "Aria Insight (Tethered drone assets and technology in Danvers,Massachusetts )",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        },
+        {
+          "id": "0014000001mVDlbAAG",
+          "name": "Assett Inc",
+          "website": "assett.net",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W000021WoqqQAC",
+          "name": "Bank for International Settlements (BIS)",
+          "website": "https://www.bis.org",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000SPoUXIA1",
+          "name": "Blasetti",
+          "website": "https://blasetti.vc",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGSEKQA5",
+          "name": "CassetteAI",
+          "website": "https://cassetteai.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003CGbx2QAD",
+          "name": "Chongqing Unipay Network Settlement Technology Co Ltd",
+          "website": "NOTFOUND",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002PmIKKQA3",
+          "name": "Color Cassettes",
+          "website": "www.colorcassettes.com.mx",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000001jPyZzAAK",
+          "name": "Commonwealth of Massachusetts",
+          "website": "www.mass.gov",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FVbB5QAL",
+          "name": "Dykema Gossett PLLC",
+          "website": "https://www.dykema.com",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002WQzxwQAD",
+          "name": "GALLAGHER BASSETT SERVICE, INC.",
+          "website": "NOTFOUND",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002WQwxEQAT",
+          "name": "Ghana Interbank Payment And Settlement Systems Limited",
+          "website": "www.ghipss.net",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002WQyUUQA1",
+          "name": "GLOBAL ROSETTA SL.",
+          "website": "getronics.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGMYRQA5",
+          "name": "hassan first university of settat",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account name contains relationship term not present in source company name"
+          ]
+        },
+        {
+          "id": "0011W00002OutN7QAJ",
+          "name": "Korea Research Institute for Human Settlements (KRIHS)",
+          "website": "http://www.krihs.re.kr",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W000020QOXDQA4",
+          "name": "Massachusetts College Of Liberal Arts (MCLA)",
+          "website": "www.mcla.edu",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0011W00002Ov8mYQAR",
+          "name": "Massachusetts Department of Transportation (MASSDOT)",
+          "website": "www.massdot.state.ma.us",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00002WQxavQAD",
+          "name": "Massachusetts Eye and Ear",
+          "website": "www.masseyeandear.org",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGMP1QAP",
+          "name": "Massachusetts General Brigham and Harvard Medical School",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000000LL5mDAAT",
+          "name": "Massachusetts General Hospital",
+          "website": "http://www.massgeneral.org",
+          "accountTags": "Enterprise Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0014000000YVlO6AAL",
+          "name": "Massachusetts Institute of Technology (MIT)",
+          "website": "http://web.mit.edu",
+          "accountTags": "Enterprise Customer;Automotive Customer",
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGL0vQAH",
+          "name": "Narisetti Technologies private limited",
+          "website": "https://www.sharpe.ai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGR5HQAX",
+          "name": "SF SosaFausett Solutions LLC",
+          "website": "https://www.sosafausett.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003FGUweQAH",
+          "name": "RosettaCipher",
+          "website": "https://www.rosettacipher.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "0018Z00003G7JiXQAV",
+          "name": "Rosette Health",
+          "website": "https://www.rosettehealth.ai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000AdNzuIAF",
+          "name": "Settlr",
+          "website": "https://www.Settlr.ch",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000HVMiVIAX",
+          "name": "Sette",
+          "website": "https://www.sette.ag",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000MBfL0IAL",
+          "name": "Pathsetter Pvt Ltd",
+          "website": "https://pathsetter.ai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000MeUVnIAN",
+          "name": "SETT Inc.",
+          "website": "https://www.sett.one",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "linked inception profile account match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000QAdm4IAD",
+          "name": "Settwiz",
+          "website": "https://settwiz.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000cdQT2IAM",
+          "name": "Osettl Technologies Pvt Ltd",
+          "website": "https://legodesk.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000hicbwIAA",
+          "name": "SettleVIA Inc",
+          "website": "https://settlevia.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000nAe9pIAC",
+          "name": "Trendsetter Ventures",
+          "website": "https://trendsetterventures.io",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "account name contains relationship term not present in source company name"
+          ]
+        },
+        {
+          "id": "001Vv00000pU5GDIA0",
+          "name": "Settle AI Inc.",
+          "website": "https://joinsettle.ai",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000t0NEiIAM",
+          "name": "UAB Pulsetto",
+          "website": "https://pulsetto.tech",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "id": "001Vv00000uWSNVIA4",
+          "name": "Settle Solutions, Inc.",
+          "website": "https://usesettle.com",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:58:13.447Z"
+    },
+    {
+      "companyKey": "sidewinder therapeutics|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Sidewinder Therapeutics",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Sidewinder Therapeutics develops precision bispecific antibody-drug conjugates (ADCs) targeting difficult-to-treat cancers — colorectal tumors and squamous cell carcinomas — where existing treatments have limited efficacy. Their bispecific design lets a single molecule bind two tumor targets simultaneously, improving selectivity and reducing off-target toxicity. Backed by top-tier life sciences investors with published research underpinning the platform.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:57:24.749Z"
+    },
+    {
+      "companyKey": "smack technologies|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "Smack Technologies",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Smack Technologies is building the first frontier AI lab for national security — developing specialized large-scale AI models trained on defense data to achieve what the company calls \"Decision Dominance\" on the battlefield. Their two flagship models, codenamed Omega and Alpha, are purpose-built for military decision-making where commercial AI fundamentally fails: classified data environments, lethal stakes, and latency requirements that commercial LLMs were never designed to meet. Founded in 2024 by two MARSOC veterans — Andy Markoff (CEO) and Clint Alanis (COO) — the company is already under contract with the Air Force, Marine Corps, and Navy, with two of those three contracts moving from prototype to production.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:58:22.714Z"
+    },
+    {
+      "companyKey": "soma energy|no-domain",
+      "briefingDates": [
+        "2026-04-06"
+      ],
+      "sourceName": "Soma Energy",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Soma Energy is an AI platform that unlocks existing grid capacity for AI data centers — delivering power interconnections in months rather than years by optimizing how distributed energy resources, battery storage, and generation assets interact with wholesale electricity markets in real time. Founded by Ath Caramanolis (who built AWS's 10 GW renewable energy optimization program) and CTO Mario Souto; launched from stealth with 18 employees and 2 GW of live U.S. grid assets already deployed.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:56:54.900Z"
+    },
+    {
+      "companyKey": "starfish space|no-domain",
+      "briefingDates": [
+        "2026-04-10"
+      ],
+      "sourceName": "Starfish Space",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Starfish Space builds autonomous satellite-servicing spacecraft — their vehicle, Otter, rendezvouses and docks with other objects in orbit to reposition satellites, extend their operational life, or safely deorbit them. The company already holds executed defense and commercial contracts; this round funds mission execution and production scale-up. Founded by ex-Blue Origin engineers; based in Kent, WA.",
+      "salesforceAccountId": "001Vv00000nVIipIAG",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/001Vv00000nVIipIAG/view",
+      "salesforceAccountName": "STARFISH SPACE INC.",
+      "salesforceWebsite": "https://www.starfishspace.com",
+      "salesforceWebsiteDomain": "starfishspace.com",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "medium",
+      "matchEvidence": [
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000nVIipIAG",
+          "name": "STARFISH SPACE INC.",
+          "website": "https://www.starfishspace.com",
+          "accountTags": null,
+          "confidence": "medium",
+          "evidence": [
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:57:30.086Z"
+    },
+    {
+      "companyKey": "stendr|no-domain",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Stendr",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Stendr is a Norwegian defence AI startup building counter-drone technology — developing AI-powered systems to detect, track, and neutralize unauthorized drone threats in real time. Counter-drone AI is one of the fastest-growing defence technology categories in Europe following drone warfare lessons from Ukraine, with governments and critical infrastructure operators urgently seeking sovereign, hardware-agnostic solutions. Previously raised $500K pre-seed from angel investor Aleksander Leonard Larsen in January 2026.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:59:42.370Z"
+    },
+    {
+      "companyKey": "subra|no-domain",
+      "briefingDates": [
+        "2026-04-13"
+      ],
+      "sourceName": "Subra",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Subra is a Danish deep-tech company manufacturing high-temperature superconductor (HTS) cables — their SUBRACABLE product converts HTS tape into bundled round wires that reduce power transmission losses, improve cable flexibility, and can be produced in runs exceeding 10 kilometers. Their cables target power grid infrastructure, industrial applications, and scientific research facilities. A spinout from the Technical University of Denmark (DTU Risø), Subra also acquired THEVA Dünnschichttechnik — a German HTS materials manufacturer near Munich — alongside this round, giving the combined company full vertical integration of the superconductor production chain from a single European base. Note: Subra was founded in 2014 (12 years old) and is a hardware/materials company rather than AI-native — included here as the strongest available April 13 story from the Energy vertical, but should be evaluated against Inception age criteria before routing.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "low",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "only low-confidence account candidates found"
+      ],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000GCy7HIAT",
+          "name": "Sri Sivasubramaniya Nadar College of Engineering",
+          "website": "NOTFOUND",
+          "accountTags": null,
+          "confidence": "low",
+          "evidence": [
+            "partial normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:58:34.619Z"
+    },
+    {
+      "companyKey": "sygaldry technologies|sygaldry.com",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Sygaldry Technologies",
+      "sourceWebsiteUrl": "https://sygaldry.com",
+      "sourceWebsiteDomain": "sygaldry.com",
+      "sourceDescription": "Sygaldry builds quantum-accelerated AI servers — integrating multiple qubit types into fault-tolerant systems designed to operate alongside classical data center infrastructure. Their servers aim to dramatically reduce the energy cost of AI training and inference, addressing one of the AI industry's most pressing infrastructure constraints: the estimated 125 GW of new power capacity required by 2030. Ann Arbor, MI. Founded 2024.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:59:14.247Z"
+    },
+    {
+      "companyKey": "synera|synera.io",
+      "briefingDates": [
+        "2026-04-15"
+      ],
+      "sourceName": "Synera",
+      "sourceWebsiteUrl": "https://synera.io",
+      "sourceWebsiteDomain": "synera.io",
+      "sourceDescription": "Synera is an agentic AI platform for engineering organizations — deploying teams of AI agents that autonomously execute complex workflows across the product lifecycle, integrating with 80+ engineering tools and enterprise systems while keeping data secure through on-premises deployment. Often described as \"JARVIS for engineers,\" the platform handles tasks from requirements capture through technical documentation and design reviews. German company (Bremen + Boston), founded 2018 (formerly ELISE GmbH).",
+      "salesforceAccountId": "001Vv00000s8CjKIAU",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/001Vv00000s8CjKIAU/view",
+      "salesforceAccountName": "Synera GmbH",
+      "salesforceWebsite": "https://www.synera.io",
+      "salesforceWebsiteDomain": "synera.io",
+      "salesforceAccountTags": null,
+      "inceptionProfileId": "aGBVv00009mHqAeOAK",
+      "inceptionStatus": "Member - Strategic",
+      "opportunityCount": 0,
+      "matchConfidence": "high",
+      "matchEvidence": [
+        "exact website domain match",
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "auto_verified",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000s8CjKIAU",
+          "name": "Synera GmbH",
+          "website": "https://www.synera.io",
+          "accountTags": null,
+          "confidence": "high",
+          "evidence": [
+            "exact website domain match",
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:59:07.582Z"
+    },
+    {
+      "companyKey": "syneron bio|no-domain",
+      "briefingDates": [
+        "2026-04-03"
+      ],
+      "sourceName": "Syneron Bio",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Syneron Bio uses AI to design macrocyclic peptide drugs — molecules that are harder to engineer than standard pills but can reach disease targets that traditional drugs cannot. Their platform generates and screens candidates across cancer, autoimmune, and metabolic disease programs.",
+      "salesforceAccountId": "001Vv00000rK5RdIAK",
+      "salesforceAccountUrl": "https://nvcrm.lightning.force.com/lightning/r/Account/001Vv00000rK5RdIAK/view",
+      "salesforceAccountName": "Syneron Bio",
+      "salesforceWebsite": "NOTFOUND",
+      "salesforceWebsiteDomain": "notfound",
+      "salesforceAccountTags": "Enterprise Customer",
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "medium",
+      "matchEvidence": [
+        "exact normalized name match"
+      ],
+      "rejectionReasons": [],
+      "reviewStatus": "needs_review",
+      "candidateAccounts": [
+        {
+          "id": "001Vv00000rK5RdIAK",
+          "name": "Syneron Bio",
+          "website": "NOTFOUND",
+          "accountTags": "Enterprise Customer",
+          "confidence": "medium",
+          "evidence": [
+            "exact normalized name match"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:55:17.695Z"
+    },
+    {
+      "companyKey": "voiceos|no-domain",
+      "briefingDates": [
+        "2026-04-03"
+      ],
+      "sourceName": "VoiceOS",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "VoiceOS is a desktop app for Mac and Windows that lets you control your computer by talking — dictate text into any app with filler words removed, or give commands that execute actions across Slack, Gmail, Figma, Notion, and 100+ others. It runs at 300ms latency with 98%+ accuracy across 100+ languages.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Community member",
+      "opportunityCount": null,
+      "matchConfidence": "reject",
+      "matchEvidence": [],
+      "rejectionReasons": [
+        "no name, domain, or profile evidence matched"
+      ],
+      "reviewStatus": "rejected",
+      "candidateAccounts": [
+        {
+          "id": "0018Z00003G7EZ4QAN",
+          "name": "WakoAI",
+          "website": "https://voiceos.io",
+          "accountTags": null,
+          "confidence": "reject",
+          "evidence": [],
+          "rejectionReasons": [
+            "no name, domain, or profile evidence matched"
+          ]
+        }
+      ],
+      "verifiedAt": "2026-07-08T15:55:34.973Z"
+    },
+    {
+      "companyKey": "whirl ai|no-domain",
+      "briefingDates": [
+        "2026-04-05",
+        "2026-04-06"
+      ],
+      "sourceName": "Whirl AI",
+      "sourceWebsiteUrl": null,
+      "sourceWebsiteDomain": null,
+      "sourceDescription": "Whirl AI is an enterprise IT modernization platform that continuously ingests metadata from an organization's systems (ERP, cloud infrastructure, identity, ticketing) to build a living, queryable knowledge graph of the IT environment. AI agents then use this graph to research, design, implement, and test IT changes in hours rather than weeks — compressing months of IT transformation work into automated agent-driven workflows.",
+      "salesforceAccountId": null,
+      "salesforceAccountUrl": null,
+      "salesforceAccountName": null,
+      "salesforceWebsite": null,
+      "salesforceWebsiteDomain": null,
+      "salesforceAccountTags": null,
+      "inceptionProfileId": null,
+      "inceptionStatus": "Not in Inception",
+      "opportunityCount": null,
+      "matchConfidence": "missing",
+      "matchEvidence": [],
+      "rejectionReasons": [],
+      "reviewStatus": "not_found",
+      "candidateAccounts": [],
+      "verifiedAt": "2026-07-08T15:56:17.713Z"
+    }
+  ]
+}

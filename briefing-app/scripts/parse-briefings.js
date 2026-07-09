@@ -1,12 +1,17 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
-import { homedir } from 'os';
 import { fileURLToPath } from 'url';
+import {
+  buildCompanyKey,
+  buildSalesforceAccountUrl,
+  shouldDisplaySalesforceLink,
+} from './salesforce-link-utils.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BRIEFINGS_DIR = join(__dirname, '../../briefings');
 const OUTPUT_DIR = join(__dirname, '../src/data');
 const OUTPUT_PATH = join(OUTPUT_DIR, 'briefings.json');
+const SALESFORCE_CACHE_PATH = join(OUTPUT_DIR, 'salesforce-account-links.json');
 
 function parseCurrencyToM(str) {
   // Prefer parenthetical USD: €40M (~$43M) -> 43
@@ -118,7 +123,36 @@ function extractUrl(text) {
   return m ? m[0].slice(1, -1) : null;
 }
 
-function parseCompanySection(sectionText) {
+function loadSalesforceCache() {
+  try {
+    const cache = JSON.parse(readFileSync(SALESFORCE_CACHE_PATH, 'utf8'));
+    return new Map((cache.records ?? []).map(record => [record.companyKey, record]));
+  } catch {
+    return new Map();
+  }
+}
+
+function getVerifiedSalesforceData(companyKey, salesforceCache) {
+  const record = salesforceCache.get(companyKey);
+  if (!shouldDisplaySalesforceLink(record)) {
+    return {
+      salesforceAccountId: null,
+      salesforceUrl: null,
+      salesforceAccountName: null,
+      salesforceMatchConfidence: record?.matchConfidence ?? null,
+      salesforceReviewStatus: record?.reviewStatus ?? null,
+    };
+  }
+  return {
+    salesforceAccountId: record.salesforceAccountId,
+    salesforceUrl: buildSalesforceAccountUrl(record.salesforceAccountId),
+    salesforceAccountName: record.salesforceAccountName,
+    salesforceMatchConfidence: record.matchConfidence,
+    salesforceReviewStatus: record.reviewStatus,
+  };
+}
+
+function parseCompanySection(sectionText, salesforceCache) {
   const lines = sectionText.trim().split('\n');
 
   // Company name: ### N. Name
@@ -182,11 +216,6 @@ function parseCompanySection(sectionText) {
   }
   flush();
 
-  // Salesforce URL
-  const sfRaw = fields['Salesforce'] ?? '';
-  const sfM = sfRaw.match(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/);
-  const salesforceUrl = sfM ? sfM[2] : null;
-
   // Website
   const wsRaw = fields['Website'] ?? '';
   const wsM = wsRaw.match(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/);
@@ -207,6 +236,9 @@ function parseCompanySection(sectionText) {
   const founderBackground = extractFounderBackground(fields);
   const country = extractCountry(fields);
 
+  const companyKey = buildCompanyKey(name, websiteUrl);
+  const salesforceData = getVerifiedSalesforceData(companyKey, salesforceCache);
+
   return {
     name,
     vertical,
@@ -221,13 +253,14 @@ function parseCompanySection(sectionText) {
     inceptionStatus,
     founderBackground,
     country,
-    salesforceUrl,
+    companyKey,
+    ...salesforceData,
     websiteUrl,
     websiteDisplay,
   };
 }
 
-function parseBriefingFile(filePath) {
+function parseBriefingFile(filePath, salesforceCache) {
   const content = readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
 
   // Extract date from header line ## Weekday, Month DD, YYYY
@@ -241,7 +274,7 @@ function parseBriefingFile(filePath) {
   for (const section of sections) {
     const trimmed = section.trim();
     if (/^###\s+\d+\./.test(trimmed)) {
-      const company = parseCompanySection(trimmed);
+      const company = parseCompanySection(trimmed, salesforceCache);
       if (company && company.name) {
         companies.push({ ...company, rank: companies.length + 1 });
       }
@@ -254,6 +287,8 @@ function parseBriefingFile(filePath) {
 }
 
 // Main
+const salesforceCache = loadSalesforceCache();
+
 const files = readdirSync(BRIEFINGS_DIR)
   .filter(f => /^\d{4}-\d{2}-\d{2}-briefing\.md$/.test(f))
   .sort()
@@ -263,7 +298,7 @@ const briefings = files.map(filename => {
   const date = filename.replace('-briefing.md', '');
   const filePath = join(BRIEFINGS_DIR, filename);
   console.log(`Parsing ${filename}...`);
-  const data = parseBriefingFile(filePath);
+  const data = parseBriefingFile(filePath, salesforceCache);
   return { date, ...data };
 });
 

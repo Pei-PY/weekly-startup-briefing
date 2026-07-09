@@ -1,18 +1,44 @@
 // Static mapping: NVIDIA product/SDK → use-case table row
-// Case study URLs verified against nvidia.com / developer.nvidia.com
+// Case study URLs sourced from nvidia.com/en-sg/case-studies/ where available
+//
+// caseStudy format:
+//   Vertical-specific products (BioNeMo, Isaac ROS, etc.): flat { label, url }
+//   Cross-vertical products (H100, NIM, DGX, etc.):        { default: {label,url}, byVertical: { verticalName: {label,url} } }
+//
+// Use getCaseStudy(productKey, vertical) to resolve — never access .caseStudy directly in render code.
+
+const CS = {
+  att:        { label: 'AT&T — 84% call-centre cost reduction',       url: 'https://www.nvidia.com/en-us/case-studies/att-drives-ai-agents-with-nemo/' },
+  baseten:    { label: 'Baseten — 5× requests, 225% cost-perf',       url: 'https://www.nvidia.com/en-us/case-studies/baseten-cloud-scaling-ai-inference/' },
+  thinkdeep:  { label: 'ThinkDeep — €2M saved, 2 days → 2 mins',      url: 'https://www.nvidia.com/en-us/case-studies/thinkdeep-sovereign-ai-agents-automate-public-services/' },
+  mitRecurs:  { label: 'MIT & Recursion — 2–3× protein folding speedup', url: 'https://www.nvidia.com/en-us/case-studies/mit-recursion-open-source-protein-co-folding-model/' },
+  agility:    { label: 'Agility Robotics — Digit humanoid robot',      url: 'https://www.nvidia.com/en-us/customer-stories/agility-robotics-digit-humanoid-robot/' },
+  mitre:      { label: 'MITRE — federal AI sandbox',                   url: 'https://www.nvidia.com/en-us/case-studies/mitre-federal-ai-sandbox-unleashes-ai-potential-for-public-good/' },
+};
 
 export const NVIDIA_TECH = {
   'NIM': {
     useCase: 'On-prem & cloud LLM deployment',
     sdk: 'NVIDIA NIM, AI Enterprise',
     outcome: 'Deploy production-grade LLM APIs in minutes; optimised inference with enterprise SLA',
-    caseStudy: { label: 'NIM microservices', url: 'https://www.nvidia.com/en-us/ai/' },
+    caseStudy: {
+      default: { label: 'NIM microservices overview', url: 'https://www.nvidia.com/en-us/ai/' },
+      byVertical: {
+        'Telecom':                              CS.att,
+        'IT Services / SaaS':                  CS.att,
+        'IT Services / Data Science / Mar-Legal-HR Tech': CS.att,
+        'FinTech / FSI':                        CS.thinkdeep,
+        'Global Public Sector':                 CS.thinkdeep,
+        'Supercomputing / Global Public Sector':CS.thinkdeep,
+        'Federal / US Public Sector / Defense': CS.mitre,
+      },
+    },
   },
   'TensorRT-LLM': {
     useCase: 'LLM inference throughput optimisation',
     sdk: 'TensorRT-LLM, Triton Inference Server',
     outcome: 'Up to 8× throughput vs unoptimised PyTorch on same GPU',
-    caseStudy: { label: 'TensorRT-LLM overview', url: 'https://developer.nvidia.com/tensorrt' },
+    caseStudy: { label: 'Baseten — 5× more requests, 225% cost-perf', url: 'https://www.nvidia.com/en-us/case-studies/baseten-cloud-scaling-ai-inference/' },
   },
   'TensorRT': {
     useCase: 'Deep learning inference optimisation',
@@ -30,7 +56,20 @@ export const NVIDIA_TECH = {
     useCase: 'Large-scale AI training & inference',
     sdk: 'CUDA, NVLink, cuDNN, NVMe',
     outcome: '30× faster LLM inference vs A100; 4× better energy efficiency per FLOP',
-    caseStudy: { label: 'H100 Tensor Core GPU', url: 'https://www.nvidia.com/en-us/data-center/h100/' },
+    caseStudy: {
+      default: { label: 'H100 Tensor Core GPU', url: 'https://www.nvidia.com/en-us/data-center/h100/' },
+      byVertical: {
+        'Healthcare & Life Sciences':           CS.mitRecurs,
+        'Supercomputing / Quantum':             CS.mitRecurs,
+        'Supercomputing / Global Public Sector':CS.mitRecurs,
+        'CRISP':                                CS.baseten,
+        'AI Developer Tools':                   CS.baseten,
+        'Telecom':                              CS.att,
+        'FinTech / FSI':                        CS.thinkdeep,
+        'Global Public Sector':                 CS.thinkdeep,
+        'Federal / US Public Sector / Defense': CS.mitre,
+      },
+    },
   },
   'B200': {
     useCase: 'Next-gen AI compute (Blackwell architecture)',
@@ -54,7 +93,17 @@ export const NVIDIA_TECH = {
     useCase: 'Enterprise AI compute cluster (turnkey)',
     sdk: 'DGX OS, Base Command, NVAIE',
     outcome: 'Sovereign AI infrastructure; fastest time-to-first-token in on-prem deployments',
-    caseStudy: { label: 'DGX systems', url: 'https://www.nvidia.com/en-us/data-center/dgx-systems/' },
+    caseStudy: {
+      default: { label: 'DGX systems', url: 'https://www.nvidia.com/en-us/data-center/dgx-systems/' },
+      byVertical: {
+        'Global Public Sector':                 CS.thinkdeep,
+        'Supercomputing / Global Public Sector':CS.thinkdeep,
+        'FinTech / FSI':                        CS.thinkdeep,
+        'Federal / US Public Sector / Defense': CS.mitre,
+        'Supercomputing / Quantum':             CS.mitRecurs,
+        'Healthcare & Life Sciences':           CS.mitRecurs,
+      },
+    },
   },
   'Jetson Orin': {
     useCase: 'Edge AI inference for robotics, drones, IoT',
@@ -72,7 +121,7 @@ export const NVIDIA_TECH = {
     useCase: 'Hardware-accelerated robot perception',
     sdk: 'Isaac ROS, ROS 2, CUDA',
     outcome: '8× faster stereo depth estimation; GPU-accelerated SLAM & object detection',
-    caseStudy: { label: 'Isaac ROS', url: 'https://developer.nvidia.com/isaac/ros' },
+    caseStudy: { label: 'Agility Robotics — Digit humanoid robot', url: 'https://www.nvidia.com/en-us/customer-stories/agility-robotics-digit-humanoid-robot/' },
   },
   'Isaac Sim': {
     useCase: 'Photorealistic robot simulation & synthetic data',
@@ -84,7 +133,7 @@ export const NVIDIA_TECH = {
     useCase: 'Foundation model for humanoid robot control',
     sdk: 'Isaac GR00T, Isaac Lab',
     outcome: 'Cross-embodiment policy training; generalise to new robot form factors without retraining',
-    caseStudy: { label: 'Project GR00T', url: 'https://www.nvidia.com/en-us/isaac/gr00t/' },
+    caseStudy: { label: 'Agility Robotics — Digit humanoid robot', url: 'https://www.nvidia.com/en-us/customer-stories/agility-robotics-digit-humanoid-robot/' },
   },
   'DeepStream': {
     useCase: 'Multi-stream video analytics pipeline',
@@ -108,12 +157,21 @@ export const NVIDIA_TECH = {
     useCase: 'GPU-accelerated data science & ML pipelines',
     sdk: 'cuDF, cuML, cuGraph, RAFT',
     outcome: 'Up to 50× speedup over CPU-based pandas/sklearn on identical hardware',
-    caseStudy: { label: 'RAPIDS.ai', url: 'https://rapids.ai/' },
+    caseStudy: {
+      default: { label: 'RAPIDS.ai', url: 'https://rapids.ai/' },
+      byVertical: {
+        'Telecom':                              CS.att,
+        'IT Services / SaaS':                  CS.att,
+        'IT Services / Data Science / Mar-Legal-HR Tech': CS.att,
+        'FinTech / FSI':                        CS.att,
+        'Adtech / Martech':                     CS.att,
+      },
+    },
   },
   'Morpheus': {
     useCase: 'Real-time AI-powered cybersecurity & threat detection',
     sdk: 'NVIDIA Morpheus, CUDA, TensorRT',
-    outcome: 'Analyse 100Gbps packet streams in real time; detect insider threats and malware at network speed',
+    outcome: 'Analyse 100Gbps packet streams in real time; detect insider threats at network speed',
     caseStudy: { label: 'NVIDIA Morpheus', url: 'https://developer.nvidia.com/morpheus-cybersecurity' },
   },
   'BlueField DPU': {
@@ -132,13 +190,20 @@ export const NVIDIA_TECH = {
     useCase: 'Ultra-low latency GPU interconnect for AI clusters',
     sdk: 'InfiniBand, NCCL, GPUDirect RDMA',
     outcome: 'Sub-microsecond latency; near-linear scaling to thousands of GPUs for distributed training',
-    caseStudy: { label: 'NVIDIA InfiniBand', url: 'https://www.nvidia.com/en-us/networking/infiniband/' },
+    caseStudy: {
+      default: { label: 'NVIDIA InfiniBand', url: 'https://www.nvidia.com/en-us/networking/infiniband/' },
+      byVertical: {
+        'Healthcare & Life Sciences':           CS.mitRecurs,
+        'Supercomputing / Quantum':             CS.mitRecurs,
+        'Supercomputing / Global Public Sector':CS.mitRecurs,
+      },
+    },
   },
   'BioNeMo': {
     useCase: 'Drug discovery & biomolecular AI',
     sdk: 'BioNeMo Framework, NIM for biology',
     outcome: 'Generate & screen 10M+ molecular candidates/day; 10× faster hit identification vs in-vitro screening',
-    caseStudy: { label: 'NVIDIA BioNeMo', url: 'https://www.nvidia.com/en-us/clara/bionemo/' },
+    caseStudy: { label: 'MIT & Recursion — open-source protein co-folding', url: 'https://www.nvidia.com/en-us/case-studies/mit-recursion-open-source-protein-co-folding-model/' },
   },
   'Clara Holoscan': {
     useCase: 'Real-time AI for medical devices & surgical robotics',
@@ -149,7 +214,7 @@ export const NVIDIA_TECH = {
   'Clara Parabricks': {
     useCase: 'GPU-accelerated genomics (WGS/WES pipeline)',
     sdk: 'Clara Parabricks, CUDA',
-    outcome: 'Full 30× WGS analysis in <20 min vs 30 hrs on CPU; 50× speedup for GATK4 HaplotypeCaller',
+    outcome: 'Full 30× WGS analysis in <20 min vs 30 hrs on CPU; 50× speedup for GATK4',
     caseStudy: { label: 'Clara Parabricks', url: 'https://www.nvidia.com/en-us/clara/parabricks/' },
   },
   'MONAI': {
@@ -162,7 +227,17 @@ export const NVIDIA_TECH = {
     useCase: 'LLM training, fine-tuning & speech AI',
     sdk: 'NeMo Framework, NeMo Guardrails',
     outcome: 'Train custom LLMs on enterprise data; full pipeline from data curation to RLHF alignment',
-    caseStudy: { label: 'NVIDIA NeMo', url: 'https://www.nvidia.com/en-us/ai-data-science/products/nemo/' },
+    caseStudy: {
+      default: { label: 'NVIDIA NeMo', url: 'https://www.nvidia.com/en-us/ai-data-science/products/nemo/' },
+      byVertical: {
+        'Telecom':                              CS.att,
+        'IT Services / SaaS':                  CS.att,
+        'IT Services / Data Science / Mar-Legal-HR Tech': CS.att,
+        'Global Public Sector':                 CS.thinkdeep,
+        'Supercomputing / Global Public Sector':CS.thinkdeep,
+        'FinTech / FSI':                        CS.thinkdeep,
+      },
+    },
   },
   'Riva': {
     useCase: 'Real-time speech AI (ASR, TTS, NLP)',
@@ -210,8 +285,48 @@ export const NVIDIA_TECH = {
     useCase: 'Enterprise-grade AI software stack',
     sdk: 'NVIDIA AI Enterprise, NIM, NeMo',
     outcome: 'Certified, supported AI software with 3-year LTS; reduces deployment risk for regulated industries',
-    caseStudy: { label: 'NVIDIA AI Enterprise', url: 'https://www.nvidia.com/en-us/data-center/products/ai-enterprise/' },
+    caseStudy: {
+      default: { label: 'NVIDIA AI Enterprise', url: 'https://www.nvidia.com/en-us/data-center/products/ai-enterprise/' },
+      byVertical: {
+        'Telecom':                              CS.att,
+        'IT Services / SaaS':                  CS.att,
+        'IT Services / Data Science / Mar-Legal-HR Tech': CS.att,
+        'FinTech / FSI':                        CS.thinkdeep,
+        'Global Public Sector':                 CS.thinkdeep,
+        'Supercomputing / Global Public Sector':CS.thinkdeep,
+        'Federal / US Public Sector / Defense': CS.mitre,
+      },
+    },
   },
+};
+
+// Per-vertical recommended NVIDIA products — used when text matching alone is insufficient
+export const VERTICAL_NVIDIA_MAP = {
+  'Healthcare & Life Sciences':    ['BioNeMo', 'Clara Holoscan', 'MONAI', 'Clara Parabricks'],
+  'Auto / AV Infra':               ['DRIVE Orin', 'DRIVE Thor', 'Omniverse'],
+  'Manufacturing & Industrial':    ['Omniverse', 'Jetson Orin', 'DeepStream', 'Isaac Sim'],
+  'Robotics':                      ['Isaac GR00T', 'Isaac ROS', 'Isaac Sim', 'Jetson Orin'],
+  'Federal / US Public Sector / Defense': ['Morpheus', 'NIM', 'Jetson', 'H100'],
+  'Global Public Sector':          ['DGX', 'NIM', 'H100'],
+  'Supercomputing / Global Public Sector': ['DGX', 'H100', 'InfiniBand', 'NIM'],
+  'Telecom':                       ['H100', 'Spectrum-X', 'Morpheus', 'NIM'],
+  'FinTech / FSI':                 ['RAPIDS', 'Morpheus', 'NIM', 'H100'],
+  'IT Services / Data Science / Mar-Legal-HR Tech': ['RAPIDS', 'NIM', 'NeMo', 'NVAIE'],
+  'IT Services / SaaS':            ['NIM', 'NeMo', 'RAPIDS', 'NVAIE'],
+  'Cybersecurity':                 ['Morpheus', 'BlueField DPU', 'H100', 'NIM'],
+  'Edtech / Higher Ed':            ['NIM', 'NeMo', 'H100'],
+  'Media & Entertainment':         ['RTX', 'Maxine', 'TensorRT', 'NIM'],
+  'Gaming':                        ['RTX', 'TensorRT', 'NIM'],
+  'Smart Spaces':                  ['Metropolis', 'DeepStream', 'Jetson Orin'],
+  'Energy (CleanTech / Oil & Gas)': ['H100', 'Omniverse', 'FourCastNet', 'RAPIDS'],
+  'AgTech':                        ['Jetson Orin', 'Isaac Sim', 'TensorRT', 'DeepStream'],
+  'Architecture, Engineering, Construction': ['Omniverse', 'RTX'],
+  'AI Developer Tools':            ['NIM', 'TensorRT-LLM', 'NeMo', 'Triton'],
+  'CRISP':                         ['H100', 'NIM', 'TensorRT-LLM', 'RAPIDS'],
+  'Retail':                        ['Metropolis', 'DeepStream', 'Jetson Orin', 'RAPIDS'],
+  'Supercomputing / Quantum':      ['H100', 'GH200', 'InfiniBand', 'cuQuantum'],
+  'Adtech / Martech':              ['RAPIDS', 'TensorRT', 'NIM'],
+  'Space':                         ['H100', 'TensorRT', 'Jetson'],
 };
 
 // Products to detect in relevancy text, ordered longest-match-first
@@ -259,14 +374,44 @@ export const NVIDIA_PRODUCT_PATTERNS = [
   { key: 'NIM',            re: /\bNIM\b/i },
 ];
 
-export function extractNvidiaTech(relevancyText) {
+// Returns [{key, source}] where source is 'text' (explicitly mentioned) or 'vertical' (inferred from industry tag)
+// Resolves the correct case study for a product given the company's vertical.
+// Handles both flat { label, url } (vertical-specific products) and
+// { default, byVertical } (cross-vertical products).
+export function getCaseStudy(productKey, vertical) {
+  const cs = NVIDIA_TECH[productKey]?.caseStudy;
+  if (!cs) return { label: '', url: '#' };
+  if (cs.byVertical) {
+    return (vertical && cs.byVertical[vertical]) ? cs.byVertical[vertical] : cs.default;
+  }
+  return cs; // flat format
+}
+
+export function extractNvidiaTech(relevancyText, vertical) {
   const found = [];
   const seen = new Set();
-  for (const { key, re } of NVIDIA_PRODUCT_PATTERNS) {
-    if (!seen.has(key) && re.test(relevancyText)) {
-      seen.add(key);
-      if (NVIDIA_TECH[key]) found.push(key);
+
+  // Text-matched: explicitly named in the NVIDIA Relevancy field
+  if (relevancyText) {
+    for (const { key, re } of NVIDIA_PRODUCT_PATTERNS) {
+      if (!seen.has(key) && re.test(relevancyText)) {
+        seen.add(key);
+        if (NVIDIA_TECH[key]) found.push({ key, source: 'text' });
+      }
     }
   }
+
+  // Vertical-inferred: suggested based on industry tag (capped at 3 to avoid noise)
+  const verticalKeys = VERTICAL_NVIDIA_MAP[vertical] ?? [];
+  let verticalAdded = 0;
+  for (const key of verticalKeys) {
+    if (verticalAdded >= 3) break;
+    if (!seen.has(key) && NVIDIA_TECH[key]) {
+      seen.add(key);
+      found.push({ key, source: 'vertical' });
+      verticalAdded++;
+    }
+  }
+
   return found;
 }

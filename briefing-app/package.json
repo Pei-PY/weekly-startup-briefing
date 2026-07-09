@@ -6,8 +6,12 @@
   "scripts": {
     "parse": "node scripts/parse-briefings.js",
     "dev": "npm run parse && vite",
-    "build": "npm run parse && vite build",
-    "preview": "vite preview"
+    "build": "npm run verify:salesforce:offline && npm run parse && npm run verify:salesforce:app-data && vite build",
+    "preview": "vite preview",
+    "verify:salesforce": "node scripts/verify-salesforce-links.js",
+    "verify:salesforce:app-data": "node scripts/validate-salesforce-link-cache.js --briefings",
+    "verify:salesforce:offline": "node scripts/validate-salesforce-link-cache.js",
+    "test:salesforce-links": "node --test scripts/*.test.js"
   },
   "dependencies": {
     "lucide-react": "^1.0.0",
