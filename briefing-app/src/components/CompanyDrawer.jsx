@@ -135,6 +135,12 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
               <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
             </Section>
 
+            {company.workloadResearch?.length > 0 && (
+              <Section label="Account Workload Acceleration Research">
+                <WorkloadResearchTable rows={company.workloadResearch} />
+              </Section>
+            )}
+
             {company.salesforceUrl && (
               <Section label="Salesforce">
                 <a href={company.salesforceUrl} target="_blank" rel="noopener noreferrer"
@@ -225,6 +231,47 @@ function NvidiaTechTable({ relevancyText, vertical }) {
       </table>
       <p className="px-3 py-1.5 text-[9px] text-slate-700 border-t border-[#1e293b] bg-[#0a1628]">
         Rows marked "suggested" are inferred from the {vertical} vertical — confirm applicability with the company.
+      </p>
+    </div>
+  );
+}
+
+const WORKLOAD_COLS = ['Workload', 'Budget', 'Acceleration', 'Nodes', 'Libraries / Tools', 'Partner'];
+const ACCEL_COLOR = t => {
+  const u = t?.toLowerCase() ?? '';
+  if (u.includes('gpu')) return 'text-[#76B900]';
+  if (u.includes('cpu')) return 'text-amber-400';
+  return 'text-slate-400';
+};
+
+function WorkloadResearchTable({ rows }) {
+  const headers = Object.keys(rows[0] ?? {});
+  return (
+    <div className="overflow-x-auto rounded border border-[#1e293b]">
+      <table className="w-full text-[11px] border-collapse" style={{ minWidth: '640px' }}>
+        <thead>
+          <tr className="bg-[#0a1628] border-b border-[#1e293b]">
+            {headers.map(h => (
+              <th key={h} className="px-3 py-2 text-left text-[10px] font-semibold uppercase tracking-wider text-slate-500 whitespace-nowrap">
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, i) => (
+            <tr key={i} className={`border-b border-[#1e293b] ${i % 2 === 0 ? 'bg-[#0f172a]' : 'bg-[#0d1526]'}`}>
+              {headers.map(h => (
+                <td key={h} className={`px-3 py-2.5 align-top leading-snug ${h === 'Acceleration' ? ACCEL_COLOR(row[h]) : h === 'Workload' ? 'text-slate-300 font-medium' : 'text-slate-400'}`}>
+                  {row[h]}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p className="px-3 py-1.5 text-[9px] text-slate-700 border-t border-[#1e293b] bg-[#0a1628]">
+        Identifies high-budget CPU-bound workloads not yet GPU-accelerated — acceleration opportunity analysis for NVIDIA Inception engagement.
       </p>
     </div>
   );

@@ -123,6 +123,21 @@ function extractUrl(text) {
   return m ? m[0].slice(1, -1) : null;
 }
 
+function parseMarkdownTable(text) {
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+  if (lines.length < 3) return [];
+  const parseRow = line => line.split('|').slice(1, -1).map(c => c.trim());
+  const headers = parseRow(lines[0]);
+  return lines.slice(2)
+    .map(line => {
+      const cells = parseRow(line);
+      const obj = {};
+      headers.forEach((h, i) => { obj[h] = cells[i] ?? ''; });
+      return obj;
+    })
+    .filter(row => Object.values(row).some(v => v));
+}
+
 function loadSalesforceCache() {
   try {
     const cache = JSON.parse(readFileSync(SALESFORCE_CACHE_PATH, 'utf8'));
@@ -233,6 +248,7 @@ function parseCompanySection(sectionText, salesforceCache) {
   const description = stripMarkdown((fields['What we do'] ?? '').replace(/\n/g, ' ').trim());
   const articleBody = stripMarkdown((fields["Today's interesting article"] ?? '').replace(/\n+/g, ' ').trim());
   const nvidiaRelevancy = stripMarkdown((fields['NVIDIA Relevancy'] ?? '').replace(/\n/g, ' ').trim());
+  const workloadResearch = parseMarkdownTable(fields['Account Workload Research'] ?? '');
   const founderBackground = extractFounderBackground(fields);
   const country = extractCountry(fields);
 
@@ -250,6 +266,7 @@ function parseCompanySection(sectionText, salesforceCache) {
     articleBody,
     investors,
     nvidiaRelevancy,
+    workloadResearch,
     inceptionStatus,
     founderBackground,
     country,

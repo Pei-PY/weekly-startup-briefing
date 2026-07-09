@@ -260,6 +260,37 @@ For each story that passes the initial filter, fetch the full article and extrac
 
 Do not summarize from the search snippet. Read the article.
 
+### Phase 2C — Account Workload Acceleration Research (required for every story)
+
+You are acting as **Account Workload Acceleration Research** analyst. For each company, identify the 3–5 highest-budget workloads or processes that benefit from CPU/GPU acceleration but are **not accelerated today**. Use the company's public reports, IT budget disclosures, GPU case studies, open-source repositories, and press releases.
+
+**Focus areas by priority:**
+- Risk computation, AI/ML training & inference, cloud infrastructure, clinical data analytics, genomics, medical imaging, drug discovery, EHR, video processing, EDA/chip simulation, real-time analytics, robotics control loops, NLP at scale.
+
+**Classify each workload:**
+- **GPU (accelerated)** — already running on GPU hardware
+- **CPU (unaccelerated)** — running on CPU today; prime acceleration target
+- **Hybrid** — partially accelerated; bottleneck exists
+- **External API** — outsourced to cloud API (OpenAI, Anthropic); on-prem GPU opportunity
+
+**Output format — insert this field into each company section after `NVIDIA Relevancy`:**
+
+```markdown
+**Account Workload Research:**
+| Workload | Budget | Acceleration | Nodes | Libraries / Tools | Partner |
+|---|---|---|---|---|---|
+| [Workload name] | [Budget allocation or est.] | [GPU/CPU/Hybrid/External API] | [Node count or N/A] | [CUDA, TensorRT, RAPIDS, etc.] | [NVIDIA (ISV), AWS (GSI), In-House] |
+```
+
+**Rules:**
+- Include 3–5 rows per company. More is better if evidence supports it.
+- Cite source numbers in brackets where available: `$6B [1]`
+- For early-stage companies (seed/pre-seed) where budgets are not public, use `~$[X]K/yr (est.)` based on headcount, ARR, or funding runway.
+- Match NVIDIA SDK/library to each workload from the vertical tech map above — prefer explicit SDK names (TensorRT-LLM, RAPIDS, NIM, Morpheus, cuDNN, DALI, Parabricks, Isaac ROS, etc.) over generic terms.
+- In the **Partner** column: classify as `NVIDIA (ISV)`, `[Cloud] (GSI)`, `In-House`, or a named ISV/GSI. Multiple partners separated by comma.
+- **Quantify performance gains where evidence exists**: e.g., "40× speedup in risk calculations using H100 GPUs" — add as a note in the Workload cell.
+- The table is stored as `workloadResearch` in the app's JSON and rendered in the Company Drawer under a dedicated section.
+
 ### Phase 2B — Salesforce account and Inception membership lookup (required for every candidate)
 
 For each candidate company, run two Salesforce checks:
@@ -411,6 +442,11 @@ Use this exact format:
 **NVIDIA Relevancy:** [1–2 sentences on NVIDIA tech relevance. Purely informational — no recommendations, suggestions, or calls to action. Apply two standards:
 - **If there is publicly verifiable proof** the company uses NVIDIA technology (article, website, press release): state it as fact. E.g., "Already running on Jetson Orin per their product page."
 - **In all other cases**: describe the potential connection using hedged language ("could potentially," "may align with," "might be relevant to") but do not suggest any action. Never assume GPU-native workload means NVIDIA. Never say "worth exploring," "recommend," "should," or any similar directive language.]
+
+**Account Workload Research:**
+| Workload | Budget | Acceleration | Nodes | Libraries / Tools | Partner |
+|---|---|---|---|---|---|
+| [See Phase 2C for row format] | | | | | |
 
 **Salesforce:** [Account](URL) *(only include if a Salesforce account was found; omit this line entirely if not in Salesforce)*
 
