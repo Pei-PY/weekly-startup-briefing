@@ -135,6 +135,14 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
               <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
             </Section>
 
+            {company.caseStudy && (
+              <Section label="NVIDIA Case Study">
+                <div className="rounded border border-[#1e293b] bg-[#0f172a] px-3.5 py-3">
+                  <MarkdownText text={company.caseStudy} />
+                </div>
+              </Section>
+            )}
+
             {company.workloadResearch?.length > 0 && (
               <Section label="Account Workload Acceleration Research">
                 <WorkloadResearchTable rows={company.workloadResearch} />
@@ -248,7 +256,7 @@ function WorkloadResearchTable({ rows }) {
   const headers = Object.keys(rows[0] ?? {});
   return (
     <div className="overflow-x-auto rounded border border-[#1e293b]">
-      <table className="w-full text-[11px] border-collapse" style={{ minWidth: '640px' }}>
+      <table className="w-full text-[11px] border-collapse" style={{ minWidth: headers.includes('Expected Outcomes') ? '920px' : headers.includes('Case Study') ? '780px' : '640px' }}>
         <thead>
           <tr className="bg-[#0a1628] border-b border-[#1e293b]">
             {headers.map(h => (
@@ -263,7 +271,7 @@ function WorkloadResearchTable({ rows }) {
             <tr key={i} className={`border-b border-[#1e293b] ${i % 2 === 0 ? 'bg-[#0f172a]' : 'bg-[#0d1526]'}`}>
               {headers.map(h => (
                 <td key={h} className={`px-3 py-2.5 align-top leading-snug ${h === 'Acceleration' ? ACCEL_COLOR(row[h]) : h === 'Workload' ? 'text-slate-300 font-medium' : 'text-slate-400'}`}>
-                  {row[h]}
+                  {typeof row[h] === 'string' && row[h].includes('](') ? <MarkdownText text={row[h]} className="" /> : row[h]}
                 </td>
               ))}
             </tr>
@@ -275,6 +283,29 @@ function WorkloadResearchTable({ rows }) {
       </p>
     </div>
   );
+}
+
+// Renders a markdown snippet supporting **bold** and [text](url) links
+function MarkdownText({ text, className = 'text-sm text-slate-400 leading-relaxed' }) {
+  const parts = [];
+  const regex = /\[([^\]]+)\]\((https?:\/\/[^)]+)\)|\*\*([^*]+)\*\*/g;
+  let last = 0, m, i = 0;
+  while ((m = regex.exec(text)) !== null) {
+    if (m.index > last) parts.push(<span key={i++}>{text.slice(last, m.index)}</span>);
+    if (m[1]) {
+      parts.push(
+        <a key={i++} href={m[2]} target="_blank" rel="noopener noreferrer"
+          className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
+          {m[1]}
+        </a>
+      );
+    } else {
+      parts.push(<strong key={i++} className="text-slate-200 font-semibold">{m[3]}</strong>);
+    }
+    last = regex.lastIndex;
+  }
+  if (last < text.length) parts.push(<span key={i++}>{text.slice(last)}</span>);
+  return <p className={className}>{parts}</p>;
 }
 
 function Section({ label, children }) {

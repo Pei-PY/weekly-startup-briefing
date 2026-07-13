@@ -248,6 +248,8 @@ function parseCompanySection(sectionText, salesforceCache) {
   const description = stripMarkdown((fields['What we do'] ?? '').replace(/\n/g, ' ').trim());
   const articleBody = stripMarkdown((fields["Today's interesting article"] ?? '').replace(/\n+/g, ' ').trim());
   const nvidiaRelevancy = stripMarkdown((fields['NVIDIA Relevancy'] ?? '').replace(/\n/g, ' ').trim());
+  // Keep raw markdown — the drawer renders the embedded [case study](url) links
+  const caseStudy = (fields['NVIDIA Case Study'] ?? '').replace(/\n/g, ' ').trim() || null;
   const workloadResearch = parseMarkdownTable(fields['Account Workload Research'] ?? '');
   const founderBackground = extractFounderBackground(fields);
   const country = extractCountry(fields);
@@ -266,6 +268,7 @@ function parseCompanySection(sectionText, salesforceCache) {
     articleBody,
     investors,
     nvidiaRelevancy,
+    caseStudy,
     workloadResearch,
     inceptionStatus,
     founderBackground,
