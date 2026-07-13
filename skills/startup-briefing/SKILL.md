@@ -69,32 +69,48 @@ Every story in the briefing must be tagged with its NVIDIA Inception vertical.
 Prioritize stories from these 23 verticals — they represent NVIDIA's strategic focus areas:
 
 
-| #   | Vertical                                                                                                                                                                                                       | Key NVIDIA Tech                                                                                                            |
+| #   | Vertical                                                                                                                                                                                                       | Key NVIDIA Tech (SDKs / NIMs only)                                                                                          |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 1   | **Healthcare & Life Sciences**                                                                                                                                                                                 | Clara Holoscan, MONAI, BioNeMo, Clara Parabricks, IGX Orin, NeMo (clinical), Isaac for Healthcare                          |
-| 2   | **Auto / AV Infra**                                                                                                                                                                                            | DRIVE Orin/Thor, DriveWorks, DRIVE Sim, Omniverse, H100/B200                                                               |
-| 3   | **Manufacturing & Industrial**                                                                                                                                                                                 | Omniverse (digital twins), OpenUSD, Isaac Sim, IGX Orin, Jetson Orin, DeepStream                                           |
-| 4   | **Robotics**                                                                                                                                                                                                   | Isaac ROS/Sim/Lab/GR00T, Jetson Orin, Omniverse, Newton physics engine, Cosmos3                                                    |
-| 5   | **Federal / US Public Sector / Defense**                                                                                                                                                                       | Morpheus (cybersecurity), H100/B200 (sovereign AI), Jetson (edge/unmanned), DRIVE, NIM (on-prem sovereign)                 |
-| 6   | **Global Public Sector**                                                                                                                                                                                       | Sovereign AI (DGX national AI programs), NIM (on-prem), H100/B200 clusters                                                 |
-| 7   | **Telecom**                                                                                                                                                                                                    | H100/B200 (RAN AI), Spectrum-X (network AI), Morpheus, NIM, Triton, Aerial AI                                                         |
-| 8   | **FinTech / FSI**                                                                                                                                                                                              | RAPIDS (fraud/risk modeling), Morpheus (AML/fraud), H100 (quant/HFT), NIM (on-prem LLM for compliance)                     |
-| 9   | **IT Services / Data Science / Mar-Legal-HR Tech**                                                                                                                                                             | RAPIDS, NIM, NeMo, NVAIE, Triton                                                                                           |
-| 10  | **Cybersecurity**                                                                                                                                                                                              | Morpheus, BlueField DPU, H100/B200 (AI threat detection), NIM                                                              |
-| 11  | **Edtech / Higher Ed**                                                                                                                                                                                         | NIM (on-prem AI tutors), H100 (campus AI), NeMo, DGX Spark (research)                                                      |
-| 12  | **Media & Entertainment**                                                                                                                                                                                      | Omniverse, RTX (rendering), Maxine, Riva, TensorRT (video AI), NIM                                                         |
-| 13  | **Gaming**                                                                                                                                                                                                     | RTX (DLSS/path tracing), GeForce, TensorRT, NIM (game AI), Omniverse                                                       |
-| 14  | **Smart Spaces**                                                                                                                                                                                               | Metropolis (video analytics), DeepStream, Jetson Orin (edge), Omniverse (building digital twins)                           |
-| 15  | **Energy (CleanTech / Oil & Gas)**                                                                                                                                                                             | H100/B200 (simulation/optimization), Omniverse (energy digital twins), FourCastNet NIM (weather/climate), RAPIDS           |
-| 16  | **AgTech**                                                                                                                                                                                                     | Jetson Orin (edge/drone), TensorRT (vision AI), DeepStream, Isaac Sim                                                      |
-| 17  | **Architecture, Engineering, Construction**                                                                                                                                                                    | Omniverse (AEC digital twins), OpenUSD, RTX (visualization), Isaac Sim                                                     |
-| 18  | **AI Developer Tools**                                                                                                                                                                                         | NIM, CUDA, TensorRT-LLM, NeMo, Triton/Dynamo, RAPIDS, DALI, NVAIE                                                          |
-| 19  | **CRISP** *(Consumer Internet Service Providers — AI-native internet platforms: Databricks, Snowflake, Salesforce, ServiceNow, Roblox, Snap, Pinterest, LinkedIn, Zoom, SAP, etc. and startups in that orbit)* | H100/B200 (AI platform infra), NIM (LLM APIs), RAPIDS (data platforms), TensorRT-LLM, Triton, NVAIE, InfiniBand/Spectrum-X |
-| 20  | **Retail**                                                                                                                                                                                                     | Metropolis (store analytics), DeepStream, Jetson Orin (edge), RAPIDS (demand forecasting), NIM                             |
-| 21  | **Supercomputing / Quantum**                                                                                                                                                                                   | H100/B200/NVL72, GH200, NVLink/InfiniBand, cuQuantum (quantum simulation)                                                  |
-| 22  | **Adtech / Martech**                                                                                                                                                                                           | RAPIDS (real-time bidding, audience modeling), TensorRT (inference), NIM                                                   |
-| 23  | **Space**                                                                                                                                                                                                      | H100/B200 (satellite data processing), TensorRT (onboard AI), Jetson (edge/payload), Omniverse (mission sim)               |
+| 1   | **Healthcare & Life Sciences**                                                                                                                                                                                 | Clara Holoscan SDK, MONAI, BioNeMo, Clara Parabricks, NeMo (clinical), Isaac for Healthcare                                 |
+| 2   | **Auto / AV Infra**                                                                                                                                                                                            | DriveWorks, DRIVE OS, DRIVE Sim, Omniverse, TensorRT (in-vehicle inference)                                                 |
+| 3   | **Manufacturing & Industrial**                                                                                                                                                                                 | Omniverse (digital twins), OpenUSD, Isaac Sim, Metropolis, DeepStream, TAO Toolkit                                          |
+| 4   | **Robotics**                                                                                                                                                                                                   | Isaac ROS/Sim/Lab/GR00T, JetPack, Omniverse, Newton physics engine, Cosmos3                                                 |
+| 5   | **Federal / US Public Sector / Defense**                                                                                                                                                                       | Morpheus (cybersecurity), NeMo + NIM (on-prem sovereign AI), Isaac ROS (edge/unmanned), DriveWorks                          |
+| 6   | **Global Public Sector**                                                                                                                                                                                       | NeMo (sovereign/national LLMs), NIM (on-prem), NVAIE, Riva (local-language speech AI)                                       |
+| 7   | **Telecom**                                                                                                                                                                                                    | Aerial AI (RAN AI), Morpheus, NIM, Triton, DOCA (network AI)                                                                |
+| 8   | **FinTech / FSI**                                                                                                                                                                                              | RAPIDS (fraud/risk/quant modeling), Morpheus (AML/fraud), NIM (on-prem LLM for compliance), Triton                          |
+| 9   | **IT Services / Data Science / Mar-Legal-HR Tech**                                                                                                                                                             | RAPIDS, NIM, NeMo, NVAIE, Triton                                                                                            |
+| 10  | **Cybersecurity**                                                                                                                                                                                              | Morpheus, DOCA (DPU-accelerated security), NIM, NeMo (AI threat detection)                                                  |
+| 11  | **Edtech / Higher Ed**                                                                                                                                                                                         | NIM (on-prem AI tutors), NeMo, Riva (speech/language tutors), NVAIE (campus/research AI)                                    |
+| 12  | **Media & Entertainment**                                                                                                                                                                                      | Omniverse (rendering pipelines), Maxine, Riva, TensorRT (video AI), NIM                                                     |
+| 13  | **Gaming**                                                                                                                                                                                                     | DLSS SDK / RTX Kit (path tracing), ACE + NIM (game AI), TensorRT, Omniverse                                                 |
+| 14  | **Smart Spaces**                                                                                                                                                                                               | Metropolis (video analytics), DeepStream, TAO Toolkit, Omniverse (building digital twins)                                   |
+| 15  | **Energy (CleanTech / Oil & Gas)**                                                                                                                                                                             | Modulus (physics-ML simulation), cuOpt (optimization), Omniverse (energy digital twins), FourCastNet NIM (weather/climate), RAPIDS |
+| 16  | **AgTech**                                                                                                                                                                                                     | Isaac ROS (edge/drone autonomy), TensorRT (vision AI), DeepStream, Isaac Sim, TAO Toolkit                                   |
+| 17  | **Architecture, Engineering, Construction**                                                                                                                                                                    | Omniverse (AEC digital twins + visualization), OpenUSD, Isaac Sim                                                           |
+| 18  | **AI Developer Tools**                                                                                                                                                                                         | NIM, CUDA, TensorRT-LLM, NeMo, Triton/Dynamo, RAPIDS, DALI, NVAIE                                                           |
+| 19  | **CRISP** *(Consumer Internet Service Providers — AI-native internet platforms: Databricks, Snowflake, Salesforce, ServiceNow, Roblox, Snap, Pinterest, LinkedIn, Zoom, SAP, etc. and startups in that orbit)* | NIM (LLM APIs), TensorRT-LLM, Triton/Dynamo, RAPIDS (data platforms), NeMo, NVAIE, NCCL (multi-node scaling)                |
+| 20  | **Retail**                                                                                                                                                                                                     | Metropolis (store analytics), DeepStream, Merlin (recommenders), RAPIDS (demand forecasting), NIM                           |
+| 21  | **Supercomputing / Quantum**                                                                                                                                                                                   | cuQuantum + CUDA-Q (quantum simulation), CUDA-X HPC libraries, NCCL, Magnum IO                                              |
+| 22  | **Adtech / Martech**                                                                                                                                                                                           | RAPIDS (real-time bidding, audience modeling), Merlin, TensorRT (inference), NIM                                            |
+| 23  | **Space**                                                                                                                                                                                                      | RAPIDS (satellite data processing), TensorRT (onboard/edge AI), Omniverse (mission sim), NIM                                |
 
+
+> **⛔ Software-only rule — applies to every NVIDIA mention in briefing output.**
+> All NVIDIA technology named in the briefing — **NVIDIA Relevancy**, **Key NVIDIA Tech**, and the
+> **Libraries / Tools** column of Account Workload Research — must be **NVIDIA SDKs, libraries,
+> frameworks, or NIM microservices**. Never recommend or name hardware: no H100, B200, GB200,
+> GH200, NVL72, DGX, HGX, DGX Spark, Jetson / IGX / DRIVE hardware modules, RTX / GeForce cards,
+> BlueField, NVLink, InfiniBand, or Spectrum-X.
+> When a workload implies a hardware platform, reference its **software layer** instead:
+> Jetson → **JetPack / Isaac ROS** · IGX → **Holoscan SDK** · DRIVE hardware → **DriveWorks / DRIVE OS** ·
+> BlueField DPU → **DOCA** · DGX → **NVAIE / Base Command** · GPU cluster training → **CUDA, NCCL, NeMo** ·
+> RTX GPUs → **DLSS SDK / RTX Kit / OptiX** · quantum hardware → **cuQuantum / CUDA-Q**.
+> Two exceptions: (1) if there is **publicly verifiable proof** a company already uses specific NVIDIA
+> hardware, you may state that as fact — but every *prospective* fit must be expressed in software terms;
+> (2) the **Acceleration** column of Account Workload Research documents the company's *current* compute
+> stack, so name the specific silicon there — `GPU (AMD MI300X — not NVIDIA)`, `GPU (cloud NVIDIA A100,
+> on-demand)`, `CPU (x86 Xeon, unaccelerated)` — because it describes as-is state, not a recommendation.
 
 **When a story doesn't fit any of these 23 verticals**, deprioritize it relative to stories that do.
 **When 10 candidates score equally**, prefer coverage breadth across more verticals over
@@ -311,35 +327,119 @@ For each story that passes the initial filter, fetch the full article and extrac
 
 Do not summarize from the search snippet. Read the article.
 
-### Phase 2C — Account Workload Acceleration Research (required for every story)
+### Phase 2C — Account Workload Acceleration Research + NVIDIA Case-Study Matching (required for every story)
 
 You are acting as **Account Workload Acceleration Research** analyst. For each company, identify the 3–5 highest-budget workloads or processes that benefit from CPU/GPU acceleration but are **not accelerated today**. Use the company's public reports, IT budget disclosures, GPU case studies, open-source repositories, and press releases.
 
 **Focus areas by priority:**
 - Risk computation, AI/ML training & inference, cloud infrastructure, clinical data analytics, genomics, medical imaging, drug discovery, EHR, video processing, EDA/chip simulation, real-time analytics, robotics control loops, NLP at scale.
 
-**Classify each workload:**
-- **GPU (accelerated)** — already running on GPU hardware
-- **CPU (unaccelerated)** — running on CPU today; prime acceleration target
-- **Hybrid** — partially accelerated; bottleneck exists
-- **External API** — outsourced to cloud API (OpenAI, Anthropic); on-prem GPU opportunity
+**Classify each workload — and always name the specific silicon in the Acceleration cell:**
+- **GPU (accelerated)** — already running on GPU hardware. Name the model: `GPU (AMD MI300X — not NVIDIA)`, `GPU (cloud NVIDIA A100, on-demand)`, `GPU (NVIDIA Jetson Orin — verified)`
+- **CPU (unaccelerated)** — running on CPU today; prime acceleration target. Name the architecture: `CPU (x86 Xeon/EPYC, unaccelerated)`, `CPU (ARM Cortex-A — drone MCU)`
+- **Hybrid** — partially accelerated; bottleneck exists. Name both sides: `CPU/GPU Hybrid (x86 + cloud NVIDIA T4, unoptimized)`
+- **External API** — outsourced to cloud API (OpenAI, Anthropic); on-prem GPU opportunity. Note the opacity: `External API (OpenAI — vendor-hosted GPUs, opaque)`
 
-**Output format — insert this field into each company section after `NVIDIA Relevancy`:**
+**Evidence first — research before you write this cell.** Search the whole web (research papers / arXiv, GitHub repos, engineering blogs, job postings, product docs, conference talks) for the company's actual compute stack before filling in Acceleration. Rules of evidence:
+- **Never assert vendor exclusivity without a source.** An investor relationship (e.g., AMD Ventures on the cap table) is NOT proof of the training stack — write `GPU (vendor undisclosed — AMD Ventures investor; AMD/NVIDIA mix possible)`, not `GPU (AMD — not NVIDIA)`. Mixed AMD + NVIDIA fleets are common.
+- **When a public source clearly names the exact GPU model, put that model in the cell.** If a research paper, technical report, engineering blog, GitHub repo, job posting, conference talk, or press release states the GPU type — e.g., `H100`, `H200`, `B200`, `GB200`, `A100`, `L40S`, `Jetson Orin`, `AMD MI300X` — write it with the count where given and the source cited inline: `GPU (8× NVIDIA A100 — verified, arXiv 2408.03506)`, `GPU (NVIDIA H100 cluster — per engineering blog)`, `GPU (1,024× H200 — per launch PR)`. Never generalize a publicly named model back to a bare `GPU (NVIDIA)`.
+- Mark inferred silicon with `(est.)`; use `vendor undisclosed` when nothing public exists. Never leave the cell as a bare `GPU`/`CPU` — the specific silicon (or the honest absence of evidence) is what makes the acceleration gap actionable.
+
+**Then ground the workload research in ONE NVIDIA industry case study** matched to the company's
+**industry AND use case** — never quote a generic example. Source case studies from the NVIDIA
+industries portal: `https://www.nvidia.com/en-sg/industries/`.
+
+**Step 1 — Map the company's Inception vertical to its NVIDIA industry page:**
+
+| Inception Vertical | NVIDIA Industry Page |
+|---|---|
+| Healthcare & Life Sciences | `https://www.nvidia.com/en-sg/industries/healthcare-life-sciences/` |
+| Auto / AV Infra | `https://www.nvidia.com/en-sg/industries/automotive/` |
+| Manufacturing & Industrial | `https://www.nvidia.com/en-sg/industries/manufacturing/` (also `/en-sg/industries/industrial-sector/`) |
+| Robotics | `https://www.nvidia.com/en-sg/industries/robotics/` |
+| Federal / US Public Sector / Defense | `https://www.nvidia.com/en-sg/industries/public-sector/` |
+| Global Public Sector | `https://www.nvidia.com/en-sg/industries/global-public-sector/` |
+| Telecom | `https://www.nvidia.com/en-sg/industries/telecommunications/` |
+| FinTech / FSI | `https://www.nvidia.com/en-sg/industries/finance/` |
+| IT Services / Data Science / Mar-Legal-HR | Match by the customer industry the startup serves (e.g., HR tech serving retailers → retail page); else use the site-search fallback |
+| Cybersecurity | `https://www.nvidia.com/en-sg/solutions/ai/cybersecurity/` |
+| Edtech / Higher Ed | `https://www.nvidia.com/en-sg/industries/higher-education-research/` |
+| Media & Entertainment | `https://www.nvidia.com/en-sg/industries/media-and-entertainment/` |
+| Gaming | `https://www.nvidia.com/en-sg/industries/game-development/` |
+| Smart Spaces | `https://www.nvidia.com/en-sg/industries/smart-cities-and-spaces/` |
+| Energy (CleanTech / Oil & Gas) | `https://www.nvidia.com/en-sg/industries/energy/` |
+| AgTech | No dedicated page — use `https://www.nvidia.com/en-sg/industries/robotics/` for agri-robotics/drones, plus the site-search fallback |
+| Architecture, Engineering, Construction | `https://www.nvidia.com/en-sg/industries/aec/` |
+| AI Developer Tools | Match by the customer industry the startup's tools serve; else use the site-search fallback |
+| CRISP | Match by the dominant end-customer industry (retail, finance, telco…); else use the site-search fallback |
+| Retail | `https://www.nvidia.com/en-sg/industries/retail/` (F&B / quick-service: `https://www.nvidia.com/en-sg/industries/restaurants/`) |
+| Supercomputing / Quantum | `https://www.nvidia.com/en-sg/industries/supercomputing/` |
+| Adtech / Martech | Use `retail` or `media-and-entertainment` page depending on use case, plus the site-search fallback |
+| Space | No dedicated page — use the site-search fallback |
+
+**Step 2 — Fetch the industry page and follow its routed links.** WebFetch the mapped industry
+page, then follow the "customer story" / "case study" / solution sub-page links routed from it
+until you find customers whose **use case** matches the startup's (not merely the same industry —
+e.g., for a food-vision app, a retail *computer-vision* customer story beats a retail *supply-chain* one).
+
+**Step 3 — Site-search fallback** (for unmapped verticals, or when the industry page yields no
+close match): `WebSearch: site:nvidia.com ("case study" OR "customer story") [use-case keywords]`,
+preferring results routed from `/en-sg/industries/` pages.
+
+**Step 4 — Extract** from the chosen case study: customer name, what they built/achieved, which
+NVIDIA SDKs / NIMs they used (software names only, per the Software-only rule), and the URL. Use
+the case study's SDK stack to sanity-check the `Libraries / Tools` column of the workload table.
+
+**Output format — insert these two fields into each company section after `NVIDIA Relevancy`:**
 
 ```markdown
+**NVIDIA Case Study:** **[Customer name]** — [what the customer built/achieved with which NVIDIA SDKs/NIMs, and why it is analogous to this company's use case] ([case study]([CASE STUDY URL]) · via [NVIDIA {industry} page]([INDUSTRY PAGE URL]))
+
 **Account Workload Research:**
-| Workload | Budget | Acceleration | Nodes | Libraries / Tools | Partner |
-|---|---|---|---|---|---|
-| [Workload name] | [Budget allocation or est.] | [GPU/CPU/Hybrid/External API] | [Node count or N/A] | [CUDA, TensorRT, RAPIDS, etc.] | [NVIDIA (ISV), AWS (GSI), In-House] |
+| Workload | Budget | Acceleration | Nodes | Libraries / Tools | Partner | Case Study | Expected Outcomes |
+|---|---|---|---|---|---|---|---|
+| [Workload name + product/architecture/initiative in parens] | [$ + what it funds] | [GPU/CPU/Hybrid/External API + specific silicon, both vendors when applicable] | [Node count + total accelerators] | [component-level NVIDIA SDKs/NIMs + named in-house tools] | [named partner (role), In-House] | [[Customer — use case]([URL])] | [quantified result from that case study, e.g., "100× faster training (bunq)"] |
 ```
+
+**Gold-standard depth — match this level of specificity (columns stay exactly as above).** The
+following is the quality bar every workload table should reach. Note the named architectures in
+the workload column, the *specific silicon from both vendors* in Acceleration, node **plus** total-
+accelerator counts, component-level libraries including named in-house tools, and named strategic/
+co-development/financial partners with their role — all grounded in real, sourced evidence:
+
+| Workload | Budget | Acceleration | Nodes | Libraries / Tools | Partner | Case Study | Expected Outcomes |
+|---|---|---|---|---|---|---|---|
+| Foundation Model Training & Core R&D (PNA & DDiT) | $40M (Foundation Model R&D) | GPU (AMD Instinct / NVIDIA H200) | 64 GPU nodes (512 total GPUs) | Megatron-Core, Transformer Engine, NCCL, cuDNN | AMD Ventures (Strategic Infrastructure), In-House | [Runway — Gen-4.5 on NVIDIA GPUs](URL) | Trained entirely on NVIDIA GPUs → production-grade generation quality (Runway Gen-4.5) |
+| Real-Time Inference & Web Serving (BACH 1.0 Engine) | $15M (Production Hosting & Global Infra) | GPU (AMD Instinct / NVIDIA H200) | 128 GPU nodes | TensorRT, Triton, Dynamo, FlashInfer, PyNvVideoCodec, Forcing-KV (in-house) | AMD Ventures (Infra Partner), In-House | [Runway — sub-100ms real-time video](URL) | Sub-100ms time-to-first-frame → interactive real-time creative workflows (Runway) |
+| Physical AI & Mobility Simulation Environments | $10M (Enterprise Mobility Initiative) | Hybrid (CPU/GPU) | 32 hybrid nodes | Isaac Sim, Isaac Lab, NuRec, nvblox, cuMotion | Hyundai Motor Group (via ZER01NE) (Strategic Partner), In-House | [NVIDIA — AV sim with NuRec + WFMs](URL) | Real scenes → closed-loop sim; faster, safer mobility model validation (NuRec + WFMs) |
+| Multi-Modal Audio-Video Synthesis (Foley-Omni) | $8M (Creative Eng. & Temporal Sync) | CPU-dependent (targeted for GPU accel.) | 16 CPU nodes | Riva, Audio Effects SDK, Maxine, Audio2Face | CJ Group (HIVEN / CJ ENM) (Co-development Partner), In-House | [NVIDIA Audio2Face — M&E animation](URL) | Real-time audio-driven facial animation → automated lip-sync/performance (Audio2Face) |
+| Dataset Preprocessing & Curation Pipeline | $7M (Data Operations & Ingestion) | CPU-dependent (targeted for GPU accel.) | 24 CPU nodes | DALI, cuDF, NeMo Curator, nvImageCodec | Qiming Venture Partners, Actoz Soft (Financial Sponsors), In-House | [Runway — CV-CUDA pipeline](URL) | GPU-accelerated preprocessing → faster, cheaper training-data throughput (Runway CV-CUDA) |
+
+Quality dimensions to hit on every row:
+- **Workload** — name the actual product, architecture, model, or initiative in parens (e.g., "(PNA & DDiT)", "(BACH 1.0 Engine)", "(Foley-Omni)"), not a generic "Model Training".
+- **Budget** — dollar figure **plus** a short label of what it funds ("$40M (Foundation Model R&D)").
+- **Acceleration** — specific silicon, and name **both vendors** when the company runs a mixed fleet ("GPU (AMD Instinct / NVIDIA H200)"); this is evidence-based per the rules above, never invented.
+- **Nodes** — node count **and** total-accelerator count where known ("64 GPU nodes (512 total GPUs)").
+- **Libraries / Tools** — component-level NVIDIA SDKs/NIMs plus the company's own named tools labeled "(in-house)" (e.g., "Forcing-KV (in-house)"); never generic ("Deep Learning Frameworks" → name them).
+- **Partner** — name the real strategic / co-development / financial partner and its role in parens; the sum of budget rows should be sanity-checked against total raised.
 
 **Rules:**
 - Include 3–5 rows per company. More is better if evidence supports it.
 - Cite source numbers in brackets where available: `$6B [1]`
 - For early-stage companies (seed/pre-seed) where budgets are not public, use `~$[X]K/yr (est.)` based on headcount, ARR, or funding runway.
 - Match NVIDIA SDK/library to each workload from the vertical tech map above — prefer explicit SDK names (TensorRT-LLM, RAPIDS, NIM, Morpheus, cuDNN, DALI, Parabricks, Isaac ROS, etc.) over generic terms.
-- In the **Partner** column: classify as `NVIDIA (ISV)`, `[Cloud] (GSI)`, `In-House`, or a named ISV/GSI. Multiple partners separated by comma.
-- **Quantify performance gains where evidence exists**: e.g., "40× speedup in risk calculations using H100 GPUs" — add as a note in the Workload cell.
+- **Dig to component level in `Libraries / Tools`, grounded in the company's researched stack** — whole-web search is expected for this column. Name the specific sub-library, microservice, or component that matches the workload, not just the top-level SDK: `cuML GPUTreeShap` (not just "RAPIDS") for SHAP explainability, `cuGraph` for transaction-graph AML, `cuVS` for vector search, `cuCIM` for large-image processing, `CUTLASS` / `cuDNN Graph API` for custom kernels, `Megatron-Core` + `TransformerEngine (FP8)` for large-model training, `NeMo Curator / Retriever / Guardrails / Evaluator` for the LLM data-RAG-safety-eval chain, `Morpheus DFP` for fingerprinting pipelines, `DOCA Flow / HBN / Argus` for network services, `DALI + CV-CUDA + Video Codec SDK` for video pipelines, `Isaac ROS cuVSLAM / nvblox` for robot perception, `Omniverse Replicator` for synthetic data, `Nsight Systems/Compute` for profiling, `Spark RAPIDS Accelerator` for Spark ETL.
+- **The `Libraries / Tools` column is software-only** — list component-level NVIDIA SDKs, libraries, frameworks, and NIM microservices, and you MAY add the company's own named proprietary tools clearly labeled `(in-house)` (e.g., `Forcing-KV (in-house)`). Never list GPU or system hardware (H100, B200, GB200, DGX, HGX, Jetson modules, IGX, DRIVE hardware, RTX/GeForce cards, BlueField, NVLink, InfiniBand, Spectrum-X — those belong in `Acceleration`). If a workload implies hardware, name its software layer instead per the Software-only rule above (JetPack/Isaac ROS, Holoscan SDK, DriveWorks, DOCA, NVAIE, CUDA/NCCL/NeMo). Never write generic placeholders like "Deep Learning Frameworks" — name the actual libraries.
+- **The `Acceleration` column names the specific silicon** currently running the workload (see classification above) — this documents as-is state, so hardware model names are required here, with `(est.)` when inferred. When the company runs a mixed fleet and both are evidenced, name **both vendors** (`GPU (AMD Instinct / NVIDIA H200)`).
+- **The `Nodes` column is a node/instance count** — give the node count and, where known, the total accelerator count in parens (`64 GPU nodes (512 total GPUs)`, `~4 nodes (est.)`, `Edge devices`, `N/A`) — never GPU model names (the silicon belongs in `Acceleration`).
+- In the **Partner** column: name the real strategic / co-development / financial / ISV / GSI partner with its role in parens (`AMD Ventures (Strategic Infrastructure)`, `Hyundai Motor Group (via ZER01NE) (Strategic Partner)`, `CJ Group (Co-development Partner)`), plus `In-House` where teams build it. Classify generic ones as `NVIDIA (ISV)`, `[Cloud] (GSI)`, `In-House`. Multiple partners separated by comma.
+- **Every row gets a `Case Study` cell** — link one NVIDIA case study (or portal use-case page) matched to that specific workload, sourced via the industry-page mapping and routed links from Steps 1–3. Format: `[Customer — use case](URL)`. Reusing the company-level matched case study is fine when it is also the best match for a row; when Steps 2–3 yield nothing close for a workload, link the mapped industry page itself.
+- **Every row gets an `Expected Outcomes` cell (rightmost column)** — state **both a quantitative metric and the qualitative business improvement** it drives, framed as what this company could expect if it adopts the analogous NVIDIA approach, with the customer named. Format: `<quant metric> → <qualitative benefit> (<Customer>)`. Examples: `~100× faster risk-model training → more frequent retraining, fewer false positives (bunq)`, `30× faster circuit simulation → shorter verification cycles, faster time-to-silicon (Synopsys)`, `4–6× faster inference, ~80% lower latency → real-time UX at lower serving cost (Amdocs)`, `7× better personalization, 80% less training time → higher conversion and retention (Toshiba Tec)`. Pull the quant metric straight from the case study; if it has no hard number, lead with the qualitative outcome and still name the customer (`real-time audio-driven facial animation → automated lip-sync (Audio2Face)`). This column must stay consistent with the `Case Study` cell in the same row.
+- **Quantify performance gains where evidence exists**: e.g., "40× speedup in risk calculations using RAPIDS" — add as a note in the Workload cell.
+- **The case study must name a specific customer** — "NVIDIA works with many healthcare startups" is not acceptable. Match on use case first, industry second; a wrong-industry customer with the identical workload (e.g., vision inspection) can be used if noted.
+- Do not default to Moon Surgical, Covariant, or Abridge — those are scouting archetypes from the preamble, not matched case studies.
+- If, after Steps 2–3, no reasonably close public case study exists, write: `No closely matching public case study — see [NVIDIA {industry} page]({industry page URL})` so the reader still gets the routed industry link.
+- Record every industry page and case-study URL consulted in `Sources Consulted`.
 - The table is stored as `workloadResearch` in the app's JSON and rendered in the Company Drawer under a dedicated section.
 
 ### Phase 2D — LinkedIn source validation
@@ -408,34 +508,34 @@ Score NVIDIA fit 0–3:
 | **0 — Maybe**              | Software-only, no meaningful compute, or built on AMD/custom silicon                                                                                  |
 
 
-**NVIDIA tech stack by Inception vertical** (see full doc for complete details):
+**NVIDIA tech stack by Inception vertical** (SDKs / NIMs only — see full doc for complete details):
 
 
-| Inception Vertical                            | Key NVIDIA Tech                                                                                                            |
+| Inception Vertical                            | Key NVIDIA Tech (SDKs / NIMs only)                                                                                         |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Healthcare & Life Sciences                    | Clara Holoscan, MONAI, BioNeMo, Parabricks, IGX Orin, NeMo (clinical)                                                      |
-| Auto / AV Infra                               | DRIVE Orin/Thor, DriveWorks, DRIVE Sim, Omniverse                                                                          |
-| Manufacturing & Industrial                    | Omniverse, OpenUSD, Isaac Sim, IGX Orin, Jetson, DeepStream                                                                |
-| Robotics                                      | Isaac ROS/Sim/Lab/GR00T, Jetson Orin, Omniverse, Newton, Cosmos3                                                                  |
-| Federal / Defense                             | Morpheus, H100/B200 (sovereign AI), Jetson (edge/unmanned), NIM (on-prem)                                                  |
-| Global Public Sector                          | Sovereign AI DGX, NIM (on-prem), H100/B200 clusters                                                                        |
-| Telecom                                       | H100/B200 (RAN AI), Spectrum-X, Morpheus, NIM, Triton, Aerial AI                                                                     |
-| FinTech / FSI                                 | RAPIDS (fraud/risk), Morpheus (AML), H100 (quant/HFT), NIM (on-prem LLM)                                                   |
+| Healthcare & Life Sciences                    | Clara Holoscan SDK, MONAI, BioNeMo, Parabricks, NeMo (clinical)                                                            |
+| Auto / AV Infra                               | DriveWorks, DRIVE OS, DRIVE Sim, Omniverse, TensorRT                                                                       |
+| Manufacturing & Industrial                    | Omniverse, OpenUSD, Isaac Sim, Metropolis, DeepStream, TAO Toolkit                                                         |
+| Robotics                                      | Isaac ROS/Sim/Lab/GR00T, JetPack, Omniverse, Newton, Cosmos3                                                               |
+| Federal / Defense                             | Morpheus, NeMo + NIM (on-prem sovereign AI), Isaac ROS (edge/unmanned), DriveWorks                                         |
+| Global Public Sector                          | NeMo (sovereign LLMs), NIM (on-prem), NVAIE, Riva                                                                          |
+| Telecom                                       | Aerial AI (RAN AI), Morpheus, NIM, Triton, DOCA                                                                            |
+| FinTech / FSI                                 | RAPIDS (fraud/risk/quant), Morpheus (AML), NIM (on-prem LLM), Triton                                                       |
 | IT Services / Data Science / Mar-Legal-HR     | RAPIDS, NIM, NeMo, NVAIE, Triton                                                                                           |
-| Cybersecurity                                 | Morpheus, BlueField DPU, H100/B200, NIM                                                                                    |
-| Edtech / Higher Ed                            | NIM (on-prem AI tutors), H100 (campus AI), NeMo, DGX Spark                                                                 |
-| Media & Entertainment                         | Omniverse, RTX, Maxine, Riva, TensorRT, NIM                                                                                |
-| Gaming                                        | RTX (DLSS/path tracing), TensorRT, NIM (game AI), Omniverse                                                                |
-| Smart Spaces                                  | Metropolis, DeepStream, Jetson Orin, Omniverse (building twins)                                                            |
-| Energy / CleanTech / Oil & Gas                | H100/B200 (simulation), Omniverse, FourCastNet NIM, RAPIDS                                                                 |
-| AgTech                                        | Jetson Orin (edge/drone), TensorRT, DeepStream, Isaac Sim                                                                  |
-| Architecture, Engineering, Construction       | Omniverse, OpenUSD, RTX, Isaac Sim                                                                                         |
+| Cybersecurity                                 | Morpheus, DOCA (DPU security), NIM, NeMo                                                                                   |
+| Edtech / Higher Ed                            | NIM (on-prem AI tutors), NeMo, Riva, NVAIE                                                                                 |
+| Media & Entertainment                         | Omniverse, Maxine, Riva, TensorRT, NIM                                                                                     |
+| Gaming                                        | DLSS SDK / RTX Kit (path tracing), ACE + NIM (game AI), TensorRT, Omniverse                                                |
+| Smart Spaces                                  | Metropolis, DeepStream, TAO Toolkit, Omniverse (building twins)                                                            |
+| Energy / CleanTech / Oil & Gas                | Modulus (simulation), cuOpt, Omniverse, FourCastNet NIM, RAPIDS                                                            |
+| AgTech                                        | Isaac ROS (edge/drone), TensorRT, DeepStream, Isaac Sim, TAO Toolkit                                                       |
+| Architecture, Engineering, Construction       | Omniverse, OpenUSD, Isaac Sim                                                                                              |
 | AI Developer Tools                            | NIM, CUDA, TensorRT-LLM, NeMo, Triton/Dynamo, RAPIDS, NVAIE                                                                |
-| CRISP *(Consumer Internet Service Providers)* | H100/B200 (AI platform infra), NIM (LLM APIs), RAPIDS (data platforms), TensorRT-LLM, Triton, NVAIE, InfiniBand/Spectrum-X |
-| Retail                                        | Metropolis, DeepStream, Jetson, RAPIDS (demand forecasting), NIM                                                           |
-| Supercomputing / Quantum                      | H100/B200/NVL72, GH200, NVLink/InfiniBand, cuQuantum                                                                       |
-| Adtech / Martech                              | RAPIDS (real-time bidding), TensorRT, NIM                                                                                  |
-| Space                                         | H100/B200 (satellite data), TensorRT, Jetson, Omniverse (mission sim)                                                      |
+| CRISP *(Consumer Internet Service Providers)* | NIM (LLM APIs), TensorRT-LLM, Triton/Dynamo, RAPIDS (data platforms), NeMo, NVAIE, NCCL                                    |
+| Retail                                        | Metropolis, DeepStream, Merlin (recommenders), RAPIDS (demand forecasting), NIM                                            |
+| Supercomputing / Quantum                      | cuQuantum + CUDA-Q, CUDA-X HPC libraries, NCCL, Magnum IO                                                                  |
+| Adtech / Martech                              | RAPIDS (real-time bidding), Merlin, TensorRT, NIM                                                                          |
+| Space                                         | RAPIDS (satellite data), TensorRT (onboard AI), Omniverse (mission sim), NIM                                               |
 
 
 ---
@@ -504,14 +604,17 @@ Use this exact format:
 
 **Investors:** [Key investors — lead investor first, then others. If full list unavailable, list known investors and note "among others"]
 
-**NVIDIA Relevancy:** [1–2 sentences on NVIDIA tech relevance. Purely informational — no recommendations, suggestions, or calls to action. Apply two standards:
-- **If there is publicly verifiable proof** the company uses NVIDIA technology (article, website, press release): state it as fact. E.g., "Already running on Jetson Orin per their product page."
+**NVIDIA Relevancy:** [1–2 sentences on NVIDIA tech relevance. Purely informational — no recommendations, suggestions, or calls to action. Apply three standards:
+- **Software only**: name NVIDIA SDKs, libraries, frameworks, and NIM microservices exclusively (NeMo, NIM, TensorRT-LLM, RAPIDS, Morpheus, Isaac ROS, Omniverse, BioNeMo, Holoscan SDK, DriveWorks, DOCA, NVAIE, etc.). Never name GPU or system hardware — no H100/B200/GB200, DGX/HGX, GeForce/RTX cards, Jetson/IGX/DRIVE modules, BlueField, NVLink/InfiniBand/Spectrum-X. If the natural fit is a hardware platform, reference its software layer instead per the Software-only rule.
+- **If there is publicly verifiable proof** the company uses NVIDIA technology (article, website, press release): state it as fact. E.g., "Already running on Jetson Orin per their product page." (Verified facts may name hardware; prospective fits may not.)
 - **In all other cases**: describe the potential connection using hedged language ("could potentially," "may align with," "might be relevant to") but do not suggest any action. Never assume GPU-native workload means NVIDIA. Never say "worth exploring," "recommend," "should," or any similar directive language.]
 
+**NVIDIA Case Study:** [One specific, named NVIDIA customer case study matched to this company's industry AND use case, found via Phase 2C. Format: "**[Customer name]** — [1–2 sentences: what the customer built/achieved and which NVIDIA SDKs/NIMs it used, and why it is analogous to this company's use case] ([case study]([CASE STUDY URL]) · via [NVIDIA {industry} page]([INDUSTRY PAGE URL]))". Never generic; if no close match after searching, write "No closely matching public case study — see [NVIDIA {industry} page]([INDUSTRY PAGE URL])".]
+
 **Account Workload Research:**
-| Workload | Budget | Acceleration | Nodes | Libraries / Tools | Partner |
-|---|---|---|---|---|---|
-| [See Phase 2C for row format] | | | | | |
+| Workload | Budget | Acceleration | Nodes | Libraries / Tools | Partner | Case Study |
+|---|---|---|---|---|---|---|
+| [See Phase 2C for row format — Acceleration: specific silicon; Libraries / Tools: NVIDIA SDKs / NIMs only; Case Study: per-workload portal link] | | | | | | |
 
 **Salesforce:** [Account](URL) *(only include if a Salesforce account was found; omit this line entirely if not in Salesforce)*
 
@@ -531,8 +634,8 @@ Use this exact format:
 
 | Rank | Company | Country | Vertical | Stage | NVIDIA Tech Alignment | Key NVIDIA Tech | Inception Status | Salesforce |
 |------|---------|---------|---------|-------|-----------|-----------------|-----------------|------------|
-| 1 | [Name] | [Country] | [Vertical] | [Stage] | 🟢 Strong potential | [Products] | Community member / Not in Inception | [Account](URL) or — |
-| 2 | [Name] | [Country] | [Vertical] | [Stage] | 🟠 Maybe | [Products] | Community member / Not in Inception | — |
+| 1 | [Name] | [Country] | [Vertical] | [Stage] | 🟢 Strong potential | [SDKs / NIMs only — no hardware] | Community member / Not in Inception | [Account](URL) or — |
+| 2 | [Name] | [Country] | [Vertical] | [Stage] | 🟠 Maybe | [SDKs / NIMs only — no hardware] | Community member / Not in Inception | — |
 | ... | | | | | | | | |
 
 *Use this table to identify which companies to route to Inception Capital Connect or flag for NVentures.*
@@ -567,6 +670,10 @@ For LinkedIn-sourced candidates, list:
 - the public web search query or connector used
 - each LinkedIn permalink consulted, when available
 - whether LinkedIn was the final source or only supporting evidence
+
+For NVIDIA case-study matching (Phase 2C), list:
+- each `nvidia.com/en-sg/industries/` page fetched
+- each case-study / customer-story URL consulted, and which company it was matched to
 
 ---
 *Generated by `/startup-briefing` · NVIDIA Inception · [TIMESTAMP]*
