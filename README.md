@@ -11,7 +11,7 @@ v1.0: Focused on South East Asia countries - Singapore, VietNam, Malaysia, Indon
 
 The briefing is generated via a structured five-phase research protocol executed against live web sources and Salesforce CRM. A strict 24-hour publication window is established at the start of each run.
 
-A minimum of 53 web searches and direct URL fetches are executed across Tier-1 sources plus one targeted search per each of NVIDIA's 23 Inception verticals, casting a wide raw candidate pool. Each candidate article is deep-read to extract funding stage, total raised, investors, founding team signals, traction metrics, and market timing.
+A minimum of 61 web searches and direct URL fetches are executed across Tier-1 sources, LinkedIn indexed discovery queries, and one targeted search per each of NVIDIA's 23 Inception verticals, casting a wide raw candidate pool. Each candidate article or post is deep-read to extract funding stage, total raised, investors, founding team signals, traction metrics, and market timing.
 
 Three sequential Salesforce SOQL queries are run against the nvcrm-dev org for every surviving candidate — an Account lookup (checking `AccountTags__c`), an Inception Connect Profile lookup (checking `Membership_Status__c`), and an Opportunity count query — each capable of triggering immediate disqualification.
 
@@ -38,7 +38,7 @@ A company is disqualified if any of the following are true:
 
 ## Sources
 
-TechCrunch, VentureBeat, Hacker News, Product Hunt, The Information, Crunchbase News, Axios, a16z News, Y Combinator Companies, SiliconAngle, GeekWire, BioPharma Dive, Data Center Dynamics, Tech.eu, EU-Startups, TechStartups, TechFundingNews, Business Insider, Fortune, Reddit (r/startups, r/artificial), LinkedIn
+TechCrunch, VentureBeat, Hacker News, Product Hunt, The Information, Crunchbase News, Axios, a16z News, Y Combinator Companies, SiliconAngle, GeekWire, BioPharma Dive, Data Center Dynamics, Tech.eu, EU-Startups, TechStartups, TechFundingNews, Business Insider, Fortune, Reddit (r/startups, r/artificial), LinkedIn indexed public posts, and optional authenticated LinkedIn connector/API enrichment when available.
 
 ---
 

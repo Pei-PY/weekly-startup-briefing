@@ -121,7 +121,7 @@ duplicate stories already covered.
 
 ---
 
-## Phase 1 — Broad research sweep (minimum 45 searches)
+## Phase 1 — Broad research sweep (minimum 59 searches)
 
 Cast a wide net first. Do NOT filter yet. Collect raw candidates.
 
@@ -158,6 +158,20 @@ Fetch ALL of these pages directly for today's content:
 - `https://huggingface.co/`
 - 
 
+### 1A.1 — LinkedIn indexed discovery source
+
+LinkedIn is a required discovery source, but do not scrape LinkedIn pages or automate
+a logged-in browser. Use indexed public web search and optional authenticated
+connectors only.
+
+LinkedIn posts are especially useful for:
+- founder/investor fundraise announcements before press coverage
+- stealth launches and product launches
+- customer/traction claims not yet covered by media
+- founder background and hiring/launch signals
+
+Treat LinkedIn as candidate discovery. Prefer a company press release, investor post,
+company blog, or credible article as the final linked source when available.
 
 ### 1B — Targeted search queries
 
@@ -191,52 +205,89 @@ Phase 0. Use both dates in queries to ensure full 24-hour coverage. Replace
 16. `Reddit r/startups r/artificial hot posts [TODAY] OR [YESTERDAY]`
 17. `site:axios.com startup funding [TODAY] OR [YESTERDAY]`
 
+**LinkedIn startup announcement discovery — run all 8:**
+
+18. `site:linkedin.com/posts ("we raised" OR "raised" OR "funding") ("seed" OR "pre-seed" OR "Series A" OR "Series B" OR "Series C" OR "Series D") startup [TODAY] OR [YESTERDAY]`
+19. `site:linkedin.com/posts ("proud to announce" OR "excited to announce" OR "thrilled to announce") ("funding" OR "round" OR "launch") startup [TODAY] OR [YESTERDAY]`
+20. `site:linkedin.com/posts ("emerged from stealth" OR "launching today" OR "launched today" OR "now live") ("AI" OR "startup") [TODAY] OR [YESTERDAY]`
+21. `site:linkedin.com/posts ("led by" OR "co-led by") ("seed" OR "Series A" OR "Series B") ("AI startup" OR "deep tech startup") [TODAY] OR [YESTERDAY]`
+22. `site:linkedin.com/posts ("a16z" OR "Sequoia" OR "Benchmark" OR "Lightspeed" OR "General Catalyst" OR "Founders Fund") ("raised" OR "led" OR "launch") [TODAY] OR [YESTERDAY]`
+23. `site:linkedin.com/posts ("NVIDIA" OR "GPU" OR "CUDA" OR "Jetson" OR "Omniverse" OR "Isaac" OR "BioNeMo") ("startup" OR "launch" OR "funding") [TODAY] OR [YESTERDAY]`
+24. `site:linkedin.com/posts ("hiring founding" OR "founding engineer" OR "stealth") ("AI" OR "robotics" OR "defense" OR "healthcare") startup [TODAY] OR [YESTERDAY]`
+25. `site:linkedin.com/posts ("customer" OR "ARR" OR "pilots" OR "deployed") ("raised" OR "launch") ("AI startup" OR "robotics startup") [TODAY] OR [YESTERDAY]`
+
 **South East Asia — always run these (primary regional sources):**
-18. `site:dealstreetasia.com startup funding [TODAY] OR [YESTERDAY]`
-19. `site:techinasia.com startup funding [TODAY] OR [YESTERDAY]`
-20. `site:e27.co startup funding [TODAY] OR [YESTERDAY]`
-21. `site:kr-asia.com startup funding [TODAY] OR [YESTERDAY]`
-22. `site:vulcanpost.com startup funding [TODAY] OR [YESTERDAY]`
-23. `"Southeast Asia" OR "SEA" startup funding raised [TODAY] OR [YESTERDAY]`
-24. `Singapore OR Malaysia OR Vietnam OR Indonesia OR Philippines OR Thailand startup raises [TODAY] OR [YESTERDAY]`
+26. `site:dealstreetasia.com startup funding [TODAY] OR [YESTERDAY]`
+27. `site:techinasia.com startup funding [TODAY] OR [YESTERDAY]`
+28. `site:e27.co startup funding [TODAY] OR [YESTERDAY]`
+29. `site:kr-asia.com startup funding [TODAY] OR [YESTERDAY]`
+30. `site:vulcanpost.com startup funding [TODAY] OR [YESTERDAY]`
+31. `"Southeast Asia" OR "SEA" startup funding raised [TODAY] OR [YESTERDAY]`
+32. `Singapore OR Malaysia OR Vietnam OR Indonesia OR Philippines OR Thailand startup raises [TODAY] OR [YESTERDAY]`
 
 **NVIDIA ecosystem-specific (always run these):**
-25. `NVIDIA GPU startup funding [TODAY] OR [YESTERDAY]`
-26. `robotics AI startup funding [TODAY] OR [YESTERDAY]`
-27. `drug discovery AI startup [TODAY] OR [YESTERDAY]`
-28. `"NVIDIA Inception" OR "built on NVIDIA" startup [TODAY] OR [YESTERDAY]`
+33. `NVIDIA GPU startup funding [TODAY] OR [YESTERDAY]`
+34. `robotics AI startup funding [TODAY] OR [YESTERDAY]`
+35. `drug discovery AI startup [TODAY] OR [YESTERDAY]`
+36. `"NVIDIA Inception" OR "built on NVIDIA" startup [TODAY] OR [YESTERDAY]`
 
 **Vertical-targeted searches — run ALL 23, one per Inception vertical:**
-29. `healthcare AI startup funding [TODAY] OR [YESTERDAY]` *(Healthcare & Life Sciences)*
-30. `autonomous vehicle AV startup raises [TODAY] OR [YESTERDAY]` *(Auto / AV Infra)*
-31. `industrial AI manufacturing startup [TODAY] OR [YESTERDAY]` *(Manufacturing & Industrial)*
-32. `humanoid robot physical AI startup funding [TODAY] OR [YESTERDAY]` *(Robotics)*
-33. `defense govtech AI startup funding [TODAY] OR [YESTERDAY]` *(Federal / Defense)*
-34. `sovereign AI government infrastructure startup [TODAY] OR [YESTERDAY]` *(Global Public Sector)*
-35. `telecom network AI startup funding [TODAY] OR [YESTERDAY]` *(Telecom)*
-36. `fintech AI startup funding [TODAY] OR [YESTERDAY]` *(FinTech / FSI)*
-37. `data science HR legal AI SaaS startup funding [TODAY] OR [YESTERDAY]` *(IT Services / Data Science / Mar-Legal-HR)*
-38. `cybersecurity AI startup raises [TODAY] OR [YESTERDAY]` *(Cybersecurity)*
-39. `edtech AI startup funding [TODAY] OR [YESTERDAY]` *(Edtech / Higher Ed)*
-40. `media entertainment AI startup funding [TODAY] OR [YESTERDAY]` *(Media & Entertainment)*
-41. `gaming AI startup funding [TODAY] OR [YESTERDAY]` *(Gaming)*
-42. `smart city building video analytics AI startup [TODAY] OR [YESTERDAY]` *(Smart Spaces)*
-43. `cleantech climate AI startup funding [TODAY] OR [YESTERDAY]` *(Energy / CleanTech)*
-44. `agtech agriculture AI startup [TODAY] OR [YESTERDAY]` *(AgTech)*
-45. `construction AEC AI startup funding [TODAY] OR [YESTERDAY]` *(Architecture/Engineering/Construction)*
-46. `AI developer tools infrastructure startup funding [TODAY] OR [YESTERDAY]` *(AI Developer Tools)*
-47. `data platform AI infrastructure startup funding [TODAY] OR [YESTERDAY]` *(CRISP — Consumer Internet)*
-48. `retail AI startup funding [TODAY] OR [YESTERDAY]` *(Retail)*
-49. `quantum computing supercomputing startup funding [TODAY] OR [YESTERDAY]` *(Supercomputing / Quantum)*
-50. `adtech martech AI startup funding [TODAY] OR [YESTERDAY]` *(Adtech / Martech)*
-51. `space satellite AI startup funding [TODAY] OR [YESTERDAY]` *(Space)*
+37. `healthcare AI startup funding [TODAY] OR [YESTERDAY]` *(Healthcare & Life Sciences)*
+38. `autonomous vehicle AV startup raises [TODAY] OR [YESTERDAY]` *(Auto / AV Infra)*
+39. `industrial AI manufacturing startup [TODAY] OR [YESTERDAY]` *(Manufacturing & Industrial)*
+40. `humanoid robot physical AI startup funding [TODAY] OR [YESTERDAY]` *(Robotics)*
+41. `defense govtech AI startup funding [TODAY] OR [YESTERDAY]` *(Federal / Defense)*
+42. `sovereign AI government infrastructure startup [TODAY] OR [YESTERDAY]` *(Global Public Sector)*
+43. `telecom network AI startup funding [TODAY] OR [YESTERDAY]` *(Telecom)*
+44. `fintech AI startup funding [TODAY] OR [YESTERDAY]` *(FinTech / FSI)*
+45. `data science HR legal AI SaaS startup funding [TODAY] OR [YESTERDAY]` *(IT Services / Data Science / Mar-Legal-HR)*
+46. `cybersecurity AI startup raises [TODAY] OR [YESTERDAY]` *(Cybersecurity)*
+47. `edtech AI startup funding [TODAY] OR [YESTERDAY]` *(Edtech / Higher Ed)*
+48. `media entertainment AI startup funding [TODAY] OR [YESTERDAY]` *(Media & Entertainment)*
+49. `gaming AI startup funding [TODAY] OR [YESTERDAY]` *(Gaming)*
+50. `smart city building video analytics AI startup [TODAY] OR [YESTERDAY]` *(Smart Spaces)*
+51. `cleantech climate AI startup funding [TODAY] OR [YESTERDAY]` *(Energy / CleanTech)*
+52. `agtech agriculture AI startup [TODAY] OR [YESTERDAY]` *(AgTech)*
+53. `construction AEC AI startup funding [TODAY] OR [YESTERDAY]` *(Architecture/Engineering/Construction)*
+54. `AI developer tools infrastructure startup funding [TODAY] OR [YESTERDAY]` *(AI Developer Tools)*
+55. `data platform AI infrastructure startup funding [TODAY] OR [YESTERDAY]` *(CRISP — Consumer Internet)*
+56. `retail AI startup funding [TODAY] OR [YESTERDAY]` *(Retail)*
+57. `quantum computing supercomputing startup funding [TODAY] OR [YESTERDAY]` *(Supercomputing / Quantum)*
+58. `adtech martech AI startup funding [TODAY] OR [YESTERDAY]` *(Adtech / Martech)*
+59. `space satellite AI startup funding [TODAY] OR [YESTERDAY]` *(Space)*
 
 ### 1C — Follow-up chaining
 
 After completing 1A and 1B, review the candidate pool:
 - If any single vertical has 3+ candidates, run one additional focused query on that vertical to ensure the strongest story is captured (e.g., if robotics has 3 candidates, search `site:techcrunch.com robotics startup [TODAY] OR [YESTERDAY]`)
 - If any Tier-1 investor (a16z, Sequoia, YC, Benchmark, Founders Fund) appears in multiple stories, run one query like `[investor name] portfolio announcement [TODAY] OR [YESTERDAY]` to check for additional deals
+- If a LinkedIn post surfaces a candidate but no durable article or press release is attached, run two follow-up searches:
+  1. `"[Company Name]" ("raised" OR "launch" OR "emerged from stealth") [TODAY] OR [YESTERDAY]`
+  2. `site:[company-domain] ("raised" OR "launch" OR "announces" OR "funding")`
+- If a founder or investor LinkedIn post names customers, ARR, pilots, or NVIDIA usage, capture the LinkedIn permalink as supporting evidence and verify the claim against another source when possible.
+- If the LinkedIn result is inaccessible, login-gated, or lacks a stable permalink, keep it as a lead only and do not cite it as the final source.
 - Cap follow-up queries at 5 total
+
+### 1D — Optional authenticated LinkedIn connector sweep
+
+If the current chat/session exposes an authenticated LinkedIn MCP/custom connector,
+run it after public web searches and before final candidate scoring. Verona MCP is
+one possible connector, but it must remain optional because OAuth may be unavailable
+or scoped to an individual user.
+
+Use the connector only for discovery or enrichment when it returns source URLs or
+stable LinkedIn permalinks. Do not ask the user for LinkedIn credentials in chat.
+Do not use browser cookies, manual token pasting, or unofficial scraping.
+
+Suggested connector searches:
+- funding announcements in the last 24 hours: `raised`, `seed`, `Series A`, `Series B`, `Series C`, `Series D`
+- launch announcements in the last 24 hours: `launch`, `emerged from stealth`, `now live`
+- NVIDIA-relevant terms: `NVIDIA`, `GPU`, `CUDA`, `Jetson`, `Omniverse`, `Isaac`, `BioNeMo`
+- investor activity: `a16z`, `Sequoia`, `Benchmark`, `Lightspeed`, `General Catalyst`, `Founders Fund`
+
+If the connector is not available or authentication fails, record
+`LinkedIn authenticated connector unavailable` in research notes and continue with
+public indexed LinkedIn searches.
 
 ---
 
@@ -290,6 +341,20 @@ You are acting as **Account Workload Acceleration Research** analyst. For each c
 - In the **Partner** column: classify as `NVIDIA (ISV)`, `[Cloud] (GSI)`, `In-House`, or a named ISV/GSI. Multiple partners separated by comma.
 - **Quantify performance gains where evidence exists**: e.g., "40× speedup in risk calculations using H100 GPUs" — add as a note in the Workload cell.
 - The table is stored as `workloadResearch` in the app's JSON and rendered in the Company Drawer under a dedicated section.
+
+### Phase 2D — LinkedIn source validation
+
+When a candidate originates from LinkedIn:
+
+1. Capture the LinkedIn post permalink and author type: founder, company page, investor, employee, customer, or third party.
+2. Verify the post timestamp is within the strict 24-hour research window. If the timestamp is unavailable or ambiguous, treat the LinkedIn post as a lead and find another timestamped source before inclusion.
+3. Extract only claims visible in the post or linked source. Do not infer funding amount, stage, customers, or NVIDIA usage from comments, reactions, or profile metadata.
+4. Prefer primary-author posts:
+   - strongest: company page, founder/executive, lead investor
+   - acceptable: participating investor, named customer, accelerator
+   - weak: recruiter, employee resharing a post, unaffiliated commentator
+5. If LinkedIn is the only source for a story, mark the source as `LinkedIn post` in research notes and include the permalink in `Sources Consulted`.
+6. If a LinkedIn post links to a company blog, press release, investor post, or article, use the linked source as the final article URL and keep LinkedIn as supporting evidence.
 
 ### Phase 2B — Salesforce account and Inception membership lookup (required for every candidate)
 
@@ -498,6 +563,11 @@ Use this exact format:
 ## Sources Consulted
 [List every source actually fetched or searched, with URLs where applicable]
 
+For LinkedIn-sourced candidates, list:
+- the public web search query or connector used
+- each LinkedIn permalink consulted, when available
+- whether LinkedIn was the final source or only supporting evidence
+
 ---
 *Generated by `/startup-briefing` · NVIDIA Inception · [TIMESTAMP]*
 ```
@@ -531,4 +601,3 @@ Report:
 - Stories by type: X funding, X acquisitions, X launches
 - **Top NVIDIA fit companies: [list top 3 with their NVIDIA angle]**
 - Stories flagged for Inception pipeline: X
-

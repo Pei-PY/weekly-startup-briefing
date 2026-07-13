@@ -8,7 +8,7 @@ Each briefing summarizes the top 10 startup news stories for the current day, fo
 - **Stage**: Pre-seed through Series D only (no public companies)
 - **Sectors**: AI/ML, SaaS, developer tools, deep tech, robotics, consumer tech
 - **Topics**: Funding rounds, acquisitions, new product launches, major pivots
-- **Sources**: TechCrunch, Y Combinator/HN, Product Hunt, Business Insider, Fortune, VentureBeat, Reddit, LinkedIn
+- **Sources**: TechCrunch, Y Combinator/HN, Product Hunt, Business Insider, Fortune, VentureBeat, Reddit, LinkedIn indexed public posts, and optional authenticated LinkedIn connector/API enrichment when available
 
 ## File naming
 
