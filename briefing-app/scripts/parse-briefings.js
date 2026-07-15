@@ -311,8 +311,7 @@ const salesforceCache = loadSalesforceCache();
 
 const files = readdirSync(BRIEFINGS_DIR)
   .filter(f => /^\d{4}-\d{2}-\d{2}-briefing\.md$/.test(f))
-  .sort()
-  .reverse();
+  .sort(); // oldest-first: sidebar starts with the earliest report (April 15), then June 21, ...
 
 const briefings = files.map(filename => {
   const date = filename.replace('-briefing.md', '');
