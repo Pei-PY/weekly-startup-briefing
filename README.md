@@ -5,6 +5,8 @@ Daily AI and tech startup news briefings for the NVIDIA Inception team.
 Each briefing surfaces the top 10 startup stories of the day — funding rounds, acquisitions, and product launches — filtered to pre-seed through Series D companies across AI/ML, SaaS, developer tools, deep tech, robotics, and consumer tech.
 
 v1.0: Focused on South East Asia countries - Singapore, VietNam, Malaysia, Indonesia, Thailand, Phillipines
+
+Contributors: Pei Yi Pang, Richard Ling, Damon Asbis 
 ---
 
 ## Research Methodology
