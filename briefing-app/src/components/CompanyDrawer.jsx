@@ -11,7 +11,8 @@ const clampMax = () => Math.max(MIN_W, window.innerWidth - 40);
 // under the NVIDIA Relevancy paragraph; Library/SDK-by-use-case table at the bottom).
 // April 15 and any future report keep the default order.
 const NEW_LAYOUT_DATES = new Set([
-  '2026-06-21', '2026-06-22', '2026-07-06', '2026-07-07', '2026-07-08', '2026-07-13',
+  '2026-06-21', '2026-06-22', '2026-06-23', '2026-06-24', '2026-06-25', '2026-06-26',
+  '2026-06-27', '2026-06-28', '2026-07-06', '2026-07-07', '2026-07-08', '2026-07-13',
 ]);
 
 export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, onNext }) {
