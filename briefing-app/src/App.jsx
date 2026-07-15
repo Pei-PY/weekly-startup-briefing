@@ -78,6 +78,7 @@ export default function App() {
       {selectedCompany && (
         <CompanyDrawer
           company={selectedCompany}
+          briefingDate={selectedDate}
           onClose={handleCloseDrawer}
           onPrev={currentIdx > 0 ? handlePrev : null}
           onNext={currentIdx < companies.length - 1 ? handleNext : null}

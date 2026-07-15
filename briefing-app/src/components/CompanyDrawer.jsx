@@ -7,8 +7,19 @@ const MIN_W = 400;
 const DEFAULT_W = 680;
 const clampMax = () => Math.max(MIN_W, window.innerWidth - 40);
 
-export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
+// Reports that use the reordered drawer layout (Account Workload Research directly
+// under the NVIDIA Relevancy paragraph; Library/SDK-by-use-case table at the bottom).
+// April 15 and any future report keep the default order.
+const NEW_LAYOUT_DATES = new Set([
+  '2026-06-21', '2026-06-22', '2026-07-06', '2026-07-07', '2026-07-08', '2026-07-13',
+]);
+
+export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, onNext }) {
   const [width, setWidth] = useState(() => Math.min(DEFAULT_W, clampMax()));
+
+  // Suggested NVIDIA library/SDK rows derived from the relevancy text + vertical.
+  const nvidiaTechItems = extractNvidiaTech(company.nvidiaRelevancy, company.vertical);
+  const newLayout = NEW_LAYOUT_DATES.has(briefingDate);
 
   const startResize = useCallback((e) => {
     e.preventDefault();
@@ -164,36 +175,81 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
               </div>
             </Section>
 
-            <Section label="NVIDIA Relevancy">
-              <div className="flex items-start gap-2 mb-4">
-                <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
-                <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
-              </div>
-              <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
-            </Section>
+            {newLayout ? (
+              <>
+                {/* Reordered layout: Account Workload Research under the relevancy paragraph; use-case/SDK table at the bottom */}
+                <Section label="NVIDIA Relevancy">
+                  <div className="flex items-start gap-2">
+                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
+                    <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
+                  </div>
+                </Section>
 
-            {company.caseStudy && (
-              <Section label="NVIDIA Case Study">
-                <div className="rounded border border-[#1e293b] bg-[#0f172a] px-3.5 py-3">
-                  <MarkdownText text={company.caseStudy} />
-                </div>
-              </Section>
-            )}
+                {company.workloadResearch?.length > 0 && (
+                  <Section label="Account Workload Acceleration Research">
+                    <WorkloadResearchTable rows={company.workloadResearch} />
+                  </Section>
+                )}
 
-            {company.workloadResearch?.length > 0 && (
-              <Section label="Account Workload Acceleration Research">
-                <WorkloadResearchTable rows={company.workloadResearch} />
-              </Section>
-            )}
+                {company.caseStudy && (
+                  <Section label="NVIDIA Case Study">
+                    <div className="rounded border border-[#1e293b] bg-[#0f172a] px-3.5 py-3">
+                      <MarkdownText text={company.caseStudy} />
+                    </div>
+                  </Section>
+                )}
 
-            {company.salesforceUrl && (
-              <Section label="Salesforce">
-                <a href={company.salesforceUrl} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 font-medium transition-colors">
-                  <Database size={14} />
-                  View account in NVCRM
-                </a>
-              </Section>
+                {company.salesforceUrl && (
+                  <Section label="Salesforce">
+                    <a href={company.salesforceUrl} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 font-medium transition-colors">
+                      <Database size={14} />
+                      View account in NVCRM
+                    </a>
+                  </Section>
+                )}
+
+                {nvidiaTechItems.length > 0 && (
+                  <Section label="NVIDIA Library / SDK by Use-Case">
+                    <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
+                  </Section>
+                )}
+              </>
+            ) : (
+              <>
+                {/* Default layout (April 15 + future reports) */}
+                <Section label="NVIDIA Relevancy">
+                  <div className="flex items-start gap-2 mb-4">
+                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
+                    <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
+                  </div>
+                  <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
+                </Section>
+
+                {company.caseStudy && (
+                  <Section label="NVIDIA Case Study">
+                    <div className="rounded border border-[#1e293b] bg-[#0f172a] px-3.5 py-3">
+                      <MarkdownText text={company.caseStudy} />
+                    </div>
+                  </Section>
+                )}
+
+                {company.workloadResearch?.length > 0 && (
+                  <Section label="Account Workload Acceleration Research">
+                    <WorkloadResearchTable rows={company.workloadResearch} />
+                  </Section>
+                )}
+
+                {company.salesforceUrl && (
+                  <Section label="Salesforce">
+                    <a href={company.salesforceUrl} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 font-medium transition-colors">
+                      <Database size={14} />
+                      View account in NVCRM
+                    </a>
+                  </Section>
+                )}
+              </>
             )}
           </div>
         </div>
