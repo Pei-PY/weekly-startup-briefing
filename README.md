@@ -6,7 +6,7 @@ Each briefing surfaces the top 10 startup stories of the day — funding rounds,
 
 v1.0: Focused on South East Asia countries - Singapore, VietNam, Malaysia, Indonesia, Thailand, Phillipines
 
-Contributors: Pei Yi Pang, Richard Ling, Damon Asbis
+Contributors: Richard Ling, Damon Asbis, Pei Yi Pang
 
 ---
 
