@@ -1,8 +1,33 @@
 import { X, ChevronLeft, ChevronRight, ExternalLink, Database } from 'lucide-react';
+import { useState, useCallback } from 'react';
 import { getVerticalColor, getStageColor, getInceptionColor } from '../lib/utils.js';
 import { extractNvidiaTech, getCaseStudy, NVIDIA_TECH } from '../lib/nvidia-tech.js';
 
+const MIN_W = 400;
+const DEFAULT_W = 680;
+const clampMax = () => Math.max(MIN_W, window.innerWidth - 40);
+
 export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
+  const [width, setWidth] = useState(() => Math.min(DEFAULT_W, clampMax()));
+
+  const startResize = useCallback((e) => {
+    e.preventDefault();
+    const startX = e.clientX;
+    const startW = width;
+    const onMove = (ev) => {
+      // Drag left → wider; drag right → narrower.
+      setWidth(Math.min(Math.max(MIN_W, startW - (ev.clientX - startX)), clampMax()));
+    };
+    const onUp = () => {
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+      document.body.style.userSelect = '';
+    };
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+    document.body.style.userSelect = 'none';
+  }, [width]);
+
   return (
     <>
       {/* Backdrop */}
@@ -11,10 +36,22 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
         onClick={onClose}
       />
 
-      {/* Drawer */}
-      <div className="fixed right-0 top-0 h-full w-[520px] bg-[#0a1628] shadow-2xl z-50 flex flex-col border-l border-[#1e293b] overflow-hidden">
+      {/* Right-docked, resizable drawer */}
+      <div
+        className="fixed right-0 top-0 h-full bg-[#0a1628] shadow-2xl z-50 flex flex-col border-l border-[#1e293b] overflow-hidden"
+        style={{ width }}
+      >
+        {/* Resize handle (left edge) — drag to widen/narrow */}
+        <div
+          onMouseDown={startResize}
+          className="group absolute left-0 top-0 h-full w-2 cursor-ew-resize z-20"
+          title="Drag to resize"
+        >
+          <div className="mx-auto h-full w-px bg-[#1e293b] transition-all group-hover:w-0.5 group-hover:bg-[#76B900]" />
+        </div>
+
         {/* Drawer header */}
-        <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#1e293b] flex-shrink-0 bg-[#0f172a]">
+        <div className="flex items-center justify-between px-6 py-3.5 border-b border-[#1e293b] flex-shrink-0 bg-[#0f172a]">
           <div className="flex items-center gap-2">
             {onPrev && (
               <button onClick={onPrev} className="p-1 rounded hover:bg-[#1e293b] text-slate-600 hover:text-slate-300 transition-colors" title="Previous company">
@@ -38,7 +75,7 @@ export default function CompanyDrawer({ company, onClose, onPrev, onNext }) {
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto">
           {/* Company title block */}
-          <div className="px-5 py-5 border-b border-[#1e293b]">
+          <div className="px-6 py-5 border-b border-[#1e293b]">
             <h2 className="text-xl font-bold text-slate-100 leading-tight">{company.name}</h2>
             <div className="flex flex-wrap gap-2 mt-3">
               <Badge color={getVerticalColor(company.vertical)}>{company.vertical}</Badge>
@@ -310,7 +347,7 @@ function MarkdownText({ text, className = 'text-sm text-slate-400 leading-relaxe
 
 function Section({ label, children }) {
   return (
-    <div className="px-5 py-4">
+    <div className="px-6 py-4">
       <p className="text-[10px] font-semibold uppercase tracking-widest text-[#76B900] mb-2">{label}</p>
       {children}
     </div>
