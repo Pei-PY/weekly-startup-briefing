@@ -307,7 +307,7 @@ public indexed LinkedIn searches.
 
 ---
 
-## Phase 2 — Deep-read each candidate and check Salesforce
+## Phase 2 — Deep-read each candidate and check prior coverage
 
 For each story that passes the initial filter, fetch the full article and extract:
 
@@ -456,45 +456,28 @@ When a candidate originates from LinkedIn:
 5. If LinkedIn is the only source for a story, mark the source as `LinkedIn post` in research notes and include the permalink in `Sources Consulted`.
 6. If a LinkedIn post links to a company blog, press release, investor post, or article, use the linked source as the final article URL and keep LinkedIn as supporting evidence.
 
-### Phase 2B — Salesforce account and Inception membership lookup (required for every candidate)
+### Phase 2B — Prior-coverage check and Inception status (required for every candidate)
 
-For each candidate company, run two Salesforce checks:
-
-**1. Account lookup** — check if a Salesforce Account record exists, and retrieve the AccountTags field:
+**1. Prior-coverage check.** A company may appear in the briefing series only once. From the project root, run:
 
 ```bash
-sf data query --query "SELECT Id, Name, AccountTags__c FROM Account WHERE Name LIKE '%[Company Name]%'" -o nvcrm-dev
+node briefing-app/scripts/dedupe-briefings.js --lookup "[Company Name]" "[company-domain.com]"
 ```
 
-- If a match is found, record the account URL: `https://nvcrm.lightning.force.com/lightning/r/Account/<ID>/view`
-- If no match, record as `None`
-- Watch for false positives — verify the name matches the actual company, not a similarly named unrelated org
-- **If `AccountTags__c` contains "Enterprise Customer" → disqualify immediately.** This tag signals the company is already an active NVIDIA enterprise customer and is covered through enterprise sales channels, not Inception.
+The tool matches on normalized company name, parenthetical aliases, and website domain across every file in `briefings/`.
 
-**2. Inception Connect Profile lookup** — check if the company has an Inception & Connect profile and what their membership status is:
+- `No prior coverage` → eligible, proceed with scoring
+- Any `Covered:` line → **disqualify immediately**, even when today's news is a genuine follow-up (new round, IPO filing, partnership). The series records first appearances only; a notable follow-up may be mentioned in **Interesting Trends**, never as a ranked entry.
+- If `node` is unavailable, fall back to `grep -ril "[Company Name]" briefings/` and treat any hit inside a `### N.` heading as prior coverage.
 
-```bash
-sf data query --query "SELECT Id, Company_Name__c, Membership_Status__c, Account__c FROM Inception_Connect_Profile__c WHERE Company_Name__c LIKE '%[Company Name]%'" -o nvcrm-dev
-```
+**2. Inception status from public evidence.** There is no CRM lookup. Set **Inception Status** from public sources only:
 
-Map `Membership_Status__c` to display values:
-- `Member - High Touch` or `Member - Nominated High Touch` → **High touch**
-- `Member - Community` → **Community member**
-- `Past Member`, no record found, or false-positive match → **Not in Inception**
+- `Community member (self-reported — [source])` when the company's website, press release, or LinkedIn states it is an NVIDIA Inception member
+- `Not verified` in every other case
 
-Again, watch for false positives — confirm the profile's company name actually matches the company in the story before assigning a status.
+If public evidence shows the company is already an NVIDIA customer or Inception High Touch partner (featured NVIDIA customer story, NVIDIA partner page, or the company says so), **disqualify** — it is already visible to NVIDIA outside this briefing.
 
-**3. Opportunity count lookup** — only run this if an Account record was found in step 1. Check how many Opportunity records are linked to the account:
-
-```bash
-sf data query --query "SELECT COUNT(Id) opps FROM Opportunity WHERE AccountId = '[Account ID from step 1]'" -o nvcrm-dev
-```
-
-- If the count is **0 or 1** → eligible, proceed with scoring
-- If the count is **2 or more** → **disqualify immediately**. This signals the account is already actively worked by NVIDIA field teams or Inception, and does not need to be surfaced via this briefing. Note the disqualification with the opportunity count.
-- If no Account record exists (step 1 returned no match) → skip this check entirely; 0 opportunities is implied and the company is eligible
-
-Use all three results in Phase 4 to populate the **Salesforce** and **Inception Status** fields for each story.
+Phase 4 re-runs the duplicate check on the finished file.
 
 ### Phase 2A — NVIDIA Relevance Assessment (required for every story)
 
@@ -558,7 +541,7 @@ Sort candidates by total score. Take top 10.
 **When scores are tied, prioritize higher NVIDIA relevance.**
 Break remaining ties: funding amount > acquisition > launch.
 
-**The final briefing must always contain exactly 10 companies.** Hard filters (High touch status, >$1B raised, public company, etc.) may disqualify candidates after scoring — if this reduces the pool below 10, go back and surface additional candidates from the research phase rather than publishing a shorter list. Run additional searches if needed to fill the remaining slots.
+**The final briefing must always contain exactly 10 companies.** Hard filters (prior coverage, >$200M raised, public company, etc.) may disqualify candidates after scoring — if this reduces the pool below 10, go back and surface additional candidates from the research phase rather than publishing a shorter list. Run additional searches if needed to fill the remaining slots.
 
 **Vertical diversity is required.** After selecting the top 10 by score, apply this rule: no single Inception vertical may appear more than 2 times in the final 10. If a vertical would appear 3+ times, replace the lowest-scoring duplicate with the next highest-scoring candidate from a different vertical. The goal is to cover as many of the 23 Inception verticals as possible across each briefing — aim for at least 7 distinct verticals represented in every issue. When a high-scoring cluster forms in one vertical, use it as a signal to run additional vertical-targeted searches for underrepresented verticals to find comparable candidates.
 
@@ -568,12 +551,10 @@ Break remaining ties: funding amount > acquisition > launch.
 - Is purely crypto/NFT/Web3 with no AI component
 - Is an opinion piece or market analysis with no primary event
 - Was published more than 24 hours ago — verify against the article's actual timestamp, not the search snippet date or calendar date
-- Duplicates a story from yesterday's briefing
+- Features a company already covered in **any** earlier briefing — run the Phase 2B prior-coverage check; the series records each company once
 - Company is older than 10 years (outside Inception eligibility window)
 - **Company has raised over $200M in total funding to date** — disqualified regardless of any other signal, NVIDIA relevance, or newsworthiness. The goal is to find companies early, before they are already known to NVIDIA through other channels. Replace with the next highest-scoring candidate. Verify total raised on Crunchbase if not stated in the article.
-- **Company's Inception membership status is "High touch"** — these companies are already actively managed by the Inception team and do not need to appear in the briefing. Only include companies with status "Not in Inception" or "Community member." Check this via the Salesforce `Inception_Connect_Profile__c` lookup in Phase 2B before including any company.
-- **Company has 2 or more Opportunities in Salesforce** — if the account opportunity count (Phase 2B step 3) is ≥2, disqualify. Multiple opportunities signals the company is already actively covered by NVIDIA field or Inception teams. Companies with 0 or 1 opportunities — or no Salesforce account at all — are eligible.
-- **Company has "Enterprise Customer" in AccountTags** — if the Salesforce Account's `AccountTags__c` field contains "Enterprise Customer" (Phase 2B step 1), disqualify. This tag means the company is already an active NVIDIA enterprise customer managed through enterprise sales, not Inception origination.
+- **Company is already a known NVIDIA account based on public evidence** — featured in a published NVIDIA customer story or partner page, or publicly described as an Inception High Touch partner (Phase 2B step 2). Such companies are already visible to NVIDIA and do not need to be sourced via this briefing.
 - **Entity is an ecosystem program, accelerator, or venture fund** — disqualify any entity that is primarily a government ecosystem program, corporate accelerator, incubator, startup studio, or venture capital / private equity fund. These are not startups and are not eligible for Inception. Examples: national AI programs, government grants, VC fund announcements, accelerator cohort launches, innovation lab programs. Only include operating companies building a product or service.
 
 ---
@@ -581,6 +562,14 @@ Break remaining ties: funding amount > acquisition > launch.
 ## Phase 4 — Write the briefing file
 
 Save to: `~/Documents/Claude/daily-startup-briefing/briefings/YYYY-MM-DD-briefing.md`
+
+**Then run the duplicate check** from the project root:
+
+```bash
+node briefing-app/scripts/dedupe-briefings.js
+```
+
+If today's file is flagged, replace the flagged company with the next-highest-scoring candidate from Phase 3, renumber, update the Summary Table and Vertical Coverage, and re-run until the check passes. Do not use `--fix` on today's file — it would publish a briefing with fewer than 10 companies.
 
 Use this exact format:
 
@@ -616,9 +605,7 @@ Use this exact format:
 |---|---|---|---|---|---|---|
 | [See Phase 2C for row format — Acceleration: specific silicon; Libraries / Tools: NVIDIA SDKs / NIMs only; Case Study: per-workload portal link] | | | | | | |
 
-**Salesforce:** [Account](URL) *(only include if a Salesforce account was found; omit this line entirely if not in Salesforce)*
-
-**Inception Status:** [Community member / Not in Inception]
+**Inception Status:** [Community member (self-reported — source) / Not verified]
 
 **Website:** [company.com](https://company.com) *(the company's official homepage URL — always include; find via their press release, LinkedIn, or a quick search)*
 
@@ -632,11 +619,11 @@ Use this exact format:
 
 *Companies from today's briefing ranked by NVIDIA relevance — for Inception pipeline review.*
 
-| Rank | Company | Country | Vertical | Stage | NVIDIA Tech Alignment | Key NVIDIA Tech | Inception Status | Salesforce |
-|------|---------|---------|---------|-------|-----------|-----------------|-----------------|------------|
-| 1 | [Name] | [Country] | [Vertical] | [Stage] | 🟢 Strong potential | [SDKs / NIMs only — no hardware] | Community member / Not in Inception | [Account](URL) or — |
-| 2 | [Name] | [Country] | [Vertical] | [Stage] | 🟠 Maybe | [SDKs / NIMs only — no hardware] | Community member / Not in Inception | — |
-| ... | | | | | | | | |
+| Rank | Company | Country | Vertical | Stage | NVIDIA Tech Alignment | Key NVIDIA Tech | Inception Status |
+|------|---------|---------|---------|-------|-----------|-----------------|-----------------|
+| 1 | [Name] | [Country] | [Vertical] | [Stage] | 🟢 Strong potential | [SDKs / NIMs only — no hardware] | Community member / Not verified |
+| 2 | [Name] | [Country] | [Vertical] | [Stage] | 🟠 Maybe | [SDKs / NIMs only — no hardware] | Community member / Not verified |
+| ... | | | | | | | |
 
 *Use this table to identify which companies to route to Inception Capital Connect or flag for NVentures.*
 
@@ -703,6 +690,7 @@ Tell the user:
 Report:
 
 - File saved: `[full path]`
+- Duplicate check: passed ✓ (no company repeated from an earlier briefing)
 - Email: sent to [pyi@nvidia.com](mailto:pyi@nvidia.com) ✓ (or: not sent — reason)
 - Total capital announced: $XM
 - Stories by type: X funding, X acquisitions, X launches

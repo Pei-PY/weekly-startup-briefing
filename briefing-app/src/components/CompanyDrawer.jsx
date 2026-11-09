@@ -1,6 +1,6 @@
-import { X, ChevronLeft, ChevronRight, ExternalLink, Database } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { useState, useCallback } from 'react';
-import { getVerticalColor, getStageColor, getInceptionColor } from '../lib/utils.js';
+import { getVerticalColor, getStageColor } from '../lib/utils.js';
 import { extractNvidiaTech, getCaseStudy, NVIDIA_TECH } from '../lib/nvidia-tech.js';
 
 const MIN_W = 400;
@@ -97,7 +97,6 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
             <div className="flex flex-wrap gap-2 mt-3">
               <Badge color={getVerticalColor(company.vertical)}>{company.vertical}</Badge>
               <Badge color={getStageColor(company.stage)}>{company.stage}</Badge>
-              <Badge color={getInceptionColor(company.inceptionStatus)}>{company.inceptionStatus || 'Unknown'}</Badge>
             </div>
 
             {/* Quick stats row */}
@@ -115,13 +114,6 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                     className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 font-medium transition-colors">
                     <ExternalLink size={11} />
                     {company.websiteDisplay}
-                  </a>
-                )}
-                {company.salesforceUrl && (
-                  <a href={company.salesforceUrl} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors">
-                    <Database size={11} />
-                    Salesforce
                   </a>
                 )}
                 {company.articleUrl && (
@@ -205,16 +197,6 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                   </Section>
                 )}
 
-                {company.salesforceUrl && (
-                  <Section label="Salesforce">
-                    <a href={company.salesforceUrl} target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 font-medium transition-colors">
-                      <Database size={14} />
-                      View account in NVCRM
-                    </a>
-                  </Section>
-                )}
-
                 {nvidiaTechItems.length > 0 && (
                   <Section label="NVIDIA Library / SDK by Use-Case">
                     <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
@@ -246,15 +228,6 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                   </Section>
                 )}
 
-                {company.salesforceUrl && (
-                  <Section label="Salesforce">
-                    <a href={company.salesforceUrl} target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 font-medium transition-colors">
-                      <Database size={14} />
-                      View account in NVCRM
-                    </a>
-                  </Section>
-                )}
               </>
             )}
           </div>

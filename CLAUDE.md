@@ -18,6 +18,16 @@ Briefing files are named: `YYYY-MM-DD-briefing.md`
 
 Type `/startup-briefing` to generate today's briefing.
 
+## Duplicate rule
+
+A company may appear in the briefing series once; the earliest briefing keeps it. Before adding a company, check prior coverage from the project root:
+
+```
+node briefing-app/scripts/dedupe-briefings.js --lookup "Company name" company.com
+```
+
+`cd briefing-app && npm run dedupe:check` lists repeats across all briefings and gates `npm run build`; `npm run dedupe:fix` removes the later repeats and renumbers the affected files.
+
 ## Output location
 
 All briefings are saved to: `~/Documents/Claude/daily-startup-briefing/briefings/`

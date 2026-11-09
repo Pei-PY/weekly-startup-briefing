@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { ExternalLink, ChevronRight, ChevronUp, ChevronDown, ChevronsUpDown } from 'lucide-react';
-import { getVerticalColor, getStageColor, getInceptionColor } from '../lib/utils.js';
+import { getVerticalColor, getStageColor } from '../lib/utils.js';
 
 const STAGE_ORDER = ['Pre-seed', 'Seed', 'Series A', 'Series B', 'Series C', 'Series D'];
 
@@ -17,7 +17,6 @@ const COLS = [
   { key: 'article',     label: "Today's News",    width: 'w-64',                    sortable: false },
   { key: 'investors',   label: 'Investors',       width: 'w-52',                    sortable: false },
   { key: 'nvidia',      label: 'NVIDIA Relevancy',width: 'w-64',                    sortable: false },
-  { key: 'inception',   label: 'Inception',       width: 'w-40',                    sortable: true },
   { key: 'website',     label: 'Website',         width: 'w-36',                    sortable: false },
 ];
 
@@ -46,7 +45,6 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
         case 'totalRaised': av = a.totalRaised.valueM ?? -1; bv = b.totalRaised.valueM ?? -1; break;
         case 'stage':       av = STAGE_ORDER.indexOf(a.stage); bv = STAGE_ORDER.indexOf(b.stage); break;
         case 'alignment':   av = a.nvidiaAlignment.level === 'strong' ? 0 : 1; bv = b.nvidiaAlignment.level === 'strong' ? 0 : 1; break;
-        case 'inception':   av = a.inceptionStatus ?? ''; bv = b.inceptionStatus ?? ''; break;
         default: return 0;
       }
       if (av < bv) return sortDir === 'asc' ? -1 : 1;
@@ -236,13 +234,6 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
       {/* NVIDIA Relevancy (truncated) */}
       <td className="px-3 py-3 max-w-[16rem]">
         <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{company.nvidiaRelevancy}</p>
-      </td>
-
-      {/* Inception Status */}
-      <td className="px-3 py-3">
-        <span className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium border ${getInceptionColor(company.inceptionStatus)}`}>
-          {company.inceptionStatus || '—'}
-        </span>
       </td>
 
       {/* Website */}

@@ -12,11 +12,11 @@ Contributors: Richard Ling, Damon Asbis, Pei Yi Pang
 
 ## Research Methodology
 
-The briefing is generated via a structured five-phase research protocol executed against live web sources and Salesforce CRM. A strict 24-hour publication window is established at the start of each run.
+The briefing is generated via a structured five-phase research protocol executed against live web sources, with a duplicate check against every earlier briefing. A strict 24-hour publication window is established at the start of each run.
 
 A minimum of 61 web searches and direct URL fetches are executed across Tier-1 sources, LinkedIn indexed discovery queries, and one targeted search per each of NVIDIA's 23 Inception verticals, casting a wide raw candidate pool. Each candidate article or post is deep-read to extract funding stage, total raised, investors, founding team signals, traction metrics, and market timing.
 
-Three sequential Salesforce SOQL queries are run against the nvcrm-dev org for every surviving candidate — an Account lookup (checking `AccountTags__c`), an Inception Connect Profile lookup (checking `Membership_Status__c`), and an Opportunity count query — each capable of triggering immediate disqualification.
+Every surviving candidate is checked against all earlier briefings by normalized company name, parenthetical alias, and website domain. A company appears in the series once: its first appearance stays, and any later repeat is disqualified (or removed with `npm run dedupe:fix` in `briefing-app/`).
 
 Surviving candidates are scored on a 13-point rubric across investor quality, founder signal, market timing, traction, and NVIDIA relevance. A vertical-diversity constraint (max 2 per vertical, target 7+ distinct verticals) is applied to ensure the final 10 represent broad coverage of NVIDIA's strategic focus areas.
 
@@ -31,9 +31,8 @@ A company is disqualified if any of the following are true:
 | Criterion | Reason |
 |-----------|--------|
 | Total capital raised > $200M | Targets early-stage companies before they accumulate NVIDIA attention |
-| Salesforce `AccountTags__c` = "Enterprise Customer" | Active NVIDIA enterprise sales relationship already exists |
-| Inception `Membership_Status__c` = "Member - High Touch" or "Member - Nominated High Touch" | Already receiving dedicated Inception support |
-| 2+ Opportunity records on the Salesforce Account | NVIDIA field team is already actively covering them |
+| Already featured in an earlier briefing | Each company appears once across the series; follow-up news belongs in Interesting Trends |
+| Publicly documented NVIDIA customer or Inception High Touch partner | Already visible to NVIDIA outside this briefing |
 | Publication timestamp older than 24 hours | Stale news |
 | Announcing entity is a VC fund, not an operating startup | Not an Inception-eligible company |
 
@@ -72,3 +71,13 @@ In Claude Code, run:
 ```
 
 This researches the day's top startup news and saves a briefing to `briefings/`. The web app picks it up automatically on the next push to `main`.
+
+## Duplicate check
+
+Each company may appear in the series only once; the earliest briefing keeps it. From `briefing-app/`:
+
+```
+npm run dedupe:check   # list companies repeated in a later briefing (also the first step of `npm run build`)
+npm run dedupe:fix     # remove the later repeats and renumber the affected briefings
+node scripts/dedupe-briefings.js --lookup "Company name" company.com   # has this company been covered before?
+```

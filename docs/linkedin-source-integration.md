@@ -60,7 +60,7 @@ briefing checks:
 
 - exact timestamp inside the research window
 - company/stage/amount/total raised verification
-- Salesforce Account, AccountTags, Inception Connect Profile, and Opportunity checks
+- prior-coverage check against every earlier briefing (name, alias, website domain)
 - NVIDIA relevance scoring
 - vertical diversity selection
 

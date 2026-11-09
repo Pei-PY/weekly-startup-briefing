@@ -14,10 +14,9 @@ const DISQUALIFIERS = [
   'Total raised > $200M',
   'Public company (post-IPO)',
   'Crypto / Web3-only (no AI component)',
-  'Already a High Touch Inception member',
-  '2+ Opportunities in Salesforce NVCRM',
+  'Already featured in an earlier briefing',
+  'Publicly known NVIDIA customer or Inception High Touch partner',
   'Founded more than 10 years ago',
-  '"Enterprise Customer" tag in Salesforce',
 ];
 
 const SOURCES = [
@@ -182,12 +181,12 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
                 </div>
               </Section>
 
-              {/* Salesforce checks */}
-              <Section label="Salesforce Verification">
+              {/* Duplicate check */}
+              <Section label="Duplicate Check">
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Every candidate is checked against <strong className="text-slate-200">NVIDIA's CRM (NVCRM)</strong> before
-                  inclusion. The briefing only surfaces companies that are genuinely new to NVIDIA's pipeline —
-                  not ones already covered by field teams or Inception account managers.
+                  Every candidate is checked against <strong className="text-slate-200">all earlier briefings</strong> by
+                  company name, alias and website domain. A company appears in the series once — its first
+                  appearance stays, and later repeats are removed before publishing.
                 </p>
               </Section>
 
