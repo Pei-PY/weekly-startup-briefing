@@ -27,7 +27,7 @@ Use these in every daily run:
 - `site:linkedin.com/posts ("emerged from stealth" OR "launching today" OR "launched today" OR "now live") ("AI" OR "startup") [TODAY] OR [YESTERDAY]`
 - `site:linkedin.com/posts ("led by" OR "co-led by") ("seed" OR "Series A" OR "Series B") ("AI startup" OR "deep tech startup") [TODAY] OR [YESTERDAY]`
 - `site:linkedin.com/posts ("a16z" OR "Sequoia" OR "Benchmark" OR "Lightspeed" OR "General Catalyst" OR "Founders Fund") ("raised" OR "led" OR "launch") [TODAY] OR [YESTERDAY]`
-- `site:linkedin.com/posts ("NVIDIA" OR "GPU" OR "CUDA" OR "Jetson" OR "Omniverse" OR "Isaac" OR "BioNeMo") ("startup" OR "launch" OR "funding") [TODAY] OR [YESTERDAY]`
+- `site:linkedin.com/posts ("GPU" OR "CUDA" OR "Jetson" OR "Omniverse" OR "Isaac" OR "BioNeMo") ("startup" OR "launch" OR "funding") [TODAY] OR [YESTERDAY]`
 - `site:linkedin.com/posts ("hiring founding" OR "founding engineer" OR "stealth") ("AI" OR "robotics" OR "defense" OR "healthcare") startup [TODAY] OR [YESTERDAY]`
 - `site:linkedin.com/posts ("customer" OR "ARR" OR "pilots" OR "deployed") ("raised" OR "launch") ("AI startup" OR "robotics startup") [TODAY] OR [YESTERDAY]`
 
@@ -61,7 +61,7 @@ briefing checks:
 - exact timestamp inside the research window
 - company/stage/amount/total raised verification
 - prior-coverage check against every earlier briefing (name, alias, website domain)
-- NVIDIA relevance scoring
+- Technology relevance scoring
 - vertical diversity selection
 
 Prefer durable primary links in final briefing entries. Use LinkedIn permalinks as

@@ -7,7 +7,7 @@ const SCORING = [
   { signal: 'Founder signal',   range: 'First-time → Repeat + domain expert' },
   { signal: 'Market timing',    range: 'Generic AI claim → Clear inflection point' },
   { signal: 'Traction / proof', range: 'None → Hard ARR or enterprise contracts' },
-  { signal: 'NVIDIA relevance', range: 'Maybe → Strong potential' },
+  { signal: 'Relevance',        range: 'Maybe → Strong potential' },
 ];
 
 const DISQUALIFIERS = [
@@ -15,7 +15,6 @@ const DISQUALIFIERS = [
   'Public company (post-IPO)',
   'Crypto / Web3-only (no AI component)',
   'Already featured in an earlier briefing',
-  'Publicly known NVIDIA customer or Inception High Touch partner',
   'Founded more than 10 years ago',
 ];
 
@@ -35,7 +34,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-[#76B900]" />
           <span className="text-[10px] font-semibold uppercase tracking-widest text-[#76B900]">
-            NVIDIA Inception
+            South East Asia
           </span>
         </div>
         <div className="flex items-center justify-between mt-1 gap-2">
@@ -146,9 +145,9 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
               <Section label="Purpose">
                 <p className="text-xs text-slate-400 leading-relaxed">
                   Surfaces the <strong className="text-slate-200">top 10 AI & tech startups</strong> each day
-                  that are most relevant to <strong className="text-slate-200">NVIDIA's Inception program</strong> —
-                  covering pre-seed through Series D, across 23 strategic verticals. Used by the Inception team
-                  to identify and recruit high-potential companies into the program before they become widely known.
+                  with the strongest <strong className="text-slate-200">accelerated-computing potential</strong> —
+                  covering pre-seed through Series D, across 23 strategic verticals. Used to identify
+                  high-potential companies before they become widely known.
                 </p>
               </Section>
 
@@ -156,7 +155,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
               <Section label="Daily Research">
                 <p className="text-xs text-slate-400 leading-relaxed mb-2">
                   Every briefing runs <strong className="text-slate-200">45+ targeted searches</strong> across
-                  a strict 24-hour publication window — one query per Inception vertical, plus funding,
+                  a strict 24-hour publication window — one query per vertical, plus funding,
                   acquisition, and launch sweeps.
                 </p>
                 <div className="flex flex-wrap gap-1">
@@ -170,7 +169,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
 
               {/* Scoring */}
               <Section label="Scoring (max 15 pts)">
-                <p className="text-[10px] text-slate-500 mb-2">5 signals × 1–3 pts each. Higher NVIDIA relevance breaks ties.</p>
+                <p className="text-[10px] text-slate-500 mb-2">5 signals × 1–3 pts each. Higher relevance breaks ties.</p>
                 <div className="space-y-2">
                   {SCORING.map(({ signal, range }) => (
                     <div key={signal}>
@@ -203,21 +202,21 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
                 </ul>
               </Section>
 
-              {/* NVIDIA Fit */}
-              <Section label="NVIDIA Fit Rating">
+              {/* Fit */}
+              <Section label="Fit Rating">
                 <div className="space-y-2">
                   <div className="flex items-start gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#76B900] mt-1 flex-shrink-0" />
                     <div>
                       <p className="text-[11px] font-medium text-slate-300">Strong potential</p>
-                      <p className="text-[10px] text-slate-500">GPU-native workloads, inference at scale, or confirmed NVIDIA tech fit</p>
+                      <p className="text-[10px] text-slate-500">GPU-native workloads, inference at scale, or confirmed accelerated-computing fit</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="w-2 h-2 rounded-full bg-amber-500 mt-1 flex-shrink-0" />
                     <div>
                       <p className="text-[11px] font-medium text-slate-300">Maybe</p>
-                      <p className="text-[10px] text-slate-500">Software-only, no meaningful compute, or built on non-NVIDIA silicon</p>
+                      <p className="text-[10px] text-slate-500">Software-only, no meaningful compute, or built on CPU-only or custom silicon</p>
                     </div>
                   </div>
                 </div>

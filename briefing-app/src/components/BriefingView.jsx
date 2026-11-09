@@ -6,7 +6,7 @@ import CompanyTable from './CompanyTable.jsx';
 const STAGE_ORDER = ['Pre-seed', 'Seed', 'Series A', 'Series B', 'Series C', 'Series D'];
 
 export default function BriefingView({ briefing, onSelectCompany, selectedCompany }) {
-  const [filters, setFilters] = useState({ vertical: '', stage: '', nvidiaFit: '' });
+  const [filters, setFilters] = useState({ vertical: '', stage: '', fit: '' });
 
   const verticals = [...new Set(briefing.companies.map(c => c.vertical))].sort();
   const stages = STAGE_ORDER.filter(s => briefing.companies.some(c => c.stage === s));
@@ -15,12 +15,12 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
   const filteredCompanies = briefing.companies.filter(c => {
     if (filters.vertical && c.vertical !== filters.vertical) return false;
     if (filters.stage && c.stage !== filters.stage) return false;
-    if (filters.nvidiaFit && c.nvidiaAlignment.level !== filters.nvidiaFit) return false;
+    if (filters.fit && c.nvidiaAlignment.level !== filters.fit) return false;
     return true;
   });
 
   const hasActiveFilters = Object.values(filters).some(Boolean);
-  const clearFilters = () => setFilters({ vertical: '', stage: '', nvidiaFit: '' });
+  const clearFilters = () => setFilters({ vertical: '', stage: '', fit: '' });
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
@@ -34,7 +34,7 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
           <Pill label={`${formatCapital(briefing.totalCapitalM)} represented`} color="text-slate-500" />
           <Pill label={`${verticals.length} verticals`} color="text-slate-500" />
           <Pill
-            label={`${strongCount} strong NVIDIA fit`}
+            label={`${strongCount} strong fit`}
             color="text-[#76B900]"
             dot="bg-[#76B900]"
           />
@@ -62,9 +62,9 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
         />
 
         <FilterSelect
-          placeholder="All NVIDIA Fit"
-          value={filters.nvidiaFit}
-          onChange={v => setFilters(f => ({ ...f, nvidiaFit: v }))}
+          placeholder="All Fit Ratings"
+          value={filters.fit}
+          onChange={v => setFilters(f => ({ ...f, fit: v }))}
           options={[
             { label: 'Strong', value: 'strong' },
             { label: 'Maybe', value: 'maybe' },

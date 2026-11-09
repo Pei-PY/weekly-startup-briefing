@@ -8,7 +8,7 @@ const DEFAULT_W = 680;
 const clampMax = () => Math.max(MIN_W, window.innerWidth - 40);
 
 // Reports that use the reordered drawer layout (Account Workload Research directly
-// under the NVIDIA Relevancy paragraph; Library/SDK-by-use-case table at the bottom).
+// under the Relevancy paragraph; Library/SDK-by-use-case table at the bottom).
 // April 15 and any future report keep the default order.
 const NEW_LAYOUT_DATES = new Set([
   '2026-06-21', '2026-06-22', '2026-06-23', '2026-06-24', '2026-06-25', '2026-06-26',
@@ -23,7 +23,7 @@ const NEW_LAYOUT_DATES = new Set([
 export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, onNext }) {
   const [width, setWidth] = useState(() => Math.min(DEFAULT_W, clampMax()));
 
-  // Suggested NVIDIA library/SDK rows derived from the relevancy text + vertical.
+  // Suggested library/SDK rows derived from the relevancy text + vertical.
   const nvidiaTechItems = extractNvidiaTech(company.nvidiaRelevancy, company.vertical);
   const newLayout = NEW_LAYOUT_DATES.has(briefingDate);
 
@@ -103,7 +103,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
             <div className="grid grid-cols-3 gap-3 mt-4">
               <Stat label="Total Raised" value={company.totalRaised.display || '—'} mono />
               <Stat
-                label="NVIDIA Fit"
+                label="Fit"
                 value={company.nvidiaAlignment.label}
                 valueColor={company.nvidiaAlignment.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}
                 dot={company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}
@@ -176,7 +176,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
             {newLayout ? (
               <>
                 {/* Reordered layout: Account Workload Research under the relevancy paragraph; use-case/SDK table at the bottom */}
-                <Section label="NVIDIA Relevancy">
+                <Section label="Relevancy">
                   <div className="flex items-start gap-2">
                     <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
                     <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
@@ -190,7 +190,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                 )}
 
                 {company.caseStudy && (
-                  <Section label="NVIDIA Case Study">
+                  <Section label="Case Study">
                     <div className="rounded border border-[#1e293b] bg-[#0f172a] px-3.5 py-3">
                       <MarkdownText text={company.caseStudy} />
                     </div>
@@ -198,7 +198,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                 )}
 
                 {nvidiaTechItems.length > 0 && (
-                  <Section label="NVIDIA Library / SDK by Use-Case">
+                  <Section label="Library / SDK by Use-Case">
                     <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
                   </Section>
                 )}
@@ -206,7 +206,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
             ) : (
               <>
                 {/* Default layout (April 15 + future reports) */}
-                <Section label="NVIDIA Relevancy">
+                <Section label="Relevancy">
                   <div className="flex items-start gap-2 mb-4">
                     <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
                     <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
@@ -215,7 +215,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                 </Section>
 
                 {company.caseStudy && (
-                  <Section label="NVIDIA Case Study">
+                  <Section label="Case Study">
                     <div className="rounded border border-[#1e293b] bg-[#0f172a] px-3.5 py-3">
                       <MarkdownText text={company.caseStudy} />
                     </div>
@@ -266,7 +266,7 @@ function NvidiaTechTable({ relevancyText, vertical }) {
       <table className="w-full text-[11px] border-collapse">
         <thead>
           <tr className="bg-[#0a1628] border-b border-[#1e293b]">
-            {['Use-case', 'NVIDIA Library / SDK', 'Expected Outcome', 'Case Study'].map(h => (
+            {['Use-case', 'Library / SDK', 'Expected Outcome', 'Case Study'].map(h => (
               <th key={h} className="px-3 py-2 text-left text-[10px] font-semibold uppercase tracking-wider text-[#76B900] whitespace-nowrap">
                 {h}
               </th>
@@ -351,7 +351,7 @@ function WorkloadResearchTable({ rows }) {
         </tbody>
       </table>
       <p className="px-3 py-1.5 text-[9px] text-slate-700 border-t border-[#1e293b] bg-[#0a1628]">
-        Identifies high-budget CPU-bound workloads not yet GPU-accelerated — acceleration opportunity analysis for NVIDIA Inception engagement.
+        Identifies high-budget CPU-bound workloads not yet GPU-accelerated — acceleration opportunity analysis for partner engagement.
       </p>
     </div>
   );

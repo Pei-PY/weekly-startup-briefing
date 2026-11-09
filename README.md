@@ -1,6 +1,6 @@
 # Daily Startup Briefing
 
-Daily AI and tech startup news briefings for the NVIDIA Inception team. 
+Daily AI and tech startup news briefings. 
 
 Each briefing surfaces the top 10 startup stories of the day — funding rounds, acquisitions, and product launches — filtered to pre-seed through Series D companies across AI/ML, SaaS, developer tools, deep tech, robotics, and consumer tech.
 
@@ -14,13 +14,13 @@ Contributors: Richard Ling, Damon Asbis, Pei Yi Pang
 
 The briefing is generated via a structured five-phase research protocol executed against live web sources, with a duplicate check against every earlier briefing. A strict 24-hour publication window is established at the start of each run.
 
-A minimum of 61 web searches and direct URL fetches are executed across Tier-1 sources, LinkedIn indexed discovery queries, and one targeted search per each of NVIDIA's 23 Inception verticals, casting a wide raw candidate pool. Each candidate article or post is deep-read to extract funding stage, total raised, investors, founding team signals, traction metrics, and market timing.
+A minimum of 61 web searches and direct URL fetches are executed across Tier-1 sources, LinkedIn indexed discovery queries, and one targeted search per each of the 23 tracked verticals, casting a wide raw candidate pool. Each candidate article or post is deep-read to extract funding stage, total raised, investors, founding team signals, traction metrics, and market timing.
 
 Every surviving candidate is checked against all earlier briefings by normalized company name, parenthetical alias, and website domain. A company appears in the series once: its first appearance stays, and any later repeat is disqualified (or removed with `npm run dedupe:fix` in `briefing-app/`).
 
-Surviving candidates are scored on a 13-point rubric across investor quality, founder signal, market timing, traction, and NVIDIA relevance. A vertical-diversity constraint (max 2 per vertical, target 7+ distinct verticals) is applied to ensure the final 10 represent broad coverage of NVIDIA's strategic focus areas.
+Surviving candidates are scored on a 13-point rubric across investor quality, founder signal, market timing, traction, and technology relevance. A vertical-diversity constraint (max 2 per vertical, target 7+ distinct verticals) is applied to ensure the final 10 represent broad coverage of the tracked verticals.
 
-Each entry includes a company description, the news hook, investor syndicate, NVIDIA technology relevance mapped to specific products (BioNeMo, NIM, Jetson Orin, Omniverse, etc.), and Inception membership status.
+Each entry includes a company description, the news hook, investor syndicate, and technology relevance mapped to specific GPU products and SDKs.
 
 ---
 
@@ -30,11 +30,10 @@ A company is disqualified if any of the following are true:
 
 | Criterion | Reason |
 |-----------|--------|
-| Total capital raised > $200M | Targets early-stage companies before they accumulate NVIDIA attention |
+| Total capital raised > $200M | Targets early-stage companies before they attract broad attention |
 | Already featured in an earlier briefing | Each company appears once across the series; follow-up news belongs in Interesting Trends |
-| Publicly documented NVIDIA customer or Inception High Touch partner | Already visible to NVIDIA outside this briefing |
 | Publication timestamp older than 24 hours | Stale news |
-| Announcing entity is a VC fund, not an operating startup | Not an Inception-eligible company |
+| Announcing entity is a VC fund, not an operating startup | Not an operating company |
 
 ---
 
@@ -46,7 +45,7 @@ TechCrunch, VentureBeat, Hacker News, Product Hunt, The Information, Crunchbase 
 
 ## Web App
 
-Browse all briefings at **[richling98.github.io/daily-startup-briefing](https://richling98.github.io/daily-startup-briefing/)** — a dark-themed React frontend with sortable columns, company detail drawers, and filters by vertical, stage, and NVIDIA fit.
+Browse all briefings at **[richling98.github.io/daily-startup-briefing](https://richling98.github.io/daily-startup-briefing/)** — a dark-themed React frontend with sortable columns, company detail drawers, and filters by vertical, stage, and fit.
 
 Auto-deployed to GitHub Pages on every push to `main`. See [`briefing-app/README.md`](briefing-app/README.md) for local development instructions.
 
@@ -57,7 +56,7 @@ Auto-deployed to GitHub Pages on every push to `main`. See [`briefing-app/README
 ```
 briefings/          # Daily briefing files (YYYY-MM-DD-briefing.md)
 briefing-app/       # Vite + React frontend (GitHub Pages)
-docs/               # Reference docs (NVIDIA Inception, tech stack)
+docs/               # Reference docs (program background, tech stack)
 skills/             # Claude Code skill definition
 CLAUDE.md           # Project instructions for Claude Code
 ```

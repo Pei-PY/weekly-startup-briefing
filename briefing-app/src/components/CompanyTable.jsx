@@ -12,11 +12,11 @@ const COLS = [
   { key: 'totalRaised', label: 'Total Raised',    width: 'w-28',                    sortable: true },
   { key: 'stage',       label: 'Stage',           width: 'w-28',                    sortable: true },
   { key: 'founder',     label: 'Founder BG',      width: 'w-44',                    sortable: false },
-  { key: 'alignment',   label: 'NVIDIA Fit',      width: 'w-32',                    sortable: true },
+  { key: 'alignment',   label: 'Fit',             width: 'w-32',                    sortable: true },
   { key: 'description', label: 'Description',     width: 'w-64',                    sortable: false },
   { key: 'article',     label: "Today's News",    width: 'w-64',                    sortable: false },
   { key: 'investors',   label: 'Investors',       width: 'w-52',                    sortable: false },
-  { key: 'nvidia',      label: 'NVIDIA Relevancy',width: 'w-64',                    sortable: false },
+  { key: 'nvidia',      label: 'Relevancy',       width: 'w-64',                    sortable: false },
   { key: 'website',     label: 'Website',         width: 'w-36',                    sortable: false },
 ];
 
@@ -183,7 +183,7 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
         )}
       </td>
 
-      {/* NVIDIA Alignment */}
+      {/* Fit */}
       <td className="px-3 py-3">
         <div className="flex items-center gap-1.5">
           <span className={`w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
@@ -231,7 +231,7 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
         </div>
       </td>
 
-      {/* NVIDIA Relevancy (truncated) */}
+      {/* Relevancy (truncated) */}
       <td className="px-3 py-3 max-w-[16rem]">
         <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{company.nvidiaRelevancy}</p>
       </td>

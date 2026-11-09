@@ -29,9 +29,9 @@ export default function App() {
       {/* Top header banner */}
       <div className="flex-shrink-0 bg-[#0a1628] px-6 py-2.5 flex items-center gap-3 border-b border-[#1e293b]">
         <div className="w-2 h-2 rounded-full bg-[#76B900]" />
-        <span className="text-[11px] font-semibold uppercase tracking-widest text-[#76B900]">NVIDIA Inception</span>
+        <span className="text-[11px] font-semibold uppercase tracking-widest text-[#76B900]">Startup Briefings</span>
         <span className="text-[#475569] text-[11px]">·</span>
-        <span className="text-[11px] text-slate-300 font-medium">South East Asia Startup Briefing</span>
+        <span className="text-[11px] text-slate-300 font-medium">South East Asia</span>
         <span className="ml-auto flex items-center gap-2.5">
           {[
             { code: 'sg', name: 'Singapore' },

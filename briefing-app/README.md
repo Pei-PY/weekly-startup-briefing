@@ -1,6 +1,6 @@
 # Briefing App
 
-A Vite + React + Tailwind frontend for browsing NVIDIA Inception daily startup briefings. Live at **[richling98.github.io/daily-startup-briefing](https://richling98.github.io/daily-startup-briefing/)**.
+A Vite + React + Tailwind frontend for browsing the daily startup briefings. Live at **[richling98.github.io/daily-startup-briefing](https://richling98.github.io/daily-startup-briefing/)**.
 
 ---
 
@@ -8,16 +8,16 @@ A Vite + React + Tailwind frontend for browsing NVIDIA Inception daily startup b
 
 Displays every daily briefing as a sortable, filterable table. Click any row to open a full company detail drawer (Notion-style). A sidebar lists all briefing dates; a methodology panel explains the research protocol and scoring rubric.
 
-**Columns:** Rank · Company · Country · Vertical · Total Raised · Stage · Founder BG · NVIDIA Fit · Description · Today's News · Investors · NVIDIA Relevancy · Website
+**Columns:** Rank · Company · Country · Vertical · Total Raised · Stage · Founder BG · Fit · Description · Today's News · Investors · Relevancy · Website
 
-**Filters:** Vertical · Stage · NVIDIA Fit
+**Filters:** Vertical · Stage · Fit
 
 ---
 
 ## Stack
 
 - **Vite 8** + **React 19**
-- **Tailwind CSS v4** (dark theme, NVIDIA green `#76B900` accent)
+- **Tailwind CSS v4** (dark theme, green `#76B900` accent)
 - **lucide-react** icons
 - Static JSON data (`src/data/briefings.json`) generated from markdown briefing files
 
