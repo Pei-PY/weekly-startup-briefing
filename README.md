@@ -49,6 +49,12 @@ Browse all briefings at **[pei-py.github.io/weekly-startup-briefing](https://pei
 
 Auto-deployed to GitHub Pages (the `gh-pages` branch) on every push to `main` by `.github/workflows/deploy.yml`. See [`briefing-app/README.md`](briefing-app/README.md) for local development instructions.
 
+## Access control
+
+The published site is password-protected. At build time `briefing-app/scripts/encrypt-briefings.js` encrypts the parsed briefing data with AES-256-GCM using a key derived (PBKDF2-SHA256, 250k iterations) from the `BRIEFING_PASSWORD` environment variable; the site ships only the ciphertext and decrypts it in the visitor's browser after they enter the password. The password is stored as the repository secret `BRIEFING_PASSWORD` for the GitHub Actions builds and is never committed. For local builds run `BRIEFING_PASSWORD=... npm run build` in `briefing-app/`.
+
+Note: this protects the published site only. The markdown sources in `briefings/` remain readable to anyone who can see this repository; make the repository private to protect those as well (GitHub Pages on a private repository requires a paid GitHub plan).
+
 ## Weekly schedule
 
 `.github/workflows/weekly-briefing.yml` runs every **Wednesday at 08:00 Singapore time** (00:00 UTC) until **31 December 2027**. It researches the previous seven days with Claude Code in headless mode following [`docs/weekly-briefing-protocol.md`](docs/weekly-briefing-protocol.md), writes `briefings/<run-date>-briefing.md`, runs the duplicate check and parser, commits to `main` and redeploys the site. The job stops itself after 2027-12-31 and skips if the week's file already exists.

@@ -39,8 +39,10 @@ jobs:
         working-directory: briefing-app
         run: npm ci
 
-      - name: Build (runs dedupe check + parser first)
+      - name: Build (dedupe check, parser, encryption)
         working-directory: briefing-app
+        env:
+          BRIEFING_PASSWORD: ${{ secrets.BRIEFING_PASSWORD }}
         run: npm run build
 
       - name: Push dist to gh-pages

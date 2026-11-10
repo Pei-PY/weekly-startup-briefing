@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
-import briefingsData from './data/briefings.json';
+import { useCallback, useMemo, useState } from 'react';
+import { LogOut } from 'lucide-react';
 import Sidebar from './components/Sidebar.jsx';
 import BriefingView from './components/BriefingView.jsx';
 import CompanyDrawer from './components/CompanyDrawer.jsx';
 import GlobalSearch from './components/GlobalSearch.jsx';
 import SearchResults from './components/SearchResults.jsx';
+import PasswordGate from './components/PasswordGate.jsx';
+import { lock } from './lib/crypto.js';
 
 const COUNTRIES = [
   { code: 'sg', name: 'Singapore' },
@@ -20,7 +22,14 @@ function normalize(s) {
 }
 
 export default function App() {
-  const { briefings } = briefingsData;
+  const [data, setData] = useState(null);
+  const handleUnlock = useCallback((payload) => setData(payload), []);
+
+  if (!data) return <PasswordGate onUnlock={handleUnlock} />;
+  return <Briefings briefings={data.briefings} onLock={() => { lock(); setData(null); }} />;
+}
+
+function Briefings({ briefings, onLock }) {
   const [selectedDate, setSelectedDate] = useState(briefings[0]?.date ?? null);
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [query, setQuery] = useState('');
@@ -48,7 +57,6 @@ export default function App() {
     return rows;
   }, [briefings, query]);
 
-  // Drawer navigation list: search results while searching, else the open briefing.
   const navList = isSearching
     ? searchResults.map(r => ({ ...r.company, _briefingDate: r.briefing.date }))
     : (currentBriefing?.companies ?? []).map(c => ({ ...c, _briefingDate: currentBriefing.date }));
@@ -90,6 +98,14 @@ export default function App() {
             />
           ))}
         </span>
+        <button
+          onClick={onLock}
+          title="Lock (forget password for this tab)"
+          className="ml-3 flex items-center gap-1 text-[11px] text-slate-500 hover:text-slate-300 transition-colors"
+        >
+          <LogOut size={12} />
+          Lock
+        </button>
       </div>
 
       <div className="flex flex-1 overflow-hidden">

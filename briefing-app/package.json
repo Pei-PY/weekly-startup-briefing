@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "parse": "node scripts/parse-briefings.js",
-    "dev": "npm run parse && vite",
-    "build": "npm run dedupe:check && npm run parse && vite build",
+    "encrypt": "node scripts/encrypt-briefings.js",
+    "dev": "npm run parse && npm run encrypt && vite",
+    "build": "npm run dedupe:check && npm run parse && npm run encrypt && vite build",
     "preview": "vite preview",
     "dedupe:check": "node scripts/dedupe-briefings.js",
     "dedupe:fix": "node scripts/dedupe-briefings.js --fix"

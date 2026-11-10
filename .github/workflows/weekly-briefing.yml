@@ -149,6 +149,8 @@ jobs:
       - name: Build site
         if: env.ENDED != '1'
         working-directory: briefing-app
+        env:
+          BRIEFING_PASSWORD: ${{ secrets.BRIEFING_PASSWORD }}
         run: npm run build
 
       - name: Deploy to gh-pages
