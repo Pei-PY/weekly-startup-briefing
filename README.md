@@ -47,7 +47,13 @@ TechCrunch, VentureBeat, Hacker News, Product Hunt, The Information, Crunchbase 
 
 Browse all briefings at **[pei-py.github.io/weekly-startup-briefing](https://pei-py.github.io/weekly-startup-briefing/)** — a dark-themed React frontend with sortable columns, company detail drawers, and filters by vertical, stage, and fit.
 
-Auto-deployed to GitHub Pages on every push to `main`. See [`briefing-app/README.md`](briefing-app/README.md) for local development instructions.
+Auto-deployed to GitHub Pages (the `gh-pages` branch) on every push to `main` by `.github/workflows/deploy.yml`. See [`briefing-app/README.md`](briefing-app/README.md) for local development instructions.
+
+## Weekly schedule
+
+`.github/workflows/weekly-briefing.yml` runs every **Wednesday at 08:00 Singapore time** (00:00 UTC) until **31 December 2027**. It researches the previous seven days with Claude Code in headless mode following [`docs/weekly-briefing-protocol.md`](docs/weekly-briefing-protocol.md), writes `briefings/<run-date>-briefing.md`, runs the duplicate check and parser, commits to `main` and redeploys the site. The job stops itself after 2027-12-31 and skips if the week's file already exists.
+
+Setup (one time): add the repository secret `ANTHROPIC_API_KEY` under Settings → Secrets and variables → Actions, or run `gh secret set ANTHROPIC_API_KEY -R Pei-PY/weekly-startup-briefing`. Trigger a run manually from the Actions tab (**Weekly Startup Briefing → Run workflow**), optionally passing a `week_end` date, to test it.
 
 ---
 

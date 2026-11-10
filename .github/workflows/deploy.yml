@@ -1,24 +1,33 @@
 name: Deploy to GitHub Pages
 
+# Builds briefing-app and pushes the static site to the gh-pages branch, which is
+# what GitHub Pages serves for this repo (legacy branch mode). Runs on every push
+# to main and can be called by other workflows (the weekly briefing job).
+
 on:
   push:
     branches: [main]
+    paths:
+      - 'briefings/**'
+      - 'briefing-app/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
+  workflow_call:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: "pages"
+  group: "gh-pages-deploy"
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -30,22 +39,31 @@ jobs:
         working-directory: briefing-app
         run: npm ci
 
-      - name: Build
+      - name: Build (runs dedupe check + parser first)
         working-directory: briefing-app
         run: npm run build
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: briefing-app/dist
+      - name: Push dist to gh-pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          BRIEFINGS=$(ls briefings/*-briefing.md | wc -l)
+          COMPANIES=$(grep -h '^### [0-9]' briefings/*-briefing.md | wc -l)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add /tmp/gh-pages origin/gh-pages
+          cd /tmp/gh-pages
+          git checkout -B gh-pages
+          git rm -rq . || true
+          cp -r "$GITHUB_WORKSPACE/briefing-app/dist/." .
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Site unchanged; nothing to deploy."
+            exit 0
+          fi
+          git commit -m "Deploy: ${BRIEFINGS} briefings, ${COMPANIES} companies
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+Built from main ${GITHUB_SHA::7} by GitHub Actions."
+          git push origin gh-pages
