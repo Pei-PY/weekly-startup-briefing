@@ -1,7 +1,7 @@
 import { X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { useState, useCallback } from 'react';
 import { getVerticalColor, getStageColor } from '../lib/utils.js';
-import { extractNvidiaTech, getCaseStudy, NVIDIA_TECH } from '../lib/nvidia-tech.js';
+import { extractTech, getCaseStudy, TECH_CATALOG } from '../lib/tech-catalog.js';
 
 const MIN_W = 400;
 const DEFAULT_W = 680;
@@ -24,7 +24,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
   const [width, setWidth] = useState(() => Math.min(DEFAULT_W, clampMax()));
 
   // Suggested library/SDK rows derived from the relevancy text + vertical.
-  const nvidiaTechItems = extractNvidiaTech(company.nvidiaRelevancy, company.vertical);
+  const techItems = extractTech(company.relevancy, company.vertical);
   const newLayout = NEW_LAYOUT_DATES.has(briefingDate);
 
   const startResize = useCallback((e) => {
@@ -104,9 +104,9 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
               <Stat label="Total Raised" value={company.totalRaised.display || '—'} mono />
               <Stat
                 label="Fit"
-                value={company.nvidiaAlignment.label}
-                valueColor={company.nvidiaAlignment.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}
-                dot={company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}
+                value={company.fit.label}
+                valueColor={company.fit.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}
+                dot={company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}
               />
               <div className="flex flex-col gap-2">
                 {company.websiteUrl && (
@@ -178,8 +178,8 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                 {/* Reordered layout: Account Workload Research under the relevancy paragraph; use-case/SDK table at the bottom */}
                 <Section label="Relevancy">
                   <div className="flex items-start gap-2">
-                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
-                    <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
+                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
+                    <p className="text-sm text-slate-400 leading-relaxed">{company.relevancy}</p>
                   </div>
                 </Section>
 
@@ -197,9 +197,9 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                   </Section>
                 )}
 
-                {nvidiaTechItems.length > 0 && (
+                {techItems.length > 0 && (
                   <Section label="Library / SDK by Use-Case">
-                    <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
+                    <TechTable relevancyText={company.relevancy} vertical={company.vertical} />
                   </Section>
                 )}
               </>
@@ -208,10 +208,10 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                 {/* Default layout (April 15 + future reports) */}
                 <Section label="Relevancy">
                   <div className="flex items-start gap-2 mb-4">
-                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
-                    <p className="text-sm text-slate-400 leading-relaxed">{company.nvidiaRelevancy}</p>
+                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
+                    <p className="text-sm text-slate-400 leading-relaxed">{company.relevancy}</p>
                   </div>
-                  <NvidiaTechTable relevancyText={company.nvidiaRelevancy} vertical={company.vertical} />
+                  <TechTable relevancyText={company.relevancy} vertical={company.vertical} />
                 </Section>
 
                 {company.caseStudy && (
@@ -257,8 +257,8 @@ function Stat({ label, value, mono, valueColor, dot }) {
   );
 }
 
-function NvidiaTechTable({ relevancyText, vertical }) {
-  const items = extractNvidiaTech(relevancyText, vertical);
+function TechTable({ relevancyText, vertical }) {
+  const items = extractTech(relevancyText, vertical);
   if (!items.length) return null;
 
   return (
@@ -275,7 +275,7 @@ function NvidiaTechTable({ relevancyText, vertical }) {
         </thead>
         <tbody>
           {items.map(({ key, source }, i) => {
-            const t = NVIDIA_TECH[key];
+            const t = TECH_CATALOG[key];
             const cs = getCaseStudy(key, vertical);
             const isSuggested = source === 'vertical';
             return (

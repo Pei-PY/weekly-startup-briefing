@@ -16,7 +16,7 @@ const COLS = [
   { key: 'description', label: 'Description',     width: 'w-64',                    sortable: false },
   { key: 'article',     label: 'News',            width: 'w-64',                    sortable: false },
   { key: 'investors',   label: 'Investors',       width: 'w-52',                    sortable: false },
-  { key: 'nvidia',      label: 'Relevancy',       width: 'w-64',                    sortable: false },
+  { key: 'relevancy',   label: 'Relevancy',       width: 'w-64',                    sortable: false },
   { key: 'website',     label: 'Website',         width: 'w-36',                    sortable: false },
 ];
 
@@ -44,7 +44,7 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
         case 'vertical':    av = a.vertical.toLowerCase(); bv = b.vertical.toLowerCase(); break;
         case 'totalRaised': av = a.totalRaised.valueM ?? -1; bv = b.totalRaised.valueM ?? -1; break;
         case 'stage':       av = STAGE_ORDER.indexOf(a.stage); bv = STAGE_ORDER.indexOf(b.stage); break;
-        case 'alignment':   av = a.nvidiaAlignment.level === 'strong' ? 0 : 1; bv = b.nvidiaAlignment.level === 'strong' ? 0 : 1; break;
+        case 'alignment':   av = a.fit.level === 'strong' ? 0 : 1; bv = b.fit.level === 'strong' ? 0 : 1; break;
         default: return 0;
       }
       if (av < bv) return sortDir === 'asc' ? -1 : 1;
@@ -186,9 +186,9 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
       {/* Fit */}
       <td className="px-3 py-3">
         <div className="flex items-center gap-1.5">
-          <span className={`w-2 h-2 rounded-full flex-shrink-0 ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
-          <span className={`text-xs font-medium ${company.nvidiaAlignment.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}`}>
-            {company.nvidiaAlignment.level === 'strong' ? 'Strong' : 'Maybe'}
+          <span className={`w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
+          <span className={`text-xs font-medium ${company.fit.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}`}>
+            {company.fit.level === 'strong' ? 'Strong' : 'Maybe'}
           </span>
         </div>
       </td>
@@ -233,7 +233,7 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
 
       {/* Relevancy (truncated) */}
       <td className="px-3 py-3 max-w-[16rem]">
-        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{company.nvidiaRelevancy}</p>
+        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{company.relevancy}</p>
       </td>
 
       {/* Website */}

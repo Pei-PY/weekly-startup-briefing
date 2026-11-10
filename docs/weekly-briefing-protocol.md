@@ -33,7 +33,7 @@ inside the week window. Verify each article's publication date falls inside the 
 - Event outside the window.
 - Appears in the exclusion list (check name AND website domain), or
   `node briefing-app/scripts/dedupe-briefings.js --lookup "Name"` exits 1.
-- Company older than 10 years; total raised > $200M; publicly known NVIDIA customer or case study.
+- Company older than 10 years; total raised > $200M; publicly featured in a GPU vendor's customer story or case study.
 - Entity is an accelerator, fund, government program, incubator or corporate innovation lab.
 - Company whose core business is chip design or integrated-circuit design (fabless AI silicon,
   ASIC/SoC design, photonic ICs). Materials, packaging and inspection companies are allowed.
@@ -45,8 +45,8 @@ relevance). Aim for exactly 10 companies; no vertical more than twice; prefer br
 and say so in the Research window note. Never pad with unverifiable names and never fabricate
 dates, amounts, investors or URLs.
 
-## Software-only rule for NVIDIA mentions
-In **NVIDIA Relevancy**, **Key NVIDIA Tech** and the **Libraries / Tools** column, name only NVIDIA
+## Software-only rule for accelerated-computing mentions
+In **Relevancy**, **Key Tech** and the **Libraries / Tools** column, name only GPU-accelerated
 SDKs, libraries, frameworks and NIM microservices (NeMo, NIM, TensorRT, TensorRT-LLM, Triton/Dynamo,
 RAPIDS, Morpheus, Isaac ROS/Sim/Lab/GR00T, Omniverse, Metropolis, DeepStream, TAO, BioNeMo, MONAI,
 Holoscan SDK, DriveWorks, DRIVE OS, cuOpt, Riva, Maxine, Merlin, Modulus, cuQuantum/CUDA-Q, DOCA,
@@ -63,13 +63,13 @@ recommendations.
 > *Curated for: pyi@nvidia.com · Pre-Seed through Series D · AI & Technology · South East Asia Edition*
 > *Research window: <Month D–D, YYYY> · Weekly edition. <1–2 sentences on the week's deal flow and, if fewer than 10, how many qualified and why.> **Hard-filter note:** all N sit under the >$200M total-raised rule; none appear in earlier briefings.*
 
-**NVIDIA Tech Alignment Legend:** 🟢 Strong potential — uses AI/ML with GPU-native workloads, inference at scale, or clear NVIDIA tech fit · 🟠 Maybe — software-only, no meaningful compute, or built on non-NVIDIA silicon
+**Tech Alignment Legend:** 🟢 Strong potential — uses AI/ML with GPU-native workloads, inference at scale, or clear accelerated-computing fit · 🟠 Maybe — software-only, no meaningful compute, or built on CPU-only or custom silicon
 
 ---
 
 ### 1. <Company Name>
 
-**Vertical:** <one of the 23 verticals> | **Total Raised to Date:** ~$XM | **Stage:** <Pre-Seed/Seed/Series A/B/C/D> | **NVIDIA Tech Alignment:** 🟢 Strong potential
+**Vertical:** <one of the 23 verticals> | **Total Raised to Date:** ~$XM | **Stage:** <Pre-Seed/Seed/Series A/B/C/D> | **Tech Alignment:** 🟢 Strong potential
 
 **What we do:** <2–3 plain sentences: what they build, for whom, HQ city and country, founding year. The country name MUST appear here and no other SEA country name should appear — the UI extracts country from this text, matching Singapore first.>
 
@@ -77,10 +77,10 @@ recommendations.
 
 **Investors:** <lead first, comma-separated>
 
-**NVIDIA Relevancy:** <1–2 sentences, software-only, hedged.>
+**Relevancy:** <1–2 sentences, software-only, hedged.>
 
-**NVIDIA Case Study:** **<Customer>** — <what they built with which NVIDIA SDKs and why it is analogous> ([case study](<URL>) · via [NVIDIA <industry> page](https://www.nvidia.com/en-us/industries/<industry>/))
-(or: **No closely matching public case study — see [NVIDIA <industry> page](<URL>)**)
+**Case Study:** **<Customer>** — <what they built with which accelerated-computing SDKs and why it is analogous> ([case study](<URL>) · via [<industry> industry page](https://www.nvidia.com/en-us/industries/<industry>/))
+(or: **No closely matching public case study — see [<industry> industry page](<URL>)**)
 
 **Account Workload Research:**
 | Workload | Budget | Acceleration | Nodes | Libraries / Tools | Partner | Case Study | Expected Outcomes |
@@ -99,7 +99,7 @@ recommendations.
 
 *Companies from this week's briefing ranked by technology relevance.*
 
-| Rank | Company | Country | Vertical | Stage | NVIDIA Tech Alignment | Key NVIDIA Tech |
+| Rank | Company | Country | Vertical | Stage | Tech Alignment | Key Tech |
 |------|---------|---------|---------|-------|-----------|-----------------|
 
 ## Vertical Coverage This Week

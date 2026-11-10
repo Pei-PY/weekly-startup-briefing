@@ -83,9 +83,9 @@ export default function SearchResults({ query, results, selectedCompany, onSelec
                       </span>
                     </td>
                     <td className="px-3 py-3 align-top">
-                      <span className={`flex items-center gap-1.5 text-xs ${company.nvidiaAlignment.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}`}>
-                        <span className={`w-1.5 h-1.5 rounded-full ${company.nvidiaAlignment.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-400'}`} />
-                        {company.nvidiaAlignment.label}
+                      <span className={`flex items-center gap-1.5 text-xs ${company.fit.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-400'}`} />
+                        {company.fit.label}
                       </span>
                     </td>
                     <td className="px-3 py-3 align-top whitespace-nowrap">

@@ -1,4 +1,4 @@
-// Static mapping: NVIDIA product/SDK → use-case table row
+// Static mapping: the accelerated-computing vendor product/SDK → use-case table row
 // Case study URLs sourced from nvidia.com/en-sg/case-studies/ where available
 //
 // caseStudy format:
@@ -16,10 +16,10 @@ const CS = {
   mitre:      { label: 'MITRE — federal AI sandbox',                   url: 'https://www.nvidia.com/en-us/case-studies/mitre-federal-ai-sandbox-unleashes-ai-potential-for-public-good/' },
 };
 
-export const NVIDIA_TECH = {
+export const TECH_CATALOG = {
   'NIM': {
     useCase: 'On-prem & cloud LLM deployment',
-    sdk: 'NVIDIA NIM, AI Enterprise',
+    sdk: 'NIM, AI Enterprise',
     outcome: 'Deploy production-grade LLM APIs in minutes; optimised inference with enterprise SLA',
     caseStudy: {
       default: { label: 'NIM microservices overview', url: 'https://www.nvidia.com/en-us/ai/' },
@@ -75,7 +75,7 @@ export const NVIDIA_TECH = {
     useCase: 'Next-gen AI compute (Blackwell architecture)',
     sdk: 'CUDA, NVLink 5, cuDNN',
     outcome: '5× faster training vs H100; 25× lower inference cost for LLMs',
-    caseStudy: { label: 'NVIDIA Blackwell', url: 'https://www.nvidia.com/en-us/data-center/blackwell/' },
+    caseStudy: { label: 'Blackwell', url: 'https://www.nvidia.com/en-us/data-center/blackwell/' },
   },
   'H200': {
     useCase: 'Memory-bound LLM inference (141 GB HBM3e)',
@@ -143,15 +143,15 @@ export const NVIDIA_TECH = {
   },
   'Metropolis': {
     useCase: 'Intelligent video analytics at city/enterprise scale',
-    sdk: 'NVIDIA Metropolis, DeepStream, TAO',
+    sdk: 'Metropolis, DeepStream, TAO',
     outcome: 'Centralised AI inference across 1000s of cameras; plug-and-play partner app ecosystem',
-    caseStudy: { label: 'NVIDIA Metropolis', url: 'https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/' },
+    caseStudy: { label: 'Metropolis', url: 'https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/' },
   },
   'Omniverse': {
     useCase: 'Industrial digital twins & 3D simulation',
     sdk: 'Omniverse Kit, OpenUSD, PhysX',
     outcome: 'Real-time collaborative simulation; $1B+ factory simulation savings reported by early adopters',
-    caseStudy: { label: 'NVIDIA Omniverse', url: 'https://www.nvidia.com/en-us/omniverse/' },
+    caseStudy: { label: 'Omniverse', url: 'https://www.nvidia.com/en-us/omniverse/' },
   },
   'RAPIDS': {
     useCase: 'GPU-accelerated data science & ML pipelines',
@@ -170,9 +170,9 @@ export const NVIDIA_TECH = {
   },
   'Morpheus': {
     useCase: 'Real-time AI-powered cybersecurity & threat detection',
-    sdk: 'NVIDIA Morpheus, CUDA, TensorRT',
+    sdk: 'Morpheus, CUDA, TensorRT',
     outcome: 'Analyse 100Gbps packet streams in real time; detect insider threats at network speed',
-    caseStudy: { label: 'NVIDIA Morpheus', url: 'https://developer.nvidia.com/morpheus-cybersecurity' },
+    caseStudy: { label: 'Morpheus', url: 'https://developer.nvidia.com/morpheus-cybersecurity' },
   },
   'BlueField DPU': {
     useCase: 'Data-centre infrastructure offload & zero-trust security',
@@ -182,16 +182,16 @@ export const NVIDIA_TECH = {
   },
   'Spectrum-X': {
     useCase: 'AI fabric networking for GPU clusters',
-    sdk: 'Spectrum-X, RoCE, NVIDIA NVLink',
+    sdk: 'Spectrum-X, RoCE, NVLink',
     outcome: '1.6× AI job throughput improvement vs standard Ethernet in large-scale GPU clusters',
-    caseStudy: { label: 'NVIDIA Spectrum-X', url: 'https://www.nvidia.com/en-us/networking/products/ethernet-switching/' },
+    caseStudy: { label: 'Spectrum-X', url: 'https://www.nvidia.com/en-us/networking/products/ethernet-switching/' },
   },
   'InfiniBand': {
     useCase: 'Ultra-low latency GPU interconnect for AI clusters',
     sdk: 'InfiniBand, NCCL, GPUDirect RDMA',
     outcome: 'Sub-microsecond latency; near-linear scaling to thousands of GPUs for distributed training',
     caseStudy: {
-      default: { label: 'NVIDIA InfiniBand', url: 'https://www.nvidia.com/en-us/networking/infiniband/' },
+      default: { label: 'InfiniBand', url: 'https://www.nvidia.com/en-us/networking/infiniband/' },
       byVertical: {
         'Healthcare & Life Sciences':           CS.mitRecurs,
         'Supercomputing / Quantum':             CS.mitRecurs,
@@ -228,7 +228,7 @@ export const NVIDIA_TECH = {
     sdk: 'NeMo Framework, NeMo Guardrails',
     outcome: 'Train custom LLMs on enterprise data; full pipeline from data curation to RLHF alignment',
     caseStudy: {
-      default: { label: 'NVIDIA NeMo', url: 'https://www.nvidia.com/en-us/ai-data-science/products/nemo/' },
+      default: { label: 'NeMo', url: 'https://www.nvidia.com/en-us/ai-data-science/products/nemo/' },
       byVertical: {
         'Telecom':                              CS.att,
         'IT Services / SaaS':                  CS.att,
@@ -241,27 +241,27 @@ export const NVIDIA_TECH = {
   },
   'Riva': {
     useCase: 'Real-time speech AI (ASR, TTS, NLP)',
-    sdk: 'NVIDIA Riva, TensorRT',
+    sdk: 'Riva, TensorRT',
     outcome: 'Production speech AI at <100 ms latency; supports 60+ languages',
-    caseStudy: { label: 'NVIDIA Riva', url: 'https://www.nvidia.com/en-us/ai-data-science/products/riva/' },
+    caseStudy: { label: 'Riva', url: 'https://www.nvidia.com/en-us/ai-data-science/products/riva/' },
   },
   'DRIVE Orin': {
     useCase: 'Autonomous vehicle & ADAS compute',
-    sdk: 'NVIDIA DRIVE, DriveWorks, DRIVE Sim',
+    sdk: 'DRIVE, DriveWorks, DRIVE Sim',
     outcome: '254 TOPS for full AV perception stack; ISO 26262 ASIL-D certified safety',
-    caseStudy: { label: 'NVIDIA DRIVE Orin', url: 'https://www.nvidia.com/en-us/self-driving-cars/drive-platform/' },
+    caseStudy: { label: 'DRIVE Orin', url: 'https://www.nvidia.com/en-us/self-driving-cars/drive-platform/' },
   },
   'DRIVE Thor': {
     useCase: 'Centralised AV & cockpit compute (next-gen)',
-    sdk: 'NVIDIA DRIVE, DriveWorks',
+    sdk: 'DRIVE, DriveWorks',
     outcome: '2000 TOPS; single SoC replaces multiple ECUs for vehicle compute consolidation',
-    caseStudy: { label: 'NVIDIA DRIVE Thor', url: 'https://www.nvidia.com/en-us/self-driving-cars/drive-platform/' },
+    caseStudy: { label: 'DRIVE Thor', url: 'https://www.nvidia.com/en-us/self-driving-cars/drive-platform/' },
   },
   'FourCastNet': {
     useCase: 'AI-based global weather & climate forecasting',
     sdk: 'FourCastNet NIM, Earth-2, CUDA',
     outcome: '10,000× faster than traditional numerical weather prediction; ensemble forecasts in seconds',
-    caseStudy: { label: 'NVIDIA Earth-2', url: 'https://www.nvidia.com/en-us/high-performance-computing/earth-2/' },
+    caseStudy: { label: 'Earth-2', url: 'https://www.nvidia.com/en-us/high-performance-computing/earth-2/' },
   },
   'cuQuantum': {
     useCase: 'GPU-accelerated quantum circuit simulation',
@@ -273,20 +273,20 @@ export const NVIDIA_TECH = {
     useCase: 'Real-time ray tracing & AI rendering (DLSS)',
     sdk: 'RTX, DLSS, OptiX',
     outcome: 'DLSS 3 delivers 4× more frames with AI; photorealistic rendering at game/VR frame rates',
-    caseStudy: { label: 'NVIDIA RTX', url: 'https://www.nvidia.com/en-us/geforce/rtx/' },
+    caseStudy: { label: 'RTX', url: 'https://www.nvidia.com/en-us/geforce/rtx/' },
   },
   'Maxine': {
     useCase: 'AI-powered video conferencing & AR effects',
-    sdk: 'NVIDIA Maxine, TensorRT',
+    sdk: 'Maxine, TensorRT',
     outcome: 'Reduce video streaming bandwidth by up to 90% with AI super-resolution; real-time AR overlays',
-    caseStudy: { label: 'NVIDIA Maxine', url: 'https://developer.nvidia.com/maxine' },
+    caseStudy: { label: 'Maxine', url: 'https://developer.nvidia.com/maxine' },
   },
   'NVAIE': {
     useCase: 'Enterprise-grade AI software stack',
-    sdk: 'NVIDIA AI Enterprise, NIM, NeMo',
+    sdk: 'AI Enterprise, NIM, NeMo',
     outcome: 'Certified, supported AI software with 3-year LTS; reduces deployment risk for regulated industries',
     caseStudy: {
-      default: { label: 'NVIDIA AI Enterprise', url: 'https://www.nvidia.com/en-us/data-center/products/ai-enterprise/' },
+      default: { label: 'AI Enterprise', url: 'https://www.nvidia.com/en-us/data-center/products/ai-enterprise/' },
       byVertical: {
         'Telecom':                              CS.att,
         'IT Services / SaaS':                  CS.att,
@@ -300,8 +300,8 @@ export const NVIDIA_TECH = {
   },
 };
 
-// Per-vertical recommended NVIDIA products — used when text matching alone is insufficient
-export const VERTICAL_NVIDIA_MAP = {
+// Per-vertical recommended the accelerated-computing vendor products — used when text matching alone is insufficient
+export const VERTICAL_TECH_MAP = {
   'Healthcare & Life Sciences':    ['BioNeMo', 'Clara Holoscan', 'MONAI', 'Clara Parabricks'],
   'Auto / AV Infra':               ['DRIVE Orin', 'DRIVE Thor', 'Omniverse'],
   'Manufacturing & Industrial':    ['Omniverse', 'Jetson Orin', 'DeepStream', 'Isaac Sim'],
@@ -330,7 +330,7 @@ export const VERTICAL_NVIDIA_MAP = {
 };
 
 // Products to detect in relevancy text, ordered longest-match-first
-export const NVIDIA_PRODUCT_PATTERNS = [
+export const PRODUCT_PATTERNS = [
   { key: 'Isaac GR00T',    re: /\bIsaac\s+GR00T\b/i },
   { key: 'Isaac ROS',      re: /\bIsaac\s+ROS\b/i },
   { key: 'Isaac Sim',      re: /\bIsaac\s+Sim\b/i },
@@ -379,7 +379,7 @@ export const NVIDIA_PRODUCT_PATTERNS = [
 // Handles both flat { label, url } (vertical-specific products) and
 // { default, byVertical } (cross-vertical products).
 export function getCaseStudy(productKey, vertical) {
-  const cs = NVIDIA_TECH[productKey]?.caseStudy;
+  const cs = TECH_CATALOG[productKey]?.caseStudy;
   if (!cs) return { label: '', url: '#' };
   if (cs.byVertical) {
     return (vertical && cs.byVertical[vertical]) ? cs.byVertical[vertical] : cs.default;
@@ -387,26 +387,26 @@ export function getCaseStudy(productKey, vertical) {
   return cs; // flat format
 }
 
-export function extractNvidiaTech(relevancyText, vertical) {
+export function extractTech(relevancyText, vertical) {
   const found = [];
   const seen = new Set();
 
-  // Text-matched: explicitly named in the NVIDIA Relevancy field
+  // Text-matched: explicitly named in the Relevancy field
   if (relevancyText) {
-    for (const { key, re } of NVIDIA_PRODUCT_PATTERNS) {
+    for (const { key, re } of PRODUCT_PATTERNS) {
       if (!seen.has(key) && re.test(relevancyText)) {
         seen.add(key);
-        if (NVIDIA_TECH[key]) found.push({ key, source: 'text' });
+        if (TECH_CATALOG[key]) found.push({ key, source: 'text' });
       }
     }
   }
 
   // Vertical-inferred: suggested based on industry tag (capped at 3 to avoid noise)
-  const verticalKeys = VERTICAL_NVIDIA_MAP[vertical] ?? [];
+  const verticalKeys = VERTICAL_TECH_MAP[vertical] ?? [];
   let verticalAdded = 0;
   for (const key of verticalKeys) {
     if (verticalAdded >= 3) break;
-    if (!seen.has(key) && NVIDIA_TECH[key]) {
+    if (!seen.has(key) && TECH_CATALOG[key]) {
       seen.add(key);
       found.push({ key, source: 'vertical' });
       verticalAdded++;

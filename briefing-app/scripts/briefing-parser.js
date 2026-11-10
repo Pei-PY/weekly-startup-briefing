@@ -104,7 +104,7 @@ function extractFounderBackground(fields) {
   const text = [
     fields['What we do'] ?? '',
     fields["Today's interesting article"] ?? '',
-    fields['NVIDIA Relevancy'] ?? '',
+    fields['Relevancy'] ?? fields['NVIDIA Relevancy'] ?? '',
   ].join(' ');
 
   const found = [];
@@ -148,7 +148,7 @@ export function parseCompanySection(sectionText) {
   const name = nameMatch?.[1]?.trim() ?? '';
   if (!name) return null;
 
-  // Metadata line: **Vertical:** X | **Total Raised to Date:** X | **Stage:** X | **NVIDIA Tech Alignment:** emoji label
+  // Metadata line: **Vertical:** X | **Total Raised to Date:** X | **Stage:** X | **Tech Alignment:** emoji label (legacy daily files use "NVIDIA Tech Alignment"; both accepted)
   const metaLine = lines.find(l => l.includes('**Vertical:**'));
   let vertical = '', totalRaisedDisplay = '', stage = '';
   let alignmentLevel = 'maybe', alignmentLabel = 'Maybe';
@@ -162,7 +162,7 @@ export function parseCompanySection(sectionText) {
       if (k === 'Vertical') vertical = v;
       else if (k === 'Total Raised to Date') totalRaisedDisplay = v;
       else if (k === 'Stage') stage = v;
-      else if (k === 'NVIDIA Tech Alignment') {
+      else if (k === 'Tech Alignment' || k === 'NVIDIA Tech Alignment') {
         alignmentLevel = v.includes('🟢') ? 'strong' : 'maybe';
         alignmentLabel = alignmentLevel === 'strong' ? 'Strong potential' : 'Maybe';
       }
@@ -220,9 +220,9 @@ export function parseCompanySection(sectionText) {
 
   const description = stripMarkdown((fields['What we do'] ?? '').replace(/\n/g, ' ').trim());
   const articleBody = stripMarkdown((fields["Today's interesting article"] ?? '').replace(/\n+/g, ' ').trim());
-  const nvidiaRelevancy = stripMarkdown((fields['NVIDIA Relevancy'] ?? '').replace(/\n/g, ' ').trim());
+  const relevancy = stripMarkdown((fields['Relevancy'] ?? fields['NVIDIA Relevancy'] ?? '').replace(/\n/g, ' ').trim());
   // Keep raw markdown — the drawer renders the embedded [case study](url) links
-  const caseStudy = (fields['NVIDIA Case Study'] ?? '').replace(/\n/g, ' ').trim() || null;
+  const caseStudy = (fields['Case Study'] ?? fields['NVIDIA Case Study'] ?? '').replace(/\n/g, ' ').trim() || null;
   const workloadResearch = parseMarkdownTable(fields['Account Workload Research'] ?? '');
   const founderBackground = extractFounderBackground(fields);
   const country = extractCountry(fields);
@@ -232,12 +232,12 @@ export function parseCompanySection(sectionText) {
     vertical,
     totalRaised: { display: totalRaisedDisplay, valueM: parseCurrencyToM(totalRaisedDisplay) },
     stage,
-    nvidiaAlignment: { level: alignmentLevel, label: alignmentLabel },
+    fit: { level: alignmentLevel, label: alignmentLabel },
     description,
     articleUrl,
     articleBody,
     investors,
-    nvidiaRelevancy,
+    relevancy,
     caseStudy,
     workloadResearch,
     inceptionStatus,
@@ -253,7 +253,7 @@ export function parseCompanySection(sectionText) {
 export function parseBriefingContent(rawContent) {
   const content = rawContent.replace(/\r\n/g, '\n');
 
-  // Extract date from header line ## Weekday, Month DD, YYYY
+  // Extract the label from the header line (legacy daily: "· NVIDIA Inception Edition"; weekly: "· Weekly Edition")
   const dateLineM = content.match(/^## (.+?) · (?:NVIDIA Inception|Weekly) Edition/m);
   const label = dateLineM ? dateLineM[1] : '';
 

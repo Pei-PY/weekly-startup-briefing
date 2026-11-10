@@ -10,12 +10,12 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
 
   const verticals = [...new Set(briefing.companies.map(c => c.vertical))].sort();
   const stages = STAGE_ORDER.filter(s => briefing.companies.some(c => c.stage === s));
-  const strongCount = briefing.companies.filter(c => c.nvidiaAlignment.level === 'strong').length;
+  const strongCount = briefing.companies.filter(c => c.fit.level === 'strong').length;
 
   const filteredCompanies = briefing.companies.filter(c => {
     if (filters.vertical && c.vertical !== filters.vertical) return false;
     if (filters.stage && c.stage !== filters.stage) return false;
-    if (filters.fit && c.nvidiaAlignment.level !== filters.fit) return false;
+    if (filters.fit && c.fit.level !== filters.fit) return false;
     return true;
   });
 

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        nvidia: { green: '#76B900', dark: '#5a8c00' },
+        brand: { green: '#76B900', dark: '#5a8c00' },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
