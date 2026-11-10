@@ -1,30 +1,72 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import briefingsData from './data/briefings.json';
 import Sidebar from './components/Sidebar.jsx';
 import BriefingView from './components/BriefingView.jsx';
 import CompanyDrawer from './components/CompanyDrawer.jsx';
 import GlobalSearch from './components/GlobalSearch.jsx';
+import SearchResults from './components/SearchResults.jsx';
+
+const COUNTRIES = [
+  { code: 'sg', name: 'Singapore' },
+  { code: 'my', name: 'Malaysia' },
+  { code: 'vn', name: 'Vietnam' },
+  { code: 'id', name: 'Indonesia' },
+  { code: 'ph', name: 'Philippines' },
+  { code: 'th', name: 'Thailand' },
+];
+
+function normalize(s) {
+  return (s || '').toLowerCase().trim();
+}
 
 export default function App() {
   const { briefings } = briefingsData;
   const [selectedDate, setSelectedDate] = useState(briefings[0]?.date ?? null);
   const [selectedCompany, setSelectedCompany] = useState(null);
+  const [query, setQuery] = useState('');
 
   const currentBriefing = briefings.find(b => b.date === selectedDate);
+  const isSearching = query.trim().length > 0;
 
-  const handleSelectCompany = (company) => setSelectedCompany(company);
+  // Company-name search across every briefing, ranked: exact > starts-with > contains.
+  const searchResults = useMemo(() => {
+    const q = normalize(query);
+    if (!q) return [];
+    const rows = [];
+    for (const briefing of briefings) {
+      for (const company of briefing.companies) {
+        const name = normalize(company.name);
+        const web = normalize(company.websiteDisplay);
+        let score = 0;
+        if (name === q) score = 3;
+        else if (name.startsWith(q)) score = 2;
+        else if (name.includes(q) || web.includes(q)) score = 1;
+        if (score) rows.push({ briefing, company, score });
+      }
+    }
+    rows.sort((a, b) => b.score - a.score || a.company.name.localeCompare(b.company.name) || b.briefing.date.localeCompare(a.briefing.date));
+    return rows;
+  }, [briefings, query]);
+
+  // Drawer navigation list: search results while searching, else the open briefing.
+  const navList = isSearching
+    ? searchResults.map(r => ({ ...r.company, _briefingDate: r.briefing.date }))
+    : (currentBriefing?.companies ?? []).map(c => ({ ...c, _briefingDate: currentBriefing.date }));
+  const currentIdx = selectedCompany
+    ? navList.findIndex(c => c.name === selectedCompany.name && c._briefingDate === selectedCompany._briefingDate)
+    : -1;
+
+  const handleSelectCompany = (company) =>
+    setSelectedCompany({ ...company, _briefingDate: currentBriefing?.date });
+  const handleSelectResult = (briefing, company) => {
+    setSelectedDate(briefing.date);
+    setSelectedCompany({ ...company, _briefingDate: briefing.date });
+  };
   const handleCloseDrawer = () => setSelectedCompany(null);
-  const handleSearchPick = (date, company) => { setSelectedDate(date); setSelectedCompany(company); };
+  const handleQueryChange = (q) => { setQuery(q); setSelectedCompany(null); };
 
-  const companies = currentBriefing?.companies ?? [];
-  const currentIdx = selectedCompany ? companies.findIndex(c => c.name === selectedCompany.name) : -1;
-
-  const handlePrev = () => {
-    if (currentIdx > 0) setSelectedCompany(companies[currentIdx - 1]);
-  };
-  const handleNext = () => {
-    if (currentIdx < companies.length - 1) setSelectedCompany(companies[currentIdx + 1]);
-  };
+  const handlePrev = () => { if (currentIdx > 0) setSelectedCompany(navList[currentIdx - 1]); };
+  const handleNext = () => { if (currentIdx < navList.length - 1) setSelectedCompany(navList[currentIdx + 1]); };
 
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-[#0f172a]">
@@ -35,17 +77,10 @@ export default function App() {
         <span className="text-[#475569] text-[11px]">·</span>
         <span className="text-[11px] text-slate-300 font-medium">South East Asia</span>
         <div className="flex-1 flex justify-center px-6">
-          <GlobalSearch briefings={briefings} onPick={handleSearchPick} />
+          <GlobalSearch query={query} onChange={handleQueryChange} resultCount={searchResults.length} />
         </div>
         <span className="flex items-center gap-2.5">
-          {[
-            { code: 'sg', name: 'Singapore' },
-            { code: 'my', name: 'Malaysia' },
-            { code: 'vn', name: 'Vietnam' },
-            { code: 'id', name: 'Indonesia' },
-            { code: 'ph', name: 'Philippines' },
-            { code: 'th', name: 'Thailand' },
-          ].map(({ code, name }) => (
+          {COUNTRIES.map(({ code, name }) => (
             <img
               key={code}
               src={`https://flagcdn.com/w40/${code}.png`}
@@ -61,11 +96,19 @@ export default function App() {
         <Sidebar
           briefings={briefings}
           selectedDate={selectedDate}
-          onSelectDate={(date) => { setSelectedDate(date); setSelectedCompany(null); }}
+          onSelectDate={(date) => { setSelectedDate(date); setSelectedCompany(null); setQuery(''); }}
         />
 
         <main className="flex-1 overflow-hidden flex flex-col">
-          {currentBriefing ? (
+          {isSearching ? (
+            <SearchResults
+              query={query}
+              results={searchResults}
+              selectedCompany={selectedCompany}
+              onSelect={handleSelectResult}
+              onClear={() => handleQueryChange('')}
+            />
+          ) : currentBriefing ? (
             <BriefingView
               key={currentBriefing.date}
               briefing={currentBriefing}
@@ -83,10 +126,10 @@ export default function App() {
       {selectedCompany && (
         <CompanyDrawer
           company={selectedCompany}
-          briefingDate={selectedDate}
+          briefingDate={selectedCompany._briefingDate ?? selectedDate}
           onClose={handleCloseDrawer}
           onPrev={currentIdx > 0 ? handlePrev : null}
-          onNext={currentIdx < companies.length - 1 ? handleNext : null}
+          onNext={currentIdx >= 0 && currentIdx < navList.length - 1 ? handleNext : null}
         />
       )}
     </div>
