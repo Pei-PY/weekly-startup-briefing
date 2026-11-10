@@ -3,6 +3,7 @@ import briefingsData from './data/briefings.json';
 import Sidebar from './components/Sidebar.jsx';
 import BriefingView from './components/BriefingView.jsx';
 import CompanyDrawer from './components/CompanyDrawer.jsx';
+import GlobalSearch from './components/GlobalSearch.jsx';
 
 export default function App() {
   const { briefings } = briefingsData;
@@ -13,6 +14,7 @@ export default function App() {
 
   const handleSelectCompany = (company) => setSelectedCompany(company);
   const handleCloseDrawer = () => setSelectedCompany(null);
+  const handleSearchPick = (date, company) => { setSelectedDate(date); setSelectedCompany(company); };
 
   const companies = currentBriefing?.companies ?? [];
   const currentIdx = selectedCompany ? companies.findIndex(c => c.name === selectedCompany.name) : -1;
@@ -32,7 +34,10 @@ export default function App() {
         <span className="text-[11px] font-semibold uppercase tracking-widest text-[#76B900]">Startup Briefings</span>
         <span className="text-[#475569] text-[11px]">·</span>
         <span className="text-[11px] text-slate-300 font-medium">South East Asia</span>
-        <span className="ml-auto flex items-center gap-2.5">
+        <div className="flex-1 flex justify-center px-6">
+          <GlobalSearch briefings={briefings} onPick={handleSearchPick} />
+        </div>
+        <span className="flex items-center gap-2.5">
           {[
             { code: 'sg', name: 'Singapore' },
             { code: 'my', name: 'Malaysia' },
