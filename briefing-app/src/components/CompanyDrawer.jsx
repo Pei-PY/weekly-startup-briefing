@@ -133,7 +133,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
               <p className="text-sm text-slate-400 leading-relaxed">{company.description}</p>
             </Section>
 
-            <Section label="Today's News">
+            <Section label="News">
               <p className="text-sm text-slate-400 leading-relaxed">{company.articleBody}</p>
               {company.articleUrl && (
                 <a href={company.articleUrl} target="_blank" rel="noopener noreferrer"

@@ -254,7 +254,7 @@ export function parseBriefingContent(rawContent) {
   const content = rawContent.replace(/\r\n/g, '\n');
 
   // Extract date from header line ## Weekday, Month DD, YYYY
-  const dateLineM = content.match(/^## (.+) · NVIDIA Inception Edition/m);
+  const dateLineM = content.match(/^## (.+?) · (?:NVIDIA Inception|Weekly) Edition/m);
   const label = dateLineM ? dateLineM[1] : '';
 
   const companies = [];

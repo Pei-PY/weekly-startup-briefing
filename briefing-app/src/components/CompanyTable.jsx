@@ -14,7 +14,7 @@ const COLS = [
   { key: 'founder',     label: 'Founder BG',      width: 'w-44',                    sortable: false },
   { key: 'alignment',   label: 'Fit',             width: 'w-32',                    sortable: true },
   { key: 'description', label: 'Description',     width: 'w-64',                    sortable: false },
-  { key: 'article',     label: "Today's News",    width: 'w-64',                    sortable: false },
+  { key: 'article',     label: 'News',            width: 'w-64',                    sortable: false },
   { key: 'investors',   label: 'Investors',       width: 'w-52',                    sortable: false },
   { key: 'nvidia',      label: 'Relevancy',       width: 'w-64',                    sortable: false },
   { key: 'website',     label: 'Website',         width: 'w-36',                    sortable: false },

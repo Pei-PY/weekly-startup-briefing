@@ -55,6 +55,8 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
       <nav className="flex-1 overflow-y-auto py-2">
         {briefings.map((b) => {
           const isActive = b.date === selectedDate;
+          const isWeekly = /^Week of /.test(b.label ?? '');
+          const title = isWeekly ? b.label.replace(/,\s*\d{4}$/, '').replace(/^Week of /, '') : formatDate(b.date);
           return (
             <button
               key={b.date}
@@ -67,7 +69,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
             >
               <div>
                 <p className={`text-sm font-medium ${isActive ? 'text-slate-100' : 'text-slate-400 group-hover:text-slate-200'}`}>
-                  {formatDate(b.date)}
+                  {title}
                 </p>
                 <p className="text-[11px] text-slate-600 mt-0.5">
                   {b.companies.length} companies
