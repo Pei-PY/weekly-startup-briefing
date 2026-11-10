@@ -36,8 +36,8 @@ Moon Surgical, Covariant, or Abridge. Research Spin offs that have their papers 
 
 **Reference documents — read these before starting:**
 
-- `~/Documents/Claude/daily-startup-briefing/docs/NVIDIA Inception program and Startup Origination role.md`
-- `~/Documents/Claude/daily-startup-briefing/docs/NVIDIA tech deep dive.md`
+- `~/Documents/Claude/weekly-startup-briefing/docs/NVIDIA Inception program and Startup Origination role.md`
+- `~/Documents/Claude/weekly-startup-briefing/docs/NVIDIA tech deep dive.md`
 
 Use these to understand (1) what NVIDIA Inception looks for in startups and (2) which
 NVIDIA products map to which startup verticals, so you can assess NVIDIA-relevance for
@@ -132,7 +132,7 @@ time boundary for this briefing.** Any story with a publication timestamp older 
 Use both dates in search queries, since a 24-hour window always spans two calendar days.
 Store them as `[TODAY]` and `[YESTERDAY]` throughout this run.
 
-Check `~/Documents/Claude/daily-startup-briefing/briefings/` for previous briefings — do not
+Check `~/Documents/Claude/weekly-startup-briefing/briefings/` for previous briefings — do not
 duplicate stories already covered.
 
 ---
@@ -561,7 +561,7 @@ Break remaining ties: funding amount > acquisition > launch.
 
 ## Phase 4 — Write the briefing file
 
-Save to: `~/Documents/Claude/daily-startup-briefing/briefings/YYYY-MM-DD-briefing.md`
+Save to: `~/Documents/Claude/weekly-startup-briefing/briefings/YYYY-MM-DD-briefing.md`
 
 **Then run the duplicate check** from the project root:
 
@@ -675,7 +675,7 @@ Note: `outlook-cli` is read/organize only — it cannot compose or send new emai
 Open the briefing file so the user can copy-paste it into a new Outlook email:
 
 ```bash
-open ~/Documents/Claude/daily-startup-briefing/briefings/YYYY-MM-DD-briefing.md
+open ~/Documents/Claude/weekly-startup-briefing/briefings/YYYY-MM-DD-briefing.md
 ```
 
 Tell the user:

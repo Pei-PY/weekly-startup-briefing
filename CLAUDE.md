@@ -1,6 +1,6 @@
-# Daily Startup Briefing — Project
+# Weekly Startup Briefing — Project
 
-This folder stores daily AI and tech startup news briefings.
+This folder stores weekly AI and tech startup news briefings.
 
 ## Purpose
 
@@ -30,7 +30,7 @@ node briefing-app/scripts/dedupe-briefings.js --lookup "Company name" company.co
 
 ## Output location
 
-All briefings are saved to: `~/Documents/Claude/daily-startup-briefing/briefings/`
+All briefings are saved to: `~/Documents/Claude/weekly-startup-briefing/briefings/`
 
 ## Skills
 
@@ -39,7 +39,7 @@ When a skill is updated here, copy it to `~/.claude/skills/<name>/SKILL.md` for 
 
 | Skill | Invoke | Description |
 |-------|--------|-------------|
-| [startup-briefing](skills/startup-briefing/SKILL.md) | `/startup-briefing` | Daily AI/tech startup news briefing |
+| [startup-briefing](skills/startup-briefing/SKILL.md) | `/startup-briefing` | Weekly AI/tech startup news briefing |
 
 ## Docs
 

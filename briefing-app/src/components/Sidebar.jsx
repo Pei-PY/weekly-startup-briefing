@@ -38,7 +38,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
           </span>
         </div>
         <div className="flex items-center justify-between mt-1 gap-2">
-          <p className="text-slate-100 font-semibold text-sm leading-tight">Daily Startup Briefings</p>
+          <p className="text-slate-100 font-semibold text-sm leading-tight">Weekly Startup Briefings</p>
           <button
             onClick={() => setShowInfo(v => !v)}
             className={`flex-shrink-0 p-0.5 rounded transition-colors ${
@@ -115,7 +115,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
           <div className="absolute left-full top-0 z-50 w-80 h-full bg-[#0a1628] border-r border-[#1e293b] shadow-xl overflow-y-auto flex flex-col">
             {/* GitHub link */}
             <a
-              href="https://github.com/richling98/daily-startup-briefing"
+              href="https://github.com/Pei-PY/weekly-startup-briefing"
               target="_blank"
               rel="noopener noreferrer"
               onClick={e => e.stopPropagation()}
@@ -152,7 +152,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
               </Section>
 
               {/* Research */}
-              <Section label="Daily Research">
+              <Section label="Weekly Research">
                 <p className="text-xs text-slate-400 leading-relaxed mb-2">
                   Every briefing runs <strong className="text-slate-200">45+ targeted searches</strong> across
                   a strict 24-hour publication window — one query per vertical, plus funding,

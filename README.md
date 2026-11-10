@@ -1,6 +1,6 @@
-# Daily Startup Briefing
+# Weekly Startup Briefing
 
-Daily AI and tech startup news briefings. 
+Weekly AI and tech startup news briefings. 
 
 Each briefing surfaces the top 10 startup stories of the day — funding rounds, acquisitions, and product launches — filtered to pre-seed through Series D companies across AI/ML, SaaS, developer tools, deep tech, robotics, and consumer tech.
 
@@ -45,7 +45,7 @@ TechCrunch, VentureBeat, Hacker News, Product Hunt, The Information, Crunchbase 
 
 ## Web App
 
-Browse all briefings at **[richling98.github.io/daily-startup-briefing](https://richling98.github.io/daily-startup-briefing/)** — a dark-themed React frontend with sortable columns, company detail drawers, and filters by vertical, stage, and fit.
+Browse all briefings at **[pei-py.github.io/weekly-startup-briefing](https://pei-py.github.io/weekly-startup-briefing/)** — a dark-themed React frontend with sortable columns, company detail drawers, and filters by vertical, stage, and fit.
 
 Auto-deployed to GitHub Pages on every push to `main`. See [`briefing-app/README.md`](briefing-app/README.md) for local development instructions.
 
@@ -54,7 +54,7 @@ Auto-deployed to GitHub Pages on every push to `main`. See [`briefing-app/README
 ## Structure
 
 ```
-briefings/          # Daily briefing files (YYYY-MM-DD-briefing.md)
+briefings/          # Weekly briefing files (YYYY-MM-DD-briefing.md)
 briefing-app/       # Vite + React frontend (GitHub Pages)
 docs/               # Reference docs (program background, tech stack)
 skills/             # Claude Code skill definition

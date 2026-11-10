@@ -1,12 +1,12 @@
 # Briefing App
 
-A Vite + React + Tailwind frontend for browsing the daily startup briefings. Live at **[richling98.github.io/daily-startup-briefing](https://richling98.github.io/daily-startup-briefing/)**.
+A Vite + React + Tailwind frontend for browsing the weekly startup briefings. Live at **[pei-py.github.io/weekly-startup-briefing](https://pei-py.github.io/weekly-startup-briefing/)**.
 
 ---
 
 ## What it does
 
-Displays every daily briefing as a sortable, filterable table. Click any row to open a full company detail drawer (Notion-style). A sidebar lists all briefing dates; a methodology panel explains the research protocol and scoring rubric.
+Displays every weekly briefing as a sortable, filterable table. Click any row to open a full company detail drawer (Notion-style). A sidebar lists all briefing dates; a methodology panel explains the research protocol and scoring rubric.
 
 **Columns:** Rank · Company · Country · Vertical · Total Raised · Stage · Founder BG · Fit · Description · Today's News · Investors · Relevancy · Website
 
@@ -74,7 +74,7 @@ Workflow: `.github/workflows/deploy.yml`
 - Runs `npm run build` (duplicate check → parse → Vite build → `dist/`)
 - Uploads `dist/` as a Pages artifact and deploys
 
-`vite.config.js` sets `base: '/daily-startup-briefing/'` for the subdirectory path.
+`vite.config.js` sets `base: '/weekly-startup-briefing/'` for the subdirectory path.
 
 ---
 
