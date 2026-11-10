@@ -32,8 +32,8 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
       {/* Header */}
       <div className="px-4 py-4 border-b border-[#1e293b]">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-[#76B900]" />
-          <span className="text-[10px] font-semibold uppercase tracking-widest text-[#76B900]">
+          <div className="w-2 h-2 rounded-full bg-[#EC4899]" />
+          <span className="text-[10px] font-semibold uppercase tracking-widest text-[#EC4899]">
             South East Asia
           </span>
         </div>
@@ -42,7 +42,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
           <button
             onClick={() => setShowInfo(v => !v)}
             className={`flex-shrink-0 p-0.5 rounded transition-colors ${
-              showInfo ? 'text-[#76B900]' : 'text-slate-500 hover:text-slate-300'
+              showInfo ? 'text-[#EC4899]' : 'text-slate-500 hover:text-slate-300'
             }`}
             title="Methodology & purpose"
           >
@@ -63,7 +63,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
               onClick={() => onSelectDate(b.date)}
               className={`w-full text-left px-4 py-2.5 flex items-center justify-between transition-colors group ${
                 isActive
-                  ? 'bg-[#1e293b] border-l-2 border-[#76B900]'
+                  ? 'bg-[#1e293b] border-l-2 border-[#EC4899]'
                   : 'border-l-2 border-transparent hover:bg-[#1e293b]/60'
               }`}
             >
@@ -75,7 +75,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
                   {b.companies.length} companies
                 </p>
               </div>
-              <span className={`text-[11px] font-mono tabular-nums ${isActive ? 'text-[#76B900]' : 'text-slate-700'}`}>
+              <span className={`text-[11px] font-mono tabular-nums ${isActive ? 'text-[#EC4899]' : 'text-slate-700'}`}>
                 {b.date.slice(5)}
               </span>
             </button>
@@ -91,15 +91,15 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
           return (
             <div className="grid grid-cols-3 gap-2">
               <div>
-                <p className="text-lg font-bold text-[#76B900] leading-none">{briefings.length}</p>
+                <p className="text-lg font-bold text-[#EC4899] leading-none">{briefings.length}</p>
                 <p className="text-[10px] text-slate-500 mt-1 leading-tight">briefings</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-[#76B900] leading-none">{briefings.reduce((s, b) => s + b.companies.length, 0)}</p>
+                <p className="text-lg font-bold text-[#EC4899] leading-none">{briefings.reduce((s, b) => s + b.companies.length, 0)}</p>
                 <p className="text-[10px] text-slate-500 mt-1 leading-tight">companies</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-[#76B900] leading-none">{fundingDisplay}</p>
+                <p className="text-lg font-bold text-[#EC4899] leading-none">{fundingDisplay}</p>
                 <p className="text-[10px] text-slate-500 mt-1 leading-tight">total raised</p>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
             {/* Panel header */}
             <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#1e293b] flex-shrink-0">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-widest text-[#76B900]">Methodology</p>
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-[#EC4899]">Methodology</p>
                 <p className="text-sm font-semibold text-slate-100 mt-0.5">How this briefing works</p>
               </div>
               <button
@@ -208,7 +208,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
               <Section label="Fit Rating">
                 <div className="space-y-2">
                   <div className="flex items-start gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#76B900] mt-1 flex-shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-[#EC4899] mt-1 flex-shrink-0" />
                     <div>
                       <p className="text-[11px] font-medium text-slate-300">Strong potential</p>
                       <p className="text-[10px] text-slate-500">GPU-native workloads, inference at scale, or confirmed accelerated-computing fit</p>
@@ -234,7 +234,7 @@ export default function Sidebar({ briefings, selectedDate, onSelectDate }) {
 function Section({ label, children }) {
   return (
     <div className="px-4 py-4">
-      <p className="text-[10px] font-semibold uppercase tracking-widest text-[#76B900] mb-2">{label}</p>
+      <p className="text-[10px] font-semibold uppercase tracking-widest text-[#EC4899] mb-2">{label}</p>
       {children}
     </div>
   );

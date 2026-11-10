@@ -55,8 +55,8 @@ export default function PasswordGate({ onUnlock }) {
         className="w-full max-w-sm bg-[#0a1628] border border-[#1e293b] rounded-lg p-6 shadow-2xl"
       >
         <div className="flex items-center gap-2 mb-1">
-          <div className="w-2 h-2 rounded-full bg-[#76B900]" />
-          <span className="text-[11px] font-semibold uppercase tracking-widest text-[#76B900]">Startup Briefings</span>
+          <div className="w-2 h-2 rounded-full bg-[#EC4899]" />
+          <span className="text-[11px] font-semibold uppercase tracking-widest text-[#EC4899]">Startup Briefings</span>
           <span className="text-[#475569] text-[11px]">·</span>
           <span className="text-[11px] text-slate-300 font-medium">South East Asia</span>
         </div>
@@ -77,7 +77,7 @@ export default function PasswordGate({ onUnlock }) {
           autoComplete="current-password"
           placeholder="Password"
           aria-label="Password"
-          className="mt-4 w-full rounded px-3 py-2 text-sm bg-[#1e293b] border border-[#334155] text-slate-100 placeholder:text-slate-600 outline-none focus:border-[#76B900]/60 disabled:opacity-60"
+          className="mt-4 w-full rounded px-3 py-2 text-sm bg-[#1e293b] border border-[#334155] text-slate-100 placeholder:text-slate-600 outline-none focus:border-[#EC4899]/60 disabled:opacity-60"
         />
 
         {error && <p className="mt-2 text-xs text-red-400">{error}</p>}
@@ -85,7 +85,7 @@ export default function PasswordGate({ onUnlock }) {
         <button
           type="submit"
           disabled={busy || !password}
-          className="mt-4 w-full rounded px-3 py-2 text-sm font-medium bg-[#76B900] text-[#0a1628] hover:bg-[#86c910] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="mt-4 w-full rounded px-3 py-2 text-sm font-medium bg-[#EC4899] text-[#0a1628] hover:bg-[#F472B6] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {busy ? 'Working…' : 'Unlock'}
         </button>

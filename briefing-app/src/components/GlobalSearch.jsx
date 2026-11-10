@@ -26,10 +26,10 @@ export default function GlobalSearch({ query, onChange, resultCount }) {
     <div className="relative w-full max-w-lg">
       <div className={`flex items-center gap-2 rounded px-2.5 py-1.5 border transition-colors ${
         hasQuery
-          ? 'bg-[#76B900]/10 border-[#76B900]/50'
-          : 'bg-[#1e293b] border-[#334155] focus-within:border-[#76B900]/60'
+          ? 'bg-[#EC4899]/10 border-[#EC4899]/50'
+          : 'bg-[#1e293b] border-[#334155] focus-within:border-[#EC4899]/60'
       }`}>
-        <Search size={12} className={hasQuery ? 'text-[#76B900]' : 'text-slate-500'} />
+        <Search size={12} className={hasQuery ? 'text-[#EC4899]' : 'text-slate-500'} />
         <input
           ref={inputRef}
           type="text"
@@ -42,7 +42,7 @@ export default function GlobalSearch({ query, onChange, resultCount }) {
         />
         {hasQuery && (
           <>
-            <span className="text-[10px] text-[#76B900] font-mono tabular-nums flex-shrink-0">
+            <span className="text-[10px] text-[#EC4899] font-mono tabular-nums flex-shrink-0">
               {resultCount} match{resultCount === 1 ? '' : 'es'}
             </span>
             <button

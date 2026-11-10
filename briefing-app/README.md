@@ -17,7 +17,7 @@ Displays every weekly briefing as a sortable, filterable table. Click any row to
 ## Stack
 
 - **Vite 8** + **React 19**
-- **Tailwind CSS v4** (dark theme, green `#76B900` accent)
+- **Tailwind CSS v4** (dark theme, pink `#EC4899` accent)
 - **lucide-react** icons
 - Static JSON data (`src/data/briefings.json`) generated from markdown briefing files
 

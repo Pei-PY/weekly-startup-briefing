@@ -64,7 +64,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
           className="group absolute left-0 top-0 h-full w-2 cursor-ew-resize z-20"
           title="Drag to resize"
         >
-          <div className="mx-auto h-full w-px bg-[#1e293b] transition-all group-hover:w-0.5 group-hover:bg-[#76B900]" />
+          <div className="mx-auto h-full w-px bg-[#1e293b] transition-all group-hover:w-0.5 group-hover:bg-[#EC4899]" />
         </div>
 
         {/* Drawer header */}
@@ -105,8 +105,8 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
               <Stat
                 label="Fit"
                 value={company.fit.label}
-                valueColor={company.fit.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}
-                dot={company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}
+                valueColor={company.fit.level === 'strong' ? 'text-[#EC4899]' : 'text-amber-400'}
+                dot={company.fit.level === 'strong' ? 'bg-[#EC4899]' : 'bg-amber-500'}
               />
               <div className="flex flex-col gap-2">
                 {company.websiteUrl && (
@@ -178,7 +178,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                 {/* Reordered layout: Account Workload Research under the relevancy paragraph; use-case/SDK table at the bottom */}
                 <Section label="Relevancy">
                   <div className="flex items-start gap-2">
-                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
+                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#EC4899]' : 'bg-amber-500'}`} />
                     <p className="text-sm text-slate-400 leading-relaxed">{company.relevancy}</p>
                   </div>
                 </Section>
@@ -208,7 +208,7 @@ export default function CompanyDrawer({ company, briefingDate, onClose, onPrev, 
                 {/* Default layout (April 15 + future reports) */}
                 <Section label="Relevancy">
                   <div className="flex items-start gap-2 mb-4">
-                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
+                    <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#EC4899]' : 'bg-amber-500'}`} />
                     <p className="text-sm text-slate-400 leading-relaxed">{company.relevancy}</p>
                   </div>
                   <TechTable relevancyText={company.relevancy} vertical={company.vertical} />
@@ -267,7 +267,7 @@ function TechTable({ relevancyText, vertical }) {
         <thead>
           <tr className="bg-[#0a1628] border-b border-[#1e293b]">
             {['Use-case', 'Library / SDK', 'Expected Outcome', 'Case Study'].map(h => (
-              <th key={h} className="px-3 py-2 text-left text-[10px] font-semibold uppercase tracking-wider text-[#76B900] whitespace-nowrap">
+              <th key={h} className="px-3 py-2 text-left text-[10px] font-semibold uppercase tracking-wider text-[#EC4899] whitespace-nowrap">
                 {h}
               </th>
             ))}
@@ -289,7 +289,7 @@ function TechTable({ relevancyText, vertical }) {
                   )}
                 </td>
                 <td className="px-3 py-2.5 align-top">
-                  <span className={`font-semibold ${isSuggested ? 'text-[#76B900]/60' : 'text-[#76B900]'}`}>{key}</span>
+                  <span className={`font-semibold ${isSuggested ? 'text-[#EC4899]/60' : 'text-[#EC4899]'}`}>{key}</span>
                   <span className="text-slate-500 block leading-snug mt-0.5">{t.sdk}</span>
                 </td>
                 <td className="px-3 py-2.5 text-slate-400 align-top leading-snug">{t.outcome}</td>
@@ -319,7 +319,7 @@ function TechTable({ relevancyText, vertical }) {
 const WORKLOAD_COLS = ['Workload', 'Budget', 'Acceleration', 'Nodes', 'Libraries / Tools', 'Partner'];
 const ACCEL_COLOR = t => {
   const u = t?.toLowerCase() ?? '';
-  if (u.includes('gpu')) return 'text-[#76B900]';
+  if (u.includes('gpu')) return 'text-[#EC4899]';
   if (u.includes('cpu')) return 'text-amber-400';
   return 'text-slate-400';
 };
@@ -383,7 +383,7 @@ function MarkdownText({ text, className = 'text-sm text-slate-400 leading-relaxe
 function Section({ label, children }) {
   return (
     <div className="px-6 py-4">
-      <p className="text-[10px] font-semibold uppercase tracking-widest text-[#76B900] mb-2">{label}</p>
+      <p className="text-[10px] font-semibold uppercase tracking-widest text-[#EC4899] mb-2">{label}</p>
       {children}
     </div>
   );

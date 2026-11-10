@@ -80,8 +80,8 @@ function Briefings({ briefings, onLock }) {
     <div className="flex flex-col h-screen overflow-hidden bg-[#0f172a]">
       {/* Top header banner */}
       <div className="flex-shrink-0 bg-[#0a1628] px-6 py-2.5 flex items-center gap-3 border-b border-[#1e293b]">
-        <div className="w-2 h-2 rounded-full bg-[#76B900]" />
-        <span className="text-[11px] font-semibold uppercase tracking-widest text-[#76B900]">Startup Briefings</span>
+        <div className="w-2 h-2 rounded-full bg-[#EC4899]" />
+        <span className="text-[11px] font-semibold uppercase tracking-widest text-[#EC4899]">Startup Briefings</span>
         <span className="text-[#475569] text-[11px]">·</span>
         <span className="text-[11px] text-slate-300 font-medium">South East Asia</span>
         <div className="flex-1 flex justify-center px-6">

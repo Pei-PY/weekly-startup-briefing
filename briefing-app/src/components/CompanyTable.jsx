@@ -70,7 +70,7 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
                     col.width,
                     col.sticky ? `sticky ${col.sticky} bg-[#1e293b] z-30` : '',
                     col.sortable ? 'cursor-pointer select-none group/th' : '',
-                    isActive ? 'text-[#76B900]' : 'text-slate-500',
+                    isActive ? 'text-[#EC4899]' : 'text-slate-500',
                   ].join(' ')}
                 >
                   <span className="inline-flex items-center gap-1">
@@ -78,7 +78,7 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
                     {col.sortable && (
                       <SortIcon
                         size={10}
-                        className={isActive ? 'text-[#76B900]' : 'text-slate-600 group-hover/th:text-slate-400'}
+                        className={isActive ? 'text-[#EC4899]' : 'text-slate-600 group-hover/th:text-slate-400'}
                       />
                     )}
                   </span>
@@ -106,7 +106,7 @@ export default function CompanyTable({ companies, onSelectCompany, selectedCompa
 
 function CompanyRow({ company, isEven, isSelected, onClick }) {
   const rowBg = isSelected
-    ? 'bg-[#76B900]/10'
+    ? 'bg-[#EC4899]/10'
     : isEven
       ? 'bg-[#0f172a] hover:bg-[#1e293b]'
       : 'bg-[#0d1526] hover:bg-[#1e293b]';
@@ -186,8 +186,8 @@ function CompanyRow({ company, isEven, isSelected, onClick }) {
       {/* Fit */}
       <td className="px-3 py-3">
         <div className="flex items-center gap-1.5">
-          <span className={`w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-500'}`} />
-          <span className={`text-xs font-medium ${company.fit.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}`}>
+          <span className={`w-2 h-2 rounded-full flex-shrink-0 ${company.fit.level === 'strong' ? 'bg-[#EC4899]' : 'bg-amber-500'}`} />
+          <span className={`text-xs font-medium ${company.fit.level === 'strong' ? 'text-[#EC4899]' : 'text-amber-400'}`}>
             {company.fit.level === 'strong' ? 'Strong' : 'Maybe'}
           </span>
         </div>

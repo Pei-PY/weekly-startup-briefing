@@ -35,8 +35,8 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
           <Pill label={`${verticals.length} verticals`} color="text-slate-500" />
           <Pill
             label={`${strongCount} strong fit`}
-            color="text-[#76B900]"
-            dot="bg-[#76B900]"
+            color="text-[#EC4899]"
+            dot="bg-[#EC4899]"
           />
         </div>
       </div>
@@ -81,7 +81,7 @@ export default function BriefingView({ briefing, onSelectCompany, selectedCompan
               Clear
             </button>
             <span className="ml-auto text-[11px] text-slate-500">
-              <span className="text-[#76B900]">{filteredCompanies.length}</span>
+              <span className="text-[#EC4899]">{filteredCompanies.length}</span>
               {' '}of {briefing.companies.length}
             </span>
           </>
@@ -111,7 +111,7 @@ function FilterSelect({ placeholder, value, onChange, options }) {
         className={[
           'appearance-none rounded px-3 py-1.5 pr-6 text-[11px] cursor-pointer transition-colors outline-none',
           isActive
-            ? 'bg-[#76B900]/10 border border-[#76B900]/40 text-[#76B900] focus:border-[#76B900]/70'
+            ? 'bg-[#EC4899]/10 border border-[#EC4899]/40 text-[#EC4899] focus:border-[#EC4899]/70'
             : 'bg-[#1e293b] border border-[#334155] text-slate-400 hover:border-[#475569] hover:text-slate-200 focus:border-[#475569]',
         ].join(' ')}
       >
@@ -124,7 +124,7 @@ function FilterSelect({ placeholder, value, onChange, options }) {
       </select>
       <ChevronDown
         size={10}
-        className={`pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 ${isActive ? 'text-[#76B900]' : 'text-slate-500'}`}
+        className={`pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 ${isActive ? 'text-[#EC4899]' : 'text-slate-500'}`}
       />
     </div>
   );

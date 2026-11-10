@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: { green: '#76B900', dark: '#5a8c00' },
+        brand: { pink: '#EC4899', dark: '#BE185D' },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

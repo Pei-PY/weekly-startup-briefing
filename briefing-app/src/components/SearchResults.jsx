@@ -13,7 +13,7 @@ export default function SearchResults({ query, results, selectedCompany, onSelec
       <div className="flex-shrink-0 px-6 py-4 bg-[#0a1628] border-b border-[#1e293b] flex items-start justify-between gap-4">
         <div>
           <h1 className="text-lg font-semibold text-slate-100">
-            Search: <span className="text-[#76B900]">“{query.trim()}”</span>
+            Search: <span className="text-[#EC4899]">“{query.trim()}”</span>
           </h1>
           <p className="text-sm text-slate-500 mt-1">
             {results.length === 0
@@ -83,8 +83,8 @@ export default function SearchResults({ query, results, selectedCompany, onSelec
                       </span>
                     </td>
                     <td className="px-3 py-3 align-top">
-                      <span className={`flex items-center gap-1.5 text-xs ${company.fit.level === 'strong' ? 'text-[#76B900]' : 'text-amber-400'}`}>
-                        <span className={`w-1.5 h-1.5 rounded-full ${company.fit.level === 'strong' ? 'bg-[#76B900]' : 'bg-amber-400'}`} />
+                      <span className={`flex items-center gap-1.5 text-xs ${company.fit.level === 'strong' ? 'text-[#EC4899]' : 'text-amber-400'}`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${company.fit.level === 'strong' ? 'bg-[#EC4899]' : 'bg-amber-400'}`} />
                         {company.fit.label}
                       </span>
                     </td>
